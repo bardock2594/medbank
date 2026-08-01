@@ -1,765 +1,319 @@
-/*======================================================
-BANKMED v1.0
-======================================================*/
+<!DOCTYPE html>
+<html lang="es">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
-}
+<head>
 
-body{
+    <meta charset="UTF-8">
 
-    background:#eef3f8;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    color:#2c3e50;
+    <title>BankMed</title>
 
-}
+    <link rel="stylesheet" href="style.css">
 
-/*======================================================
-HEADER
-======================================================*/
+</head>
 
-.header{
+<body>
 
-    background:#0d6efd;
+    <!--========================================-->
+    <!-- ENCABEZADO -->
+    <!--========================================-->
 
-    color:white;
+    <header class="header">
 
-    padding:25px;
+        <h1>🩺 BankMed</h1>
 
-    text-align:center;
+        <p>Banco Inteligente de Preguntas Médicas</p>
 
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    </header>
 
-}
 
-.header h1{
+    <!--========================================-->
+    <!-- PANTALLA DE INICIO -->
+    <!--========================================-->
 
-    font-size:42px;
+    <div class="contenedor" id="pantallaInicio">
 
-}
+        <h2>Bienvenido</h2>
 
-.header p{
+        <p>
 
-    margin-top:8px;
+            Aprende farmacología resolviendo preguntas tipo
+            ENAM y Residentado Médico.
 
-    opacity:.9;
+        </p>
 
-}
+        <div class="infoInicio">
 
-/*======================================================
-CONTENEDOR
-======================================================*/
+            <button class="infoBox accionPrincipal" id="btnEstudiar">
+                <span class="iconoAccion">📚</span>
+                <strong>Practicar por tema</strong>
+                <span>Elige un tema y pon a prueba tus conocimientos.</span>
+            </button>
 
-.contenedor{
+            <button class="infoBox" id="btnAprender">
+                <span class="iconoAccion">📝</span>
+                <strong>Simulacro de examen</strong>
+                <span>Resuelve 20 preguntas aleatorias de todo el banco.</span>
+            </button>
 
-    width:90%;
+            <button class="infoBox" id="btnEstadisticas">
+                <span class="iconoAccion">📊</span>
+                <strong>Ver mi progreso</strong>
+                <span>Revisa tus aciertos, temas y preguntas por reforzar.</span>
+            </button>
 
-    max-width:900px;
+        </div>
 
-    margin:40px auto;
+        <section class="seccionApoyo" aria-labelledby="tituloApoyo">
+            <div class="textoApoyo">
+                <span class="etiquetaApoyo">APOYO VOLUNTARIO</span>
+                <h3 id="tituloApoyo">Ayuda a que BankMed siga creciendo</h3>
+                <p>Tu aporte voluntario ayuda a crear más preguntas, explicaciones farmacológicas y nuevas herramientas de estudio.</p>
+                <p class="notaApoyo">Escanea el código con Yape y verifica que el destinatario sea <strong>Julian Daniel Espinoza Portilla</strong> antes de confirmar tu pago.</p>
+            </div>
 
-    background:white;
+            <figure class="qrApoyo">
+                <img src="WhatsApp%20Image%202026-08-01%20at%202.10.26%20PM.jpeg" alt="Código QR de Yape para apoyar a BankMed. Destinatario: Julian Daniel Espinoza Portilla." loading="lazy">
+                <figcaption>Escanea para apoyar con Yape</figcaption>
+            </figure>
+        </section>
 
-    padding:40px;
+    </div>
 
-    border-radius:18px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    <!--========================================-->
+    <!-- SELECCIÓN -->
+    <!--========================================-->
 
-}
+    <div class="contenedor" id="pantallaSeleccion" style="display:none;">
 
-/*======================================================
-TÍTULOS
-======================================================*/
+        <h2>Selecciona un tema</h2>
 
-h1,h2,h3{
+        <br>
 
-    margin-bottom:15px;
+        <label>
 
-}
+            📚 Tema
 
-p{
+        </label>
 
-    line-height:1.6;
+        <br><br>
 
-}
+        <select id="sistema">
 
-/*======================================================
-TARJETAS DE INICIO
-======================================================*/
+        </select>
 
-.infoInicio{
+        <br><br><br>
 
-    display:flex;
+        <label>
 
-    gap:20px;
+            🎯 Cantidad de preguntas
 
-    justify-content:center;
+        </label>
 
-    margin-top:35px;
+        <br><br>
 
-    flex-wrap:wrap;
+        <select id="cantidad">
 
-}
+            <option value="10">10 preguntas</option>
 
-.infoBox{
+            <option value="20">20 preguntas</option>
 
-    width:180px;
+            <option value="50">50 preguntas</option>
 
-    background:#f8f9fa;
+            <option value="Todas">Todas las preguntas</option>
 
-    border-radius:15px;
+        </select>
 
-    padding:25px;
+        <br><br><br>
 
-    text-align:center;
+        <button id="btnIniciar">
 
-    transition:.25s;
+            ▶ Iniciar examen
 
-    cursor:pointer;
+        </button>
 
-    border:1px solid #ddd;
+    </div>
 
-    font-size:16px;
-    color:#2c3e50;
 
-    /* Sobrescribe el estilo general de botones para usar tarjetas compactas. */
-    margin-top:0;
-    border:1px solid #d8dee6;
+    <!--========================================-->
+    <!-- EXAMEN -->
+    <!--========================================-->
 
-}
+    <div class="contenedor" id="pantallaPregunta" style="display:none;">
 
-.infoBox:hover{
+        <div class="barra">
 
-    transform:translateY(-5px);
+            <div id="barraProgreso"></div>
 
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+        </div>
 
-}
+        <h3 id="progreso">
 
-/*======================================================
-BOTONES
-======================================================*/
+            Pregunta 1 de 10
 
-button{
+        </h3>
 
-    width:100%;
+        <hr>
 
-    padding:16px;
+        <h2 id="textoPregunta">
 
-    margin-top:15px;
+        </h2>
 
-    border:none;
+        <br>
 
-    border-radius:12px;
+        <div id="opciones">
 
-    background:#0d6efd;
+        </div>
 
-    color:white;
+        <br>
 
-    font-size:18px;
+        <div id="explicacion" style="display:none;">
 
-    cursor:pointer;
+            <h3>
 
-    transition:.25s;
+                🧠 Fundamento farmacológico
 
-}
+            </h3>
 
-button:hover{
+            <p id="textoExplicacion">
 
-    transform:translateY(-2px);
+            </p>
 
-    background:#0b5ed7;
+        </div>
 
-    box-shadow:0 8px 15px rgba(13,110,253,.3);
+        <br>
 
-}
+        <button id="btnResponder">
 
-button:active{
+            Responder
 
-    transform:scale(.98);
+        </button>
 
-}
+    </div>
 
-.infoBox:focus-visible{
 
-    outline:3px solid #0d6efd;
-    outline-offset:3px;
+    <!--========================================-->
+    <!-- RESULTADOS -->
+    <!--========================================-->
 
-}
+    <div class="contenedor" id="pantallaResultados" style="display:none;">
 
-.infoBox strong,
-.infoBox span{
+        <h1>
 
-    display:block;
+            🎉 Examen finalizado
 
-}
+        </h1>
 
-.infoBox strong{
+        <br>
 
-    margin:8px 0;
-    font-size:17px;
+        <div class="tarjetaResultado">
 
-}
+            <h2 id="resultadoPuntaje">
 
-.infoBox span:not(.iconoAccion){
+                18 / 20
 
-    color:#667085;
-    font-size:13px;
-    line-height:1.4;
+            </h2>
 
-}
+            <h3 id="resultadoPorcentaje">
 
-.infoBox .iconoAccion{
+                90 %
 
-    font-size:28px;
+            </h3>
 
-}
+            <p id="resultadoCorrectas">
 
-.infoBox.accionPrincipal{
+                ✅ Correctas: 18
 
-    background:#0d6efd;
-    border-color:#0d6efd;
-    color:white;
+            </p>
 
-}
+            <p id="resultadoIncorrectas">
 
-.infoBox.accionPrincipal span:not(.iconoAccion){
+                ❌ Incorrectas: 2
 
-    color:#e7f0ff;
+            </p>
 
-}
+            <h3 id="mensajeResultado">
 
-.infoBox.accionPrincipal:hover{
+                🎯 Muy buen desempeño
 
-    background:#0b5ed7;
-    border-color:#0b5ed7;
+            </h3>
 
-}
+        </div>
 
-/*======================================================
-APOYO VOLUNTARIO
-======================================================*/
+        <br>
 
-.seccionApoyo{
+        <button id="btnRevisar">
 
-    display:flex;
-    align-items:center;
-    gap:30px;
-    margin-top:35px;
-    padding:28px;
-    border:1px solid #ded1e9;
-    border-radius:18px;
-    background:linear-gradient(135deg,#faf7fd,#f2eafd);
+            📖 Revisar preguntas equivocadas
 
-}
+        </button>
 
-.textoApoyo{
+        <button id="btnReintentar">
 
-    flex:1;
+            🔄 Reintentar preguntas equivocadas
 
-}
+        </button>
 
-.etiquetaApoyo{
+        <button id="btnNuevoExamen">
 
-    display:inline-block;
-    padding:6px 10px;
-    border-radius:20px;
-    background:#6f217c;
-    color:white;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.5px;
+            🎲 Nuevo examen
 
-}
+        </button>
 
-.textoApoyo h3{
+        <button id="btnVolverInicio">
 
-    margin:12px 0 8px;
-    color:#54205f;
-    font-size:24px;
+            🏠 Inicio
 
-}
+        </button>
 
-.notaApoyo{
+    </div>
 
-    margin-top:14px;
-    color:#5d5263;
-    font-size:14px;
+    <div class="contenedor" id="pantallaEstadisticas" style="display:none;">
 
-}
+        <h2>📈 Tus estadísticas</h2>
+        <p>Tu progreso se guarda únicamente en este navegador.</p>
 
-.qrApoyo{
+        <div id="contenidoEstadisticas"></div>
 
-    flex:0 0 190px;
-    margin:0;
-    padding:10px;
-    border-radius:14px;
-    background:white;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(81,28,92,.12);
+        <button id="btnVolverEstadisticas">🏠 Volver al inicio</button>
+        <button id="btnBorrarEstadisticas" class="botonSecundario">🗑️ Borrar historial</button>
 
-}
+    </div>
 
-.qrApoyo img{
 
-    display:block;
-    width:100%;
-    height:auto;
-    border-radius:8px;
+    <!--========================================-->
+    <!-- PIE -->
+    <!--========================================-->
 
-}
+    <footer>
 
-.qrApoyo figcaption{
+        BankMed v1.0
 
-    margin-top:8px;
-    color:#54205f;
-    font-size:13px;
-    font-weight:600;
+        <br>
 
-}
+        © 2026
 
-.botonSecundario{
+        <br>
 
-    background:#6c757d;
+        Desarrollado por Dr. Julián Espinoza
 
-}
+        <br><br>
 
-.botonSecundario:hover{
+        <small>Uso educativo. No sustituye guías clínicas actualizadas ni el juicio profesional.</small>
 
-    background:#5c636a;
+    </footer>
 
-    box-shadow:0 8px 15px rgba(108,117,125,.3);
 
-}
+    <!--========================================-->
+    <!-- JAVASCRIPT -->
+    <!--========================================-->
 
-/*======================================================
-SELECT
-======================================================*/
+    <script src="preguntas.js"></script>
 
-select{
+    <script src="app.js"></script>
 
-    width:100%;
+</body>
 
-    padding:14px;
-
-    font-size:18px;
-
-    border-radius:10px;
-
-    border:1px solid #ccc;
-
-    outline:none;
-
-}
-
-/*======================================================
-PREGUNTA
-======================================================*/
-
-#textoPregunta{
-
-    margin-top:20px;
-
-    margin-bottom:30px;
-
-    line-height:1.6;
-
-}
-
-/*======================================================
-OPCIONES
-======================================================*/
-
-#opciones label{
-
-    display:block;
-
-    padding:18px;
-
-    margin-bottom:15px;
-
-    border:2px solid #dee2e6;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    transition:.20s;
-
-    font-size:18px;
-
-}
-
-#opciones label:hover{
-
-    background:#eef5ff;
-
-    border-color:#0d6efd;
-
-}
-
-#opciones input{
-
-    margin-right:12px;
-
-}
-
-/*======================================================
-RESPUESTA CORRECTA
-======================================================*/
-
-.correcta{
-
-    background:#d1e7dd !important;
-
-    border-color:#198754 !important;
-
-}
-
-/*======================================================
-RESPUESTA INCORRECTA
-======================================================*/
-
-.incorrecta{
-
-    background:#f8d7da !important;
-
-    border-color:#dc3545 !important;
-
-}
-
-/*======================================================
-EXPLICACIÓN
-======================================================*/
-
-#explicacion{
-
-    margin-top:30px;
-
-    padding:25px;
-
-    border-radius:12px;
-
-    background:#f8f9fa;
-
-    border-left:6px solid #0d6efd;
-
-}
-
-#textoExplicacion{
-
-    margin-top:15px;
-
-    line-height:1.8;
-
-}
-
-/*======================================================
-BARRA DE PROGRESO
-======================================================*/
-
-.barra{
-
-    width:100%;
-
-    height:14px;
-
-    background:#e9ecef;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    margin-bottom:25px;
-
-}
-
-#barraProgreso{
-
-    width:0%;
-
-    height:100%;
-
-    background:#0d6efd;
-
-    transition:.4s;
-
-}
-
-/*======================================================
-RESULTADOS
-======================================================*/
-
-.tarjetaResultado{
-
-    text-align:center;
-
-    background:#f8f9fa;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    margin-bottom:25px;
-
-}
-
-#resultadoPuntaje{
-
-    font-size:48px;
-
-    color:#0d6efd;
-
-}
-
-#resultadoPorcentaje{
-
-    font-size:60px;
-
-    margin:20px 0;
-
-}
-
-#resultadoCorrectas{
-
-    color:#198754;
-
-    font-size:20px;
-
-    margin-top:12px;
-
-}
-
-#resultadoIncorrectas{
-
-    color:#dc3545;
-
-    font-size:20px;
-
-    margin-top:8px;
-
-}
-
-#mensajeResultado{
-
-    margin-top:25px;
-
-    font-size:24px;
-
-}
-
-/*======================================================
-ESTADÍSTICAS
-======================================================*/
-
-.resumenEstadisticas{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin:25px 0;
-
-}
-
-.datoEstadistica{
-
-    background:#eef5ff;
-    border-radius:14px;
-    padding:20px 12px;
-    text-align:center;
-
-}
-
-.datoEstadistica strong{
-
-    display:block;
-    color:#0d6efd;
-    font-size:30px;
-
-}
-
-.datoEstadistica span,
-.temaFila span{
-
-    color:#667085;
-    font-size:14px;
-
-}
-
-.bloqueEstadistica{
-
-    margin:25px 0;
-    padding:22px;
-    border:1px solid #e4e7ec;
-    border-radius:14px;
-
-}
-
-.filaTema{
-
-    display:grid;
-    grid-template-columns:minmax(160px,2fr) minmax(80px,3fr) 48px;
-    align-items:center;
-    gap:14px;
-    margin-top:16px;
-
-}
-
-.temaFila strong,
-.temaFila span{
-
-    display:block;
-
-}
-
-.miniBarra{
-
-    height:10px;
-    overflow:hidden;
-    background:#e9ecef;
-    border-radius:20px;
-
-}
-
-.miniBarra span{
-
-    display:block;
-    height:100%;
-    border-radius:20px;
-    background:#0d6efd;
-
-}
-
-.listaEstadistica{
-
-    list-style:none;
-
-}
-
-.listaEstadistica li{
-
-    padding:14px 0;
-    border-bottom:1px solid #e9ecef;
-
-}
-
-.listaEstadistica li:last-child{
-
-    border-bottom:none;
-
-}
-
-.listaEstadistica li span{
-
-    display:block;
-    margin-top:5px;
-    color:#667085;
-    font-size:14px;
-
-}
-
-.estadoVacio{
-
-    padding:50px 20px;
-    text-align:center;
-    color:#667085;
-
-}
-
-.estadoVacio div{
-
-    font-size:48px;
-    margin-bottom:12px;
-
-}
-
-/*======================================================
-FOOTER
-======================================================*/
-
-footer{
-
-    text-align:center;
-
-    margin:40px;
-
-    color:#777;
-
-    font-size:15px;
-
-}
-
-/*======================================================
-MÓVIL
-======================================================*/
-
-@media(max-width:700px){
-
-    .contenedor{
-
-        width:96%;
-
-        padding:20px;
-
-    }
-
-    .header h1{
-
-        font-size:30px;
-
-    }
-
-    .infoInicio{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .infoBox{
-
-        width:100%;
-
-    }
-
-    .seccionApoyo{
-
-        flex-direction:column;
-        align-items:stretch;
-        padding:22px;
-
-    }
-
-    .qrApoyo{
-
-        flex-basis:auto;
-        width:min(250px,100%);
-        margin:0 auto;
-
-    }
-
-    .resumenEstadisticas{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .filaTema{
-
-        grid-template-columns:1fr 48px;
-
-    }
-
-    .miniBarra{
-
-        grid-column:1 / -1;
-        grid-row:2;
-
-    }
-
-}
+</html>
