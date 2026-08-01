@@ -352,7 +352,8 @@ const bancoPreguntas = [
         "Elevación de la glucemia plasmática"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El salbutamol estimula los receptores β₂-adrenérgicos, aumentando la glucogenólisis, la producción de lactato y la captación intracelular de potasio. No produce elevación del calcio sérico, por lo que este hallazgo es el menos esperable."
 },
 
 {
@@ -368,7 +369,8 @@ const bancoPreguntas = [
         "Montelukast"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El salbutamol es un agonista selectivo de los receptores β₂-adrenérgicos que activa la adenilato ciclasa, incrementando el AMPc en el músculo liso bronquial y produciendo broncodilatación rápida."
 },
 
 {
@@ -384,7 +386,8 @@ const bancoPreguntas = [
         "Ipratropio"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La teofilina inhibe la fosfodiesterasa y antagoniza los receptores de adenosina, aumentando el AMPc y bloqueando la acción depresora fisiológica de la adenosina sobre el sistema nervioso central, lo que explica el insomnio, la ansiedad y las palpitaciones."
 },
 
 {
@@ -400,7 +403,8 @@ const bancoPreguntas = [
         "Ciclooxigenasa-2"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "El zileutón inhibe la enzima 5-lipooxigenasa, disminuyendo la síntesis de leucotrienos derivados del ácido araquidónico y reduciendo el broncoespasmo y la inflamación de la vía aérea."
 },
 
 {
@@ -416,7 +420,8 @@ const bancoPreguntas = [
         "Teofilina"
     ],
 
-    correcta:3
+    correcta:3,
+    explicacion: "La teofilina incrementa el AMPc intracelular mediante inhibición de la fosfodiesterasa, produciendo broncodilatación sin actuar directamente sobre receptores adrenérgicos."
 },
 
 {
@@ -432,7 +437,8 @@ const bancoPreguntas = [
         "Gs"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El receptor H₁ de histamina está acoplado a la proteína Gq, cuya activación estimula la fosfolipasa C, incrementando la formación de IP₃ y DAG y aumentando la concentración intracelular de calcio."
 },
 
 {
@@ -448,7 +454,8 @@ const bancoPreguntas = [
         "Hidróxido de aluminio"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La lactulosa es fermentada por la microbiota intestinal formando ácidos orgánicos que acidifican el colon, favoreciendo la conversión del amoníaco (NH₃) en amonio (NH₄⁺), el cual queda atrapado en la luz intestinal y disminuye su absorción."
 },
 
 {
@@ -464,7 +471,8 @@ const bancoPreguntas = [
         "Tetraciclina"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El subsalicilato de bismuto ejerce actividad frente a Helicobacter pylori al inhibir la ureasa bacteriana, disminuyendo la producción de amoníaco y dificultando la supervivencia del microorganismo en el ambiente ácido gástrico."
 },
 
 {
@@ -480,7 +488,8 @@ const bancoPreguntas = [
         "Deficiencia de vitamina B12"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "El uso prolongado de inhibidores de la bomba de protones puede asociarse con deficiencia de vitamina B12, hipomagnesemia y aumento del riesgo de osteoporosis, pero no produce hipercalcemia."
 },
 
 {
@@ -496,7 +505,8 @@ const bancoPreguntas = [
         "Cimetidina"
     ],
 
-    correcta:0
+    correcta:0,
+    explicacion: "El pantoprazol presenta menor inhibición de las enzimas CYP2C19 y CYP2C9, por lo que tiene menor potencial de interacción con la warfarina y menor riesgo de alterar el INR."
 },
 
 {
@@ -512,7 +522,8 @@ const bancoPreguntas = [
         "Raloxifeno"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El ácido zoledrónico, un bisfosfonato intravenoso, puede producir nefrotoxicidad por lesión tubular aguda, especialmente cuando se administra rápidamente o en pacientes con insuficiencia renal previa."
 },
 
 {
@@ -528,7 +539,8 @@ const bancoPreguntas = [
         "Raloxifeno"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La teriparatida es un análogo de la PTH que incrementa la resorción ósea y eleva el calcio sérico, por lo que está contraindicada en pacientes con hipercalcemia o hiperparatiroidismo."
 },
 
 {
@@ -544,7 +556,8 @@ const bancoPreguntas = [
         "Inicio de acción rápido y duración corta"
     ],
 
-    correcta:3
+    correcta:3,
+    explicacion: "La insulina lispro posee una rápida absorción subcutánea por su menor tendencia a formar hexámeros, lo que permite controlar eficazmente la glucemia posprandial con una duración corta del efecto."
 },
 
 {
@@ -560,7 +573,8 @@ const bancoPreguntas = [
         "GLUT-3"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La unión de la insulina a su receptor tirosina quinasa activa la vía IRS-PI3K-Akt, promoviendo la translocación de transportadores GLUT-4 hacia la membrana de miocitos y adipocitos para aumentar la captación de glucosa."
 },
 
 {
@@ -576,7 +590,8 @@ const bancoPreguntas = [
         "Translocación de GLUT-4 hacia la membrana celular en músculo y tejido adiposo"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La insulina inhibe la gluconeogénesis hepática y favorece el almacenamiento de nutrientes mediante aumento de la síntesis de glucógeno, captación de glucosa y síntesis proteica."
 },
 
 {
@@ -592,7 +607,8 @@ const bancoPreguntas = [
         "Sitagliptina"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La glibenclamida bloquea los canales de potasio ATP-dependientes de la célula β pancreática, estimulando la liberación de insulina independientemente de la glucemia, lo que aumenta el riesgo de hipoglucemia."
 },
 
 {
@@ -608,7 +624,8 @@ const bancoPreguntas = [
         "Terapia intensiva con insulina basal-bolo"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "Las modificaciones del estilo de vida mejoran la sensibilidad a la insulina y constituyen la intervención inicial en pacientes con diabetes mellitus tipo 2 recientemente diagnosticada y sin síntomas catabólicos."
 },
 
 {
@@ -624,7 +641,8 @@ const bancoPreguntas = [
         "Glibenclamida"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La liraglutida es un agonista del receptor GLP-1 acoplado a proteína G que aumenta la secreción de insulina de forma dependiente de la glucosa, retrasa el vaciamiento gástrico y aumenta la saciedad."
 },
 
 {
@@ -640,7 +658,8 @@ const bancoPreguntas = [
         "Disminución de transferrina plasmática"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La vitamina B12 es cofactor de la metilmalonil-CoA mutasa. Su administración restaura esta vía metabólica, disminuyendo la concentración de ácido metilmalónico, metabolito cuya acumulación se relaciona con el daño neurológico."
 },
 
 {
@@ -656,7 +675,8 @@ const bancoPreguntas = [
         "Colecistectomía previa"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La epoetina alfa estimula la eritropoyesis aumentando la masa eritrocitaria y la viscosidad sanguínea, lo que incrementa el riesgo de eventos tromboembólicos, especialmente en pacientes con antecedentes de trombosis."
 },
 
 {
@@ -672,7 +692,8 @@ const bancoPreguntas = [
         "Subunidad ribosomal 50S"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "Mycoplasma pneumoniae carece de pared celular y, por tanto, no posee peptidoglicano. Los antibióticos β-lactámicos requieren esta estructura para ejercer su acción, motivo por el cual son ineficaces frente a este microorganismo."
 },
 
 {
@@ -688,7 +709,8 @@ const bancoPreguntas = [
         "Cefalexina"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La fosfomicina inhibe la enzima MurA, bloqueando la incorporación del fosfoenolpiruvato al UDP-N-acetilglucosamina, primer paso en la síntesis de los precursores del peptidoglicano."
 },
 
 {
@@ -704,7 +726,8 @@ const bancoPreguntas = [
         "Fosfomicina"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La bacitracina inhibe la desfosforilación del bactoprenol, impidiendo el transporte de los precursores del peptidoglicano desde el citoplasma hacia la superficie de la membrana bacteriana."
 },
 
 {
@@ -720,7 +743,8 @@ const bancoPreguntas = [
         "Transpeptidación mediada por PBP"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La vancomicina se une al extremo D-Ala-D-Ala de los precursores del peptidoglicano, bloqueando principalmente la reacción de transglicosidación e impidiendo el alargamiento de la pared bacteriana."
 },
 
 {
@@ -736,7 +760,8 @@ const bancoPreguntas = [
         "Rifaximina"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La trimetoprima inhibe la dihidrofolato reductasa bacteriana, bloqueando la conversión de dihidrofolato en tetrahidrofolato y disminuyendo la síntesis de purinas y timidina necesarias para la producción de ADN."
 },
 
 {
@@ -752,7 +777,8 @@ const bancoPreguntas = [
         "Células yuxtaglomerulares y miocitos cardíacos"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "Los aminoglucósidos se acumulan preferentemente en las células del túbulo proximal renal y en las células ciliadas del oído interno, explicando su nefrotoxicidad y ototoxicidad características."
 },
 
 {
@@ -768,7 +794,8 @@ const bancoPreguntas = [
         "Activación de toxinas citolíticas bacterianas por el antibiótico"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "Los antibióticos de amplio espectro alteran la microbiota intestinal normal, favoreciendo la proliferación de Clostridioides difficile y la producción de toxinas responsables de la colitis pseudomembranosa."
 },
 
 {
@@ -784,7 +811,8 @@ const bancoPreguntas = [
         "14-α-desmetilasa"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La terbinafina inhibe la escualeno epoxidasa, enzima que participa en una etapa temprana de la síntesis de ergosterol. Esto provoca acumulación de escualeno y alteración de la membrana celular del hongo."
 },
 
 {
@@ -800,7 +828,8 @@ const bancoPreguntas = [
         "Inhibición de la 14-α-desmetilasa dependiente de CYP450"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La terbinafina inhibe la escualeno epoxidasa, enzima que participa en una etapa temprana de la síntesis de ergosterol. Esto provoca acumulación de escualeno y alteración de la membrana celular del hongo."
 },
 
 {
@@ -816,7 +845,8 @@ const bancoPreguntas = [
         "Metformina"
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "El fluconazol inhibe la enzima CYP2C9, disminuyendo el metabolismo de la warfarina y aumentando su concentración plasmática, con incremento del INR y del riesgo de hemorragia."
 },
 
 {
@@ -832,7 +862,8 @@ const bancoPreguntas = [
         "Pirantel — Agonismo nicotínico con despolarización persistente de la placa neuromuscular."
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "La ivermectina activa los canales de cloro regulados por glutamato presentes en los helmintos, produciendo hiperpolarización de las células nerviosas y musculares, parálisis y muerte del parásito."
 },
 
 {
@@ -848,7 +879,8 @@ const bancoPreguntas = [
         "Benzoato de bencilo"
     ],
 
-    correcta:2
+    correcta:2,
+    explicacion: "El albendazol se une selectivamente a la β-tubulina del parásito, inhibiendo la polimerización de los microtúbulos, el transporte intracelular de vesículas y la captación de glucosa, lo que provoca la muerte del helminto."
 },
 
 {
@@ -864,7 +896,8 @@ const bancoPreguntas = [
         "Sobreexpresión de ADN polimerasa viral."
     ],
 
-    correcta:1
+    correcta:1,
+    explicacion: "La permetrina prolonga la apertura de los canales de sodio neuronales del artrópodo, produciendo despolarización persistente, parálisis y muerte del parásito."
 },
 
 {
@@ -880,7 +913,8 @@ const bancoPreguntas = [
         "Zidovudina"
     ],
 
-    correcta:1
+    correcta:1,
+ explicacion: "El aciclovir inhibe la ADN polimerasa viral únicamente durante la replicación del virus. En el estado de latencia no existe síntesis activa de ADN viral, por lo que el fármaco no puede erradicar el virus."
 },
 
 {
@@ -896,7 +930,8 @@ const bancoPreguntas = [
         "Antimonio tetravalente (Sb⁴⁺)."
     ],
 
-    correcta:1
+    correcta:1,
+  explicacion: "Los antimoniales pentavalentes actúan como profármacos y son reducidos intracelularmente a antimonio trivalente (Sb³⁺), metabolito responsable de la actividad leishmanicida al interferir con el metabolismo energético del parásito."
 },
 
 {
@@ -912,6 +947,7 @@ const bancoPreguntas = [
         "Tetraciclinas"
     ],
 
-    correcta:2
+    correcta:2,
+ explicacion: "Las fluoroquinolonas inhiben la ADN girasa y la topoisomerasa IV bacterianas, estabilizando el complejo ADN-enzima y produciendo roturas irreversibles del ADN que ocasionan la muerte bacteriana."
 },
-];
+]
