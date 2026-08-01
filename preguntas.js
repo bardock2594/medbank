@@ -1040,4 +1040,94 @@ const bancoPreguntas = [
     correcta:0,
     explicacion:"Los receptores α₁ están acoplados a proteína Gq; su bloqueo disminuye el calcio intracelular y favorece la relajación del músculo liso prostático y del cuello vesical."
 },
+
+{
+    id:67,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con diabetes mellitus recibe insulina. ¿Con cuál de los siguientes tipos de receptores se asocia su mecanismo de acción?",
+    opciones:["Receptor acoplado a proteína G.","Receptor tirosina quinasa.","Canal iónico dependiente de ligando.","Receptor intracelular nuclear."],
+    correcta:1,
+    explicacion:"El receptor de insulina posee actividad tirosina quinasa intrínseca y activa las vías PI3K/Akt y MAPK."
+},
+
+{
+    id:68,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con enfermedad de Graves recibe levotiroxina. ¿Con cuál de los siguientes tipos de receptores se asocia la acción de este fármaco?",
+    opciones:["Canal iónico dependiente de ligando.","Receptor acoplado a proteína G.","Receptor intracelular nuclear.","Receptor tirosina quinasa."],
+    correcta:2,
+    explicacion:"Las hormonas tiroideas atraviesan la membrana celular y regulan la transcripción génica mediante receptores nucleares."
+},
+
+{
+    id:69,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con asma recibe salbutamol inhalado. ¿Con cuál de los siguientes tipos de receptores se asocia su efecto broncodilatador?",
+    opciones:["Receptor intracelular nuclear.","Canal iónico dependiente de ligando.","Receptor tirosina quinasa.","Receptor acoplado a proteína G."],
+    correcta:3,
+    explicacion:"El receptor β₂ pertenece a la familia de receptores acoplados a proteína G y activa la proteína Gs."
+},
+
+{
+    id:70,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con miastenia gravis recibe neostigmina. El neurotransmisor acumulado actúa sobre un receptor presente en la placa neuromuscular. ¿Con cuál de los siguientes tipos de receptores se asocia este efecto?",
+    opciones:["Canal iónico dependiente de ligando.","Receptor tirosina quinasa.","Receptor intracelular nuclear.","Receptor acoplado a proteína G."],
+    correcta:0,
+    explicacion:"El receptor nicotínico muscular es un canal iónico activado por acetilcolina que permite la entrada de sodio."
+},
+
+{
+    id:71,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con acromegalia recibe pegvisomant. ¿Con cuál de los siguientes tipos de receptores se asocia el receptor de la hormona de crecimiento?",
+    opciones:["Receptor intracelular nuclear.","Receptor asociado a JAK/STAT.","Receptor acoplado a proteína G.","Canal iónico dependiente de ligando."],
+    correcta:1,
+    explicacion:"El receptor de hormona de crecimiento no posee actividad enzimática propia y transmite la señal mediante la vía JAK/STAT."
+},
+
+{
+    id:72,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con hipertensión recibe losartán. ¿Con cuál de los siguientes tipos de receptores se asocia el receptor AT₁ bloqueado por este fármaco?",
+    opciones:["Receptor tirosina quinasa.","Receptor intracelular nuclear.","Receptor acoplado a proteína G.","Canal iónico dependiente de ligando."],
+    correcta:2,
+    explicacion:"El receptor AT₁ pertenece a la familia de receptores acoplados a proteína G, específicamente a Gq."
+},
+
+{
+    id:73,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con hiperplasia prostática recibe tamsulosina. ¿Con cuál de los siguientes tipos de receptores se asocia el receptor bloqueado por este medicamento?",
+    opciones:["Canal iónico dependiente de ligando.","Receptor tirosina quinasa.","Receptor acoplado a proteína G.","Receptor intracelular nuclear."],
+    correcta:2,
+    explicacion:"Los receptores α₁ son receptores acoplados a proteína Gq que incrementan el calcio intracelular."
+},
+
+{
+    id:74,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con enfermedad inflamatoria recibe prednisona. ¿Con cuál de los siguientes tipos de receptores se asocia su mecanismo de acción?",
+    opciones:["Receptor tirosina quinasa.","Canal iónico dependiente de ligando.","Receptor acoplado a proteína G.","Receptor intracelular nuclear."],
+    correcta:3,
+    explicacion:"Los glucocorticoides atraviesan la membrana celular y modifican la expresión génica mediante receptores nucleares."
+},
+
+{
+    id:75,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con osteoporosis recibe denosumab. ¿Con cuál de los siguientes tipos de receptores se asocia RANK, blanco fisiológico de RANKL?",
+    opciones:["Receptor acoplado a proteína G.","Receptor asociado al TNF.","Receptor tirosina quinasa.","Canal iónico dependiente de ligando."],
+    correcta:1,
+    explicacion:"RANK pertenece a la superfamilia de receptores del factor de necrosis tumoral y participa en la diferenciación de osteoclastos."
+},
+
+{
+    id:76,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con artritis reumatoide recibe etanercept. ¿Con cuál de los siguientes tipos de receptores se asocia la molécula que normalmente reconoce al TNF-α?",
+    opciones:["Canal iónico dependiente de ligando.","Receptor tirosina quinasa.","Receptor asociado al TNF.","Receptor acoplado a proteína G."],
+    correcta:2,
+    explicacion:"El TNF-α ejerce sus efectos mediante receptores de la familia TNF, los cuales activan vías inflamatorias como NF-κB."
+},
 ]
