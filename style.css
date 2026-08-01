@@ -240,6 +240,88 @@ button:active{
 
 }
 
+/*======================================================
+APOYO VOLUNTARIO
+======================================================*/
+
+.seccionApoyo{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-top:35px;
+    padding:28px;
+    border:1px solid #ded1e9;
+    border-radius:18px;
+    background:linear-gradient(135deg,#faf7fd,#f2eafd);
+
+}
+
+.textoApoyo{
+
+    flex:1;
+
+}
+
+.etiquetaApoyo{
+
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#6f217c;
+    color:white;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+
+}
+
+.textoApoyo h3{
+
+    margin:12px 0 8px;
+    color:#54205f;
+    font-size:24px;
+
+}
+
+.notaApoyo{
+
+    margin-top:14px;
+    color:#5d5263;
+    font-size:14px;
+
+}
+
+.qrApoyo{
+
+    flex:0 0 190px;
+    margin:0;
+    padding:10px;
+    border-radius:14px;
+    background:white;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(81,28,92,.12);
+
+}
+
+.qrApoyo img{
+
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:8px;
+
+}
+
+.qrApoyo figcaption{
+
+    margin-top:8px;
+    color:#54205f;
+    font-size:13px;
+    font-weight:600;
+
+}
+
 .botonSecundario{
 
     background:#6c757d;
@@ -645,6 +727,22 @@ MÓVIL
 
     }
 
+    .seccionApoyo{
+
+        flex-direction:column;
+        align-items:stretch;
+        padding:22px;
+
+    }
+
+    .qrApoyo{
+
+        flex-basis:auto;
+        width:min(250px,100%);
+        margin:0 auto;
+
+    }
+
     .resumenEstadisticas{
 
         grid-template-columns:1fr;
@@ -665,3 +763,4 @@ MÓVIL
     }
 
 }
+
