@@ -950,4 +950,94 @@ const bancoPreguntas = [
     correcta:2,
  explicacion: "Las fluoroquinolonas inhiben la ADN girasa y la topoisomerasa IV bacterianas, estabilizando el complejo ADN-enzima y produciendo roturas irreversibles del ADN que ocasionan la muerte bacteriana."
 },
+
+{
+    id:57,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con asma recibe salbutamol inhalado. ¿Con cuál de los siguientes segundos mensajeros se asocia el efecto broncodilatador de este fármaco?",
+    opciones:["AMPc.","GMPc.","IP₃.","DAG."],
+    correcta:0,
+    explicacion:"Los receptores β₂ se encuentran acoplados a proteína Gs, activan la adenilato ciclasa, aumentan el AMPc y producen relajación del músculo liso bronquial."
+},
+
+{
+    id:58,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con anafilaxia recibe adrenalina. ¿Con cuál de las siguientes proteínas G se asocia la vasoconstricción producida por la activación del receptor α₁?",
+    opciones:["Gq.","Gs.","Gi.","G12."],
+    correcta:0,
+    explicacion:"El receptor α₁ está acoplado a proteína Gq, la cual activa la fosfolipasa C y aumenta IP₃ y DAG, incrementando el calcio intracelular y produciendo contracción del músculo liso vascular."
+},
+
+{
+    id:59,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con enfermedad de Parkinson recibe bromocriptina. ¿Con cuál de las siguientes proteínas G se asocia el receptor dopaminérgico D₂?",
+    opciones:["Gi.","Gq.","Gs.","G12."],
+    correcta:0,
+    explicacion:"Los receptores D₂ están acoplados a proteína Gi, inhiben la adenilato ciclasa y disminuyen la concentración intracelular de AMPc."
+},
+
+{
+    id:60,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con diabetes mellitus recibe insulina. ¿Con cuál de los siguientes tipos de receptores se asocia el mecanismo de acción de esta hormona?",
+    opciones:["Receptor tirosina quinasa.","Receptor acoplado a proteína G.","Canal iónico dependiente de ligando.","Receptor nuclear."],
+    correcta:0,
+    explicacion:"El receptor de insulina posee actividad tirosina quinasa intrínseca y activa la vía PI3K/Akt, promoviendo la translocación de GLUT-4."
+},
+
+{
+    id:61,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con hipotiroidismo recibe levotiroxina. ¿Con cuál de los siguientes tipos de receptores se asocia el mecanismo de acción de este fármaco?",
+    opciones:["Receptor nuclear.","Receptor tirosina quinasa.","Receptor acoplado a proteína G.","Canal iónico."],
+    correcta:0,
+    explicacion:"Las hormonas tiroideas atraviesan la membrana celular y se unen a receptores nucleares que regulan la transcripción génica."
+},
+
+{
+    id:62,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con úlcera péptica recibe pantoprazol. ¿Con cuál de las siguientes proteínas G se asocia el receptor H₂ que normalmente estimula la secreción de ácido gástrico?",
+    opciones:["Gs.","Gi.","Gq.","Go."],
+    correcta:0,
+    explicacion:"El receptor H₂ está acoplado a proteína Gs, aumenta el AMPc y estimula la secreción de ácido por la célula parietal."
+},
+
+{
+    id:63,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con glaucoma recibe pilocarpina. ¿Con cuál de las siguientes proteínas G se asocia el receptor muscarínico M₃ responsable de su efecto?",
+    opciones:["Gq.","Gi.","Gs.","G12."],
+    correcta:0,
+    explicacion:"El receptor M₃ activa proteína Gq, incrementando IP₃, DAG y calcio intracelular, lo que favorece la contracción del músculo ciliar."
+},
+
+{
+    id:64,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con insuficiencia cardíaca recibe dobutamina. ¿Con cuál de los siguientes segundos mensajeros se asocia el aumento de la contractilidad cardíaca mediado por receptores β₁?",
+    opciones:["AMPc.","GMPc.","IP₃.","DAG."],
+    correcta:0,
+    explicacion:"Los receptores β₁ activan proteína Gs, aumentan el AMPc y favorecen la entrada de calcio al miocito, incrementando la fuerza de contracción."
+},
+
+{
+    id:65,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con hipertensión recibe losartán. ¿Con cuál de las siguientes proteínas G se asocia el receptor AT₁ de angiotensina II sobre el que actúa este fármaco?",
+    opciones:["Gq.","Gi.","Gs.","Go."],
+    correcta:0,
+    explicacion:"El receptor AT₁ está acoplado a proteína Gq, promoviendo aumento de calcio intracelular y vasoconstricción."
+},
+
+{
+    id:66,
+    tema:"Ciencias Básicas: Receptores y Segundos Mensajeros",
+    pregunta:"Paciente con hiperplasia prostática benigna recibe tamsulosina. ¿Con cuál de las siguientes proteínas G se asocia el receptor α₁ bloqueado por este medicamento?",
+    opciones:["Gq.","Gi.","Gs.","G12."],
+    correcta:0,
+    explicacion:"Los receptores α₁ están acoplados a proteína Gq; su bloqueo disminuye el calcio intracelular y favorece la relajación del músculo liso prostático y del cuello vesical."
+},
 ]
