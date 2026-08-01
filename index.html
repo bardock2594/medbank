@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BankMed</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!--========================================-->
+    <!-- ENCABEZADO -->
+    <!--========================================-->
+
+    <header class="header">
+
+        <h1>🩺 BankMed</h1>
+
+        <p>Banco Inteligente de Preguntas Médicas</p>
+
+    </header>
+
+
+    <!--========================================-->
+    <!-- PANTALLA DE INICIO -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaInicio">
+
+        <h2>Bienvenido</h2>
+
+        <p>
+
+            Aprende farmacología resolviendo preguntas tipo
+            ENAM y Residentado Médico.
+
+        </p>
+
+        <div class="infoInicio">
+
+            <button class="infoBox accionPrincipal" id="btnEstudiar">
+                <span class="iconoAccion">📚</span>
+                <strong>Practicar por tema</strong>
+                <span>Elige un tema y pon a prueba tus conocimientos.</span>
+            </button>
+
+            <button class="infoBox" id="btnAprender">
+                <span class="iconoAccion">📝</span>
+                <strong>Simulacro de examen</strong>
+                <span>Resuelve 20 preguntas aleatorias de todo el banco.</span>
+            </button>
+
+            <button class="infoBox" id="btnEstadisticas">
+                <span class="iconoAccion">📊</span>
+                <strong>Ver mi progreso</strong>
+                <span>Revisa tus aciertos, temas y preguntas por reforzar.</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!--========================================-->
+    <!-- SELECCIÓN -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaSeleccion" style="display:none;">
+
+        <h2>Selecciona un tema</h2>
+
+        <br>
+
+        <label>
+
+            📚 Tema
+
+        </label>
+
+        <br><br>
+
+        <select id="sistema">
+
+        </select>
+
+        <br><br><br>
+
+        <label>
+
+            🎯 Cantidad de preguntas
+
+        </label>
+
+        <br><br>
+
+        <select id="cantidad">
+
+            <option value="10">10 preguntas</option>
+
+            <option value="20">20 preguntas</option>
+
+            <option value="50">50 preguntas</option>
+
+            <option value="Todas">Todas las preguntas</option>
+
+        </select>
+
+        <br><br><br>
+
+        <button id="btnIniciar">
+
+            ▶ Iniciar examen
+
+        </button>
+
+    </div>
+
+
+    <!--========================================-->
+    <!-- EXAMEN -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaPregunta" style="display:none;">
+
+        <div class="barra">
+
+            <div id="barraProgreso"></div>
+
+        </div>
+
+        <h3 id="progreso">
+
+            Pregunta 1 de 10
+
+        </h3>
+
+        <hr>
+
+        <h2 id="textoPregunta">
+
+        </h2>
+
+        <br>
+
+        <div id="opciones">
+
+        </div>
+
+        <br>
+
+        <div id="explicacion" style="display:none;">
+
+            <h3>
+
+                🧠 Fundamento farmacológico
+
+            </h3>
+
+            <p id="textoExplicacion">
+
+            </p>
+
+        </div>
+
+        <br>
+
+        <button id="btnResponder">
+
+            Responder
+
+        </button>
+
+    </div>
+
+
+    <!--========================================-->
+    <!-- RESULTADOS -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaResultados" style="display:none;">
+
+        <h1>
+
+            🎉 Examen finalizado
+
+        </h1>
+
+        <br>
+
+        <div class="tarjetaResultado">
+
+            <h2 id="resultadoPuntaje">
+
+                18 / 20
+
+            </h2>
+
+            <h3 id="resultadoPorcentaje">
+
+                90 %
+
+            </h3>
+
+            <p id="resultadoCorrectas">
+
+                ✅ Correctas: 18
+
+            </p>
+
+            <p id="resultadoIncorrectas">
+
+                ❌ Incorrectas: 2
+
+            </p>
+
+            <h3 id="mensajeResultado">
+
+                🎯 Muy buen desempeño
+
+            </h3>
+
+        </div>
+
+        <br>
+
+        <button id="btnRevisar">
+
+            📖 Revisar preguntas equivocadas
+
+        </button>
+
+        <button id="btnReintentar">
+
+            🔄 Reintentar preguntas equivocadas
+
+        </button>
+
+        <button id="btnNuevoExamen">
+
+            🎲 Nuevo examen
+
+        </button>
+
+        <button id="btnVolverInicio">
+
+            🏠 Inicio
+
+        </button>
+
+    </div>
+
+    <div class="contenedor" id="pantallaEstadisticas" style="display:none;">
+
+        <h2>📈 Tus estadísticas</h2>
+        <p>Tu progreso se guarda únicamente en este navegador.</p>
+
+        <div id="contenidoEstadisticas"></div>
+
+        <button id="btnVolverEstadisticas">🏠 Volver al inicio</button>
+        <button id="btnBorrarEstadisticas" class="botonSecundario">🗑️ Borrar historial</button>
+
+    </div>
+
+
+    <!--========================================-->
+    <!-- PIE -->
+    <!--========================================-->
+
+    <footer>
+
+        BankMed v1.0
+
+        <br>
+
+        © 2026
+
+        <br>
+
+        Desarrollado por Dr. Julián Espinoza
+
+        <br><br>
+
+        <small>Uso educativo. No sustituye guías clínicas actualizadas ni el juicio profesional.</small>
+
+    </footer>
+
+
+    <!--========================================-->
+    <!-- JAVASCRIPT -->
+    <!--========================================-->
+
+    <script src="preguntas.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,667 @@
+/*======================================================
+BANKMED v1.0
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+
+    background:#eef3f8;
+
+    color:#2c3e50;
+
+}
+
+/*======================================================
+HEADER
+======================================================*/
+
+.header{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+
+}
+
+.header h1{
+
+    font-size:42px;
+
+}
+
+.header p{
+
+    margin-top:8px;
+
+    opacity:.9;
+
+}
+
+/*======================================================
+CONTENEDOR
+======================================================*/
+
+.contenedor{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+}
+
+/*======================================================
+TÍTULOS
+======================================================*/
+
+h1,h2,h3{
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    line-height:1.6;
+
+}
+
+/*======================================================
+TARJETAS DE INICIO
+======================================================*/
+
+.infoInicio{
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.infoBox{
+
+    width:180px;
+
+    background:#f8f9fa;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+    color:#2c3e50;
+
+    /* Sobrescribe el estilo general de botones para usar tarjetas compactas. */
+    margin-top:0;
+    border:1px solid #d8dee6;
+
+}
+
+.infoBox:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/*======================================================
+BOTONES
+======================================================*/
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    background:#0b5ed7;
+
+    box-shadow:0 8px 15px rgba(13,110,253,.3);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+.infoBox:focus-visible{
+
+    outline:3px solid #0d6efd;
+    outline-offset:3px;
+
+}
+
+.infoBox strong,
+.infoBox span{
+
+    display:block;
+
+}
+
+.infoBox strong{
+
+    margin:8px 0;
+    font-size:17px;
+
+}
+
+.infoBox span:not(.iconoAccion){
+
+    color:#667085;
+    font-size:13px;
+    line-height:1.4;
+
+}
+
+.infoBox .iconoAccion{
+
+    font-size:28px;
+
+}
+
+.infoBox.accionPrincipal{
+
+    background:#0d6efd;
+    border-color:#0d6efd;
+    color:white;
+
+}
+
+.infoBox.accionPrincipal span:not(.iconoAccion){
+
+    color:#e7f0ff;
+
+}
+
+.infoBox.accionPrincipal:hover{
+
+    background:#0b5ed7;
+    border-color:#0b5ed7;
+
+}
+
+.botonSecundario{
+
+    background:#6c757d;
+
+}
+
+.botonSecundario:hover{
+
+    background:#5c636a;
+
+    box-shadow:0 8px 15px rgba(108,117,125,.3);
+
+}
+
+/*======================================================
+SELECT
+======================================================*/
+
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    outline:none;
+
+}
+
+/*======================================================
+PREGUNTA
+======================================================*/
+
+#textoPregunta{
+
+    margin-top:20px;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+
+}
+
+/*======================================================
+OPCIONES
+======================================================*/
+
+#opciones label{
+
+    display:block;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border:2px solid #dee2e6;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.20s;
+
+    font-size:18px;
+
+}
+
+#opciones label:hover{
+
+    background:#eef5ff;
+
+    border-color:#0d6efd;
+
+}
+
+#opciones input{
+
+    margin-right:12px;
+
+}
+
+/*======================================================
+RESPUESTA CORRECTA
+======================================================*/
+
+.correcta{
+
+    background:#d1e7dd !important;
+
+    border-color:#198754 !important;
+
+}
+
+/*======================================================
+RESPUESTA INCORRECTA
+======================================================*/
+
+.incorrecta{
+
+    background:#f8d7da !important;
+
+    border-color:#dc3545 !important;
+
+}
+
+/*======================================================
+EXPLICACIÓN
+======================================================*/
+
+#explicacion{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    background:#f8f9fa;
+
+    border-left:6px solid #0d6efd;
+
+}
+
+#textoExplicacion{
+
+    margin-top:15px;
+
+    line-height:1.8;
+
+}
+
+/*======================================================
+BARRA DE PROGRESO
+======================================================*/
+
+.barra{
+
+    width:100%;
+
+    height:14px;
+
+    background:#e9ecef;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+}
+
+#barraProgreso{
+
+    width:0%;
+
+    height:100%;
+
+    background:#0d6efd;
+
+    transition:.4s;
+
+}
+
+/*======================================================
+RESULTADOS
+======================================================*/
+
+.tarjetaResultado{
+
+    text-align:center;
+
+    background:#f8f9fa;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+}
+
+#resultadoPuntaje{
+
+    font-size:48px;
+
+    color:#0d6efd;
+
+}
+
+#resultadoPorcentaje{
+
+    font-size:60px;
+
+    margin:20px 0;
+
+}
+
+#resultadoCorrectas{
+
+    color:#198754;
+
+    font-size:20px;
+
+    margin-top:12px;
+
+}
+
+#resultadoIncorrectas{
+
+    color:#dc3545;
+
+    font-size:20px;
+
+    margin-top:8px;
+
+}
+
+#mensajeResultado{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+}
+
+/*======================================================
+ESTADÍSTICAS
+======================================================*/
+
+.resumenEstadisticas{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+
+}
+
+.datoEstadistica{
+
+    background:#eef5ff;
+    border-radius:14px;
+    padding:20px 12px;
+    text-align:center;
+
+}
+
+.datoEstadistica strong{
+
+    display:block;
+    color:#0d6efd;
+    font-size:30px;
+
+}
+
+.datoEstadistica span,
+.temaFila span{
+
+    color:#667085;
+    font-size:14px;
+
+}
+
+.bloqueEstadistica{
+
+    margin:25px 0;
+    padding:22px;
+    border:1px solid #e4e7ec;
+    border-radius:14px;
+
+}
+
+.filaTema{
+
+    display:grid;
+    grid-template-columns:minmax(160px,2fr) minmax(80px,3fr) 48px;
+    align-items:center;
+    gap:14px;
+    margin-top:16px;
+
+}
+
+.temaFila strong,
+.temaFila span{
+
+    display:block;
+
+}
+
+.miniBarra{
+
+    height:10px;
+    overflow:hidden;
+    background:#e9ecef;
+    border-radius:20px;
+
+}
+
+.miniBarra span{
+
+    display:block;
+    height:100%;
+    border-radius:20px;
+    background:#0d6efd;
+
+}
+
+.listaEstadistica{
+
+    list-style:none;
+
+}
+
+.listaEstadistica li{
+
+    padding:14px 0;
+    border-bottom:1px solid #e9ecef;
+
+}
+
+.listaEstadistica li:last-child{
+
+    border-bottom:none;
+
+}
+
+.listaEstadistica li span{
+
+    display:block;
+    margin-top:5px;
+    color:#667085;
+    font-size:14px;
+
+}
+
+.estadoVacio{
+
+    padding:50px 20px;
+    text-align:center;
+    color:#667085;
+
+}
+
+.estadoVacio div{
+
+    font-size:48px;
+    margin-bottom:12px;
+
+}
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+    text-align:center;
+
+    margin:40px;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/*======================================================
+MÓVIL
+======================================================*/
+
+@media(max-width:700px){
+
+    .contenedor{
+
+        width:96%;
+
+        padding:20px;
+
+    }
+
+    .header h1{
+
+        font-size:30px;
+
+    }
+
+    .infoInicio{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .infoBox{
+
+        width:100%;
+
+    }
+
+    .resumenEstadisticas{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .filaTema{
+
+        grid-template-columns:1fr 48px;
+
+    }
+
+    .miniBarra{
+
+        grid-column:1 / -1;
+        grid-row:2;
+
+    }
+
+}
