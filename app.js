@@ -20,6 +20,7 @@ let temaSesion = "";
 let cursoSeleccionado = "";
 
 const CLAVE_ESTADISTICAS = "bankmed_estadisticas_v1";
+const CLAVE_NOMBRE_USUARIO = "bankmed_nombre_usuario";
 
 // Mantiene visibles los subtemas planificados aunque todavía no tengan preguntas.
 const SUBTEMAS_PLANIFICADOS = {
@@ -113,6 +114,27 @@ document.getElementById("btnSimulacroInicio");
 const botonesCurso =
 document.querySelectorAll(".cursoDisponible");
 
+const mascotaSaludo =
+document.getElementById("mascotaSaludo");
+
+const mensajeMascota =
+document.getElementById("mensajeMascota");
+
+const btnMascota =
+document.getElementById("btnMascota");
+
+const modalNombre =
+document.getElementById("modalNombre");
+
+const inputNombre =
+document.getElementById("inputNombre");
+
+const btnGuardarNombre =
+document.getElementById("btnGuardarNombre");
+
+const btnOmitirNombre =
+document.getElementById("btnOmitirNombre");
+
 //===============================
 // CONTROLES
 //===============================
@@ -185,6 +207,100 @@ function iniciarAplicacion(){
     cargarTemas();
 
     mostrarPantalla("inicio");
+
+    configurarMascota();
+
+}
+
+function configurarMascota(){
+
+    const nombreGuardado=localStorage.getItem(CLAVE_NOMBRE_USUARIO);
+
+    actualizarSaludoMascota(nombreGuardado);
+
+    if(!nombreGuardado){
+
+        mostrarModalNombre();
+
+    }
+
+    btnMascota.onclick=function(){
+
+        const nombre=localStorage.getItem(CLAVE_NOMBRE_USUARIO);
+
+        if(!nombre){
+
+            mostrarModalNombre();
+            return;
+
+        }
+
+        mascotaSaludo.classList.toggle("mascotaAbierta");
+
+    };
+
+    btnGuardarNombre.onclick=guardarNombreUsuario;
+
+    btnOmitirNombre.onclick=function(){
+
+        cerrarModalNombre();
+        mensajeMascota.textContent="¡Hola! Soy Guilbert. Cuando quieras, toca mi patita para saludar.";
+
+    };
+
+    inputNombre.addEventListener("keydown",function(evento){
+
+        if(evento.key==="Enter"){
+
+            guardarNombreUsuario();
+
+        }
+
+    });
+
+}
+
+function actualizarSaludoMascota(nombre){
+
+    mensajeMascota.textContent=nombre
+        ? "¡Hola, "+nombre+"! Soy Guilbert. ¿Listo para aprender hoy?"
+        : "¡Hola! Soy Guilbert. ¿Cómo te llamas?";
+
+}
+
+function mostrarModalNombre(){
+
+    modalNombre.style.display="flex";
+    mascotaSaludo.classList.add("mascotaAbierta");
+
+    setTimeout(function(){
+
+        inputNombre.focus();
+
+    },100);
+
+}
+
+function cerrarModalNombre(){
+
+    modalNombre.style.display="none";
+
+}
+
+function guardarNombreUsuario(){
+
+    const nombre=inputNombre.value.trim().replace(/\s+/g," ").slice(0,30);
+
+    if(!nombre){
+
+        inputNombre.focus();
+        return;
+
+    }
+
+    localStorage.setItem(CLAVE_NOMBRE_USUARIO,nombre);
+    actualizarSaludoMascota(nombre);
+    cerrarModalNombre();
 
 }
 
