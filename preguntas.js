@@ -23,7 +23,7 @@ const bancoPreguntas = [
     pregunta:"Paciente sometido a endoscopia digestiva recibe un sedante que aumenta la frecuencia de apertura del canal de cloro asociado al receptor GABA-A. Posteriormente desarrolla depresión excesiva del nivel de conciencia y se administra un antagonista específico. ¿Cuál es el fármaco utilizado?",
 
     opciones:[
-        "Sugammadex"
+        "Sugammadex",
         "Naloxona",
         "Flumazenil",
         "Neostigmina"
@@ -1129,5 +1129,383 @@ const bancoPreguntas = [
     opciones:["Canal iónico dependiente de ligando.","Receptor tirosina quinasa.","Receptor asociado al TNF.","Receptor acoplado a proteína G."],
     correcta:2,
     explicacion:"El TNF-α ejerce sus efectos mediante receptores de la familia TNF, los cuales activan vías inflamatorias como NF-κB."
+},
+
+{
+    id:77,
+    tema:"Anatomía: Tórax",
+    pregunta:"Joven de 17 años, atendida en emergencia por cuadro de exacerbación asmática caracterizado por broncoconstricción y aumento de secreciones. ¿Qué nervio aporta las fibras preganglionares al plexo pulmonar que produce los hallazgos del caso?",
+    opciones:["Vago","Ramos simpáticos","Esplácnico mayor","Frénico"],
+    correcta:0,
+    explicacion:"El nervio vago aporta fibras parasimpáticas preganglionares al plexo pulmonar. Su activación produce broncoconstricción y aumenta la secreción de las glándulas bronquiales. Las fibras simpáticas, por el contrario, favorecen broncodilatación."
+},
+
+{
+    id:78,
+    tema:"Anatomía: Tórax",
+    pregunta:"Mujer de 45 años presenta un tumor maligno de 1,5 cm localizado en el cuadrante superior interno de la mama derecha. ¿Hacia qué grupo de nódulos linfáticos drena más probablemente de manera inicial?",
+    opciones:["Paraesternales","Axilares nivel II","Axilares nivel I","Frénicos inferiores"],
+    correcta:0,
+    explicacion:"Los cuadrantes mediales de la mama drenan principalmente hacia los nódulos paraesternales, situados a lo largo de los vasos torácicos internos."
+},
+
+{
+    id:79,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Un paciente con prostatitis obstructiva presenta reducción del volumen seminal. ¿Qué conducto está más afectado?",
+    opciones:["Eyaculador","Deferente","Seminífero","Epididimario"],
+    correcta:0,
+    explicacion:"Los conductos eyaculadores atraviesan la próstata y desembocan en la uretra prostática. Una obstrucción puede impedir la salida de las secreciones de vesículas seminales y del esperma."
+},
+
+{
+    id:80,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Mujer de 19 años llevada a emergencia por dolor intenso en la fosa iliaca izquierda. Ecografía: quiste anexial izquierdo a pedículo torcido. Durante la cirugía encuentran el ovario izquierdo necrosado por compromiso de la arteria ovárica. ¿A través de qué ligamento ingresa la arteria hacia el ovario?",
+    opciones:["Suspensorio del ovario","Ancho del útero","Redondo del útero","Propio del ovario"],
+    correcta:0,
+    explicacion:"La arteria ovárica llega al ovario a través del ligamento suspensorio del ovario, también llamado ligamento infundibulopélvico."
+},
+
+{
+    id:81,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Varón de 34 años se queja de hiperacusia después de una infección de oído medio. ¿Qué nervio es el lesionado y produce parálisis del músculo que amortigua la transmisión del sonido?",
+    opciones:["Vago","Estapedio","Accesorio","Hipogloso"],
+    correcta:1,
+    explicacion:"El nervio para el músculo estapedio es una rama del nervio facial. El estapedio reduce las vibraciones excesivas del estribo; su parálisis genera hiperacusia."
+},
+
+{
+    id:82,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Niño de 7 años presenta ronquidos nocturnos, otitis media recurrente y respiración exclusivamente por la boca. ¿Qué estructura se encuentra hipertrofiada?",
+    opciones:["Amígdala palatina","Rodete tubárico","Adenoides","Amígdala lingual"],
+    correcta:2,
+    explicacion:"Las adenoides corresponden a la amígdala faríngea. Su hipertrofia obstruye la vía aérea nasal y puede bloquear la abertura de la trompa auditiva, predisponiendo a otitis media recurrente."
+},
+
+{
+    id:83,
+    tema:"Anatomía: Cuello",
+    pregunta:"Varón de 54 años presenta una espina de pescado enclavada en la mucosa de la fosa piriforme izquierda. Al extraerla se lesiona una estructura nerviosa que discurre inmediatamente profunda. ¿Cuál nervio fue lesionado con mayor probabilidad?",
+    opciones:["Glosofaríngeo","Frénico","Laríngeo recurrente","Laríngeo superior"],
+    correcta:3,
+    explicacion:"La rama interna del nervio laríngeo superior proporciona sensibilidad a la mucosa supraglótica, incluida la región cercana a la fosa piriforme."
+},
+
+{
+    id:84,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 60 años con cefalea intensa presenta un hematoma pequeño localizado en el mesencéfalo. ¿Cuál estructura se encuentra en esa región?",
+    opciones:["Hipotálamo","Cuerpo geniculado lateral","Piso del cuarto ventrículo","Lámina cuadrigémina"],
+    correcta:3,
+    explicacion:"La lámina cuadrigémina forma parte de la cara posterior del mesencéfalo y está constituida por los colículos superiores e inferiores."
+},
+
+{
+    id:85,
+    tema:"Anatomía: Locomotor",
+    pregunta:"Varón de 18 años sufre una caída y presenta dolor a la flexión y dificultad para la rotación interna de la rodilla flexionada. ¿Qué tendón se encuentra afectado?",
+    opciones:["Bíceps femoral","Pata de ganso","Cintilla iliotibial","Vasto medial"],
+    correcta:1,
+    explicacion:"La pata de ganso está formada por los tendones de sartorio, grácil y semitendinoso. Estos músculos contribuyen a la flexión y rotación interna de la rodilla."
+},
+
+{
+    id:86,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 24 años sufre traumatismo encéfalo craneano y presenta ceguera total unilateral del ojo izquierdo. ¿Qué estructura fue lesionada y en qué localización?",
+    opciones:["Corteza visual en lóbulo occipital derecho","Nervio óptico izquierdo en el canal óptico","Quiasma óptico en la silla turca","Cintilla óptica derecha en el tálamo"],
+    correcta:1,
+    explicacion:"La lesión completa del nervio óptico izquierdo antes del quiasma produce pérdida total de visión del ojo izquierdo."
+},
+
+{
+    id:87,
+    tema:"Anatomía: Abdomen",
+    pregunta:"Varón de 35 años presenta hematemesis y melena. La endoscopía muestra una úlcera en la pared posterior del bulbo duodenal. ¿Qué arteria tiene alto riesgo de lesión?",
+    opciones:["Pancreática duodenal inferior","Gastroduodenal","Mesentérica superior","Gastroepiploica izquierda"],
+    correcta:1,
+    explicacion:"La arteria gastroduodenal discurre posteriormente a la primera porción del duodeno. Una úlcera posterior del bulbo puede erosionarla y causar hemorragia digestiva alta."
+},
+
+{
+    id:88,
+    tema:"Anatomía: Retroperitoneo",
+    pregunta:"Mujer de 68 años presenta un cálculo en uréter derecho. ¿En cuál localización es más frecuente que se impacte el cálculo?",
+    opciones:["Cáliz mayor","Unión uretero-vesical","Entre el borde pélvico y vasos ilíacos","Porción media de uréter"],
+    correcta:1,
+    explicacion:"La unión ureterovesical es uno de los estrechamientos fisiológicos del uréter y el sitio más frecuente de impactación de cálculos."
+},
+
+{
+    id:89,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Mujer de 38 años multípara presenta incontinencia urinaria de esfuerzo desde su último parto vaginal. ¿Qué músculo pélvico es el más probablemente lesionado?",
+    opciones:["Piriforme","Elevador del ano","Coccígeo","Obturador interno"],
+    correcta:1,
+    explicacion:"El elevador del ano es el principal componente muscular del diafragma pélvico. Sostiene las vísceras pélvicas y ayuda a mantener la continencia urinaria."
+},
+
+{
+    id:90,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Varón de 69 años presenta disfunción eréctil seis meses después de una prostatectomía radical. ¿Cuál nervio ha sido dañado probablemente?",
+    opciones:["Dorsal del pene","Esplácnico sacro","Esplácnico pélvico","Perianal"],
+    correcta:2,
+    explicacion:"La erección depende principalmente de las fibras parasimpáticas de los nervios esplácnicos pélvicos, de S2 a S4, que discurren cerca de la próstata."
+},
+
+{
+    id:91,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Mujer de 40 años no puede dirigir la mirada de su ojo derecho lateralmente. ¿Cuál es el nervio afectado con mayor probabilidad?",
+    opciones:["Troclear","Óptico","Abducens","Oculomotor"],
+    correcta:2,
+    explicacion:"El nervio abducens, sexto par craneal, inerva al músculo recto lateral. Su lesión impide la abducción del ojo afectado."
+},
+
+{
+    id:92,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 75 años presenta hemianopsia homónima derecha y defecto pupilar aferente relativo en el ojo derecho. ¿En qué nivel de la vía visual se localiza más probablemente la lesión?",
+    opciones:["Radiaciones ópticas izquierdas","Tracto óptico izquierdo","Radiaciones ópticas derechas","Tracto óptico derecho"],
+    correcta:1,
+    explicacion:"Una lesión del tracto óptico izquierdo ocasiona hemianopsia homónima derecha y puede causar un defecto pupilar aferente relativo contralateral."
+},
+
+{
+    id:93,
+    tema:"Anatomía: Tórax",
+    pregunta:"Mujer de 41 años sufre traumatismo cerrado de tórax por impacto del esternón contra el volante. Presenta derrame pericárdico y taponamiento cardiaco. ¿Qué estructura es más probable que se haya lesionado?",
+    opciones:["Pared del ventrículo derecho","Borde obtuso del ventrículo izquierdo","Punta del ventrículo izquierdo","Aurícula derecha"],
+    correcta:0,
+    explicacion:"El ventrículo derecho forma la mayor parte de la superficie anterior del corazón y es la cámara más próxima al esternón."
+},
+
+{
+    id:94,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Varón de 22 años presenta hematoma epidural tras traumatismo cráneo encefálico. El vaso lesionado se origina de la arteria maxilar e ingresa al cráneo por el agujero espinoso. ¿Cuál es esa arteria?",
+    opciones:["Meníngea accesoria","Temporal profunda anterior","Meníngea media","Facial transversa"],
+    correcta:2,
+    explicacion:"La arteria meníngea media es una rama de la arteria maxilar que entra a la cavidad craneal por el agujero espinoso. Su ruptura es una causa clásica de hematoma epidural."
+},
+
+{
+    id:95,
+    tema:"Embriología: Desarrollo embrionario temprano y teratología",
+    pregunta:"Gestante de 9 semanas. La ecografía muestra gemelos con un solo saco coriónico y dos sacos amnióticos. ¿Cuál es la causa más probable?",
+    opciones:["División del cigoto después del día catorce post-fertilización","División del embrión entre días cuatro y ocho post-fertilización","División del embrión entre días nueve y doce post-fertilización","División del embrión antes del segundo día post-fertilización"],
+    correcta:1,
+    explicacion:"La división entre los días 4 y 8 ocurre después de la formación del corion, pero antes de la formación del amnios. Por ello, los gemelos resultantes son monocoriónicos y diamnióticos."
+},
+
+{
+    id:96,
+    tema:"Embriología: Desarrollo embrionario temprano y teratología",
+    pregunta:"Recién nacido con antecedente de exposición a teratógeno en la semana 5 presenta defectos cardíacos. ¿Qué proceso explica la alta vulnerabilidad en esta etapa?",
+    opciones:["Organogénesis activa con diferenciación acelerada de tejidos","Migración reducida de células germinales primordiales","Gastrulación tardía con formación lenta del mesodermo","Implantación incompleta con trofoblasto poco funcional"],
+    correcta:0,
+    explicacion:"Entre las semanas 3 y 8 ocurre la organogénesis, periodo de máxima susceptibilidad a teratógenos. Una agresión durante la semana 5 puede ocasionar malformaciones estructurales graves."
+},
+
+{
+    id:97,
+    tema:"Embriología: Desarrollo de extremidades",
+    pregunta:"Recién nacido con defectos en las extremidades presenta una alteración en FGF8. ¿Qué función cumple este factor?",
+    opciones:["Inhibición de apoptosis en paladar secundario embrionario","Control de diferenciación de células gonadales primitivas","Regulación mesodérmica de conductos nefrogénicos intermedios","Señalización del ectodermo apical para elongación del miembro"],
+    correcta:3,
+    explicacion:"FGF8 es producido por la cresta ectodérmica apical. Mantiene la proliferación del mesénquima subyacente y permite el crecimiento proximodistal de las extremidades."
+},
+
+{
+    id:98,
+    tema:"Embriología: Desarrollo del aparato reproductor",
+    pregunta:"En el ovario, ¿qué estructura se forma a partir de las células de la granulosa y de la teca después de la ovulación y es crucial para la producción de progesterona?",
+    opciones:["Cuerpo lúteo","Folículo primordial","Folículo secundario","Folículo maduro"],
+    correcta:0,
+    explicacion:"Después de la ovulación, las células de la granulosa y de la teca se luteinizan y forman el cuerpo lúteo, que produce progesterona."
+},
+
+{
+    id:99,
+    tema:"Embriología: Desarrollo del aparato reproductor",
+    pregunta:"Mujer de 20 años con problemas de fertilidad presenta duplicación completa del útero. ¿Qué mecanismo provocó esta alteración?",
+    opciones:["Canalización final de la vagina durante el tercer trimestre","Separación tardía del seno urogenital distal femenino","Alteración de la fusión de los conductos paramesonéfricos en la línea media","Degeneración normal de los conductos mesonéfricos fetales"],
+    correcta:2,
+    explicacion:"El útero se forma por la fusión de los conductos paramesonéfricos o de Müller. La ausencia de fusión genera duplicación uterina, conocida como útero didelfo."
+},
+
+{
+    id:100,
+    tema:"Embriología: Desarrollo de cabeza y cuello",
+    pregunta:"Niño de 6 años presenta una masa en línea media de la región cervical anterior, móvil con la deglución. ¿Qué estructura embrionaria originó este quiste?",
+    opciones:["Restos del conducto tirogloso","Segmento del seno cervical","Istmo tiroideo fetal","Restos del tercer arco faríngeo"],
+    correcta:0,
+    explicacion:"La glándula tiroides migra desde el foramen ciego de la lengua hasta su ubicación cervical definitiva a través del conducto tirogloso. La persistencia de este conducto puede formar un quiste tirogloso."
+},
+
+{
+    id:101,
+    tema:"Embriología: Desarrollo cardiopulmonar",
+    pregunta:"Recién nacido con dificultad respiratoria presenta hipoplasia pulmonar secundaria a hernia diafragmática. ¿Qué mecanismo explica esta alteración?",
+    opciones:["Vascularización inicial del saco pleural embrionario","Cierre inadecuado del conducto pleuroperitoneal","Formación posterior del pliegue traqueoesofágico","División temprana del septo transverso embrionario"],
+    correcta:1,
+    explicacion:"La hernia diafragmática congénita suele deberse a un cierre defectuoso de los conductos pleuroperitoneales. Las vísceras abdominales ingresan al tórax y comprimen el pulmón en desarrollo."
+},
+
+{
+    id:102,
+    tema:"Embriología: Desarrollo cardiopulmonar",
+    pregunta:"Niño de 4 años presenta comunicación interauricular tipo ostium secundum. ¿Cuál es el mecanismo más frecuente de este defecto?",
+    opciones:["Migración caudal del septum primum hacia cojinetes","Cierre tardío del septum secundum tras el nacimiento","Reabsorción excesiva del septum primum","Fusión incompleta del septum primum y secundum"],
+    correcta:2,
+    explicacion:"La comunicación interauricular tipo ostium secundum aparece con mayor frecuencia por reabsorción excesiva del septum primum o por desarrollo insuficiente del septum secundum."
+},
+
+{
+    id:103,
+    tema:"Histología: Tejidos básicos",
+    pregunta:"Paciente presenta alteraciones graves en la conducción nerviosa debido a desmielinización central. ¿Qué célula es principalmente afectada?",
+    opciones:["Célula de Schwann","Oligodendrocito","Neurona bipolar","Célula satélite"],
+    correcta:1,
+    explicacion:"Los oligodendrocitos producen mielina en el sistema nervioso central. Las células de Schwann cumplen esa función en el sistema nervioso periférico."
+},
+
+{
+    id:104,
+    tema:"Histología: Tejidos básicos",
+    pregunta:"Niño de 12 años con quemaduras de segundo grado. En el epitelio se identifican uniones intercelulares que anclan filamentos intermedios de queratina de células adyacentes. ¿Cómo se denominan estas estructuras?",
+    opciones:["Desmosomas","Zónula adherens","Hemidesmosomas","Uniones estrechas u ocluyentes"],
+    correcta:0,
+    explicacion:"Los desmosomas unen células epiteliales entre sí y anclan filamentos intermedios de queratina, proporcionando resistencia al estrés mecánico."
+},
+
+{
+    id:105,
+    tema:"Histología: Tejidos básicos",
+    pregunta:"Mujer de 76 años con osteoporosis presenta fracturas frecuentes. ¿Cuál célula es responsable del incremento de la resorción ósea?",
+    opciones:["Osteocito","Osteoblasto","Osteoclasto","Condrocito"],
+    correcta:2,
+    explicacion:"Los osteoclastos son células multinucleadas que reabsorben tejido óseo. El predominio de su actividad sobre la formación ósea favorece la osteoporosis."
+},
+
+{
+    id:106,
+    tema:"Histología: Sistema linfoide cardio-respiratorio",
+    pregunta:"Joven de 22 años presenta rinorrea persistente tras una infección viral. El frotis nasal evidencia pérdida de cilios y células caliciformes. ¿Qué tipo de epitelio está principalmente dañado?",
+    opciones:["Cilíndrico pseudoestratificado ciliado","Cilíndrico con chapa estriada","Cilíndrico estratificado ciliado","Cúbico simple ciliado"],
+    correcta:0,
+    explicacion:"El epitelio respiratorio presenta células ciliadas y caliciformes. Los cilios movilizan el moco y las partículas hacia la faringe mediante la depuración mucociliar."
+},
+
+{
+    id:107,
+    tema:"Histología: Sistema linfoide cardio-respiratorio",
+    pregunta:"¿Cuál subpoblación de linfocitos reconoce péptidos virales presentados en MHC clase I y elimina células diana mediante perforina y granzimas?",
+    opciones:["Moléculas del MHC clase II","Linfocitos T CD4","Linfocitos B","Linfocitos T CD8"],
+    correcta:3,
+    explicacion:"Los linfocitos T CD8 reconocen antígenos presentados mediante MHC clase I y destruyen células infectadas o tumorales liberando perforina y granzimas."
+},
+
+{
+    id:108,
+    tema:"Histología: Órganos metabólicos",
+    pregunta:"Paciente con diarrea secretora por Vibrio cholerae presenta marcada activación de los canales CFTR en el intestino delgado. ¿Qué tipo de célula intestinal está hiperestimulada?",
+    opciones:["Enterocito","De Paneth","Caliciforme","Célula M"],
+    correcta:0,
+    explicacion:"Los enterocitos expresan CFTR en su membrana apical. La toxina colérica incrementa el AMP cíclico, activa estos canales y provoca pérdida masiva de cloro y agua hacia el lumen intestinal."
+},
+
+{
+    id:109,
+    tema:"Histología: Órganos de los sentidos",
+    pregunta:"Varón de 50 años presenta pérdida de la audición por daño de las células ciliadas receptoras. ¿Qué estructura está comprometida?",
+    opciones:["Órgano espiral de Corti","Canal semicircular superior","Trompa auditiva faríngea","Membrana timpánica externa"],
+    correcta:0,
+    explicacion:"El órgano de Corti, situado en el conducto coclear, contiene las células ciliadas receptoras que transforman las vibraciones sonoras en impulsos nerviosos."
+},
+
+{
+    id:110,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"Varón de 28 años presenta irritación química que comprometió toda la epidermis hasta la membrana basal en la palma de la mano. ¿Cuántos estratos epidérmicos resultaron afectados?",
+    opciones:["Dos","Tres","Cuatro","Cinco"],
+    correcta:3,
+    explicacion:"La piel gruesa de las palmas tiene cinco estratos epidérmicos: basal, espinoso, granuloso, lúcido y córneo. El estrato lúcido la diferencia de la piel delgada."
+},
+
+{
+    id:111,
+    tema:"Bioquímica: Estructura y función a nivel celular",
+    pregunta:"En la anemia falciforme, una mutación puntual en el gen HBB de la cadena β de la hemoglobina provoca el reemplazo del ácido glutámico en la posición 6. ¿Cuál aminoácido lo reemplaza?",
+    opciones:["Glutamina","Valina","Ácido aspártico","Histidina"],
+    correcta:1,
+    explicacion:"La anemia falciforme se debe a una mutación puntual en la β-globina: el ácido glutámico, cargado e hidrofílico, es reemplazado por valina, hidrofóbica. Esto favorece la polimerización de la hemoglobina desoxigenada."
+},
+
+{
+    id:112,
+    tema:"Bioquímica: Señalización celular",
+    pregunta:"Gestante de 28 años recibe oxitocina para aumentar la contractilidad uterina. El receptor acoplado a Gq activa fosfolipasa C y hidroliza PIP₂. ¿Qué segundos mensajeros se generan?",
+    opciones:["Inositol difosfato y calmodulina","Inositol trifosfato (IP₃) y diacilglicerol (DAG)","Fosfatidilcolina y fosfatidiletanolamina","AMP cíclico y GMP cíclico"],
+    correcta:1,
+    explicacion:"Los receptores acoplados a Gq activan fosfolipasa C, que divide PIP₂ en IP₃ y DAG. El IP₃ libera calcio y el DAG activa proteína cinasa C."
+},
+
+{
+    id:113,
+    tema:"Bioquímica: Señalización celular",
+    pregunta:"Varón de 23 años con feocromocitoma presenta taquicardia y temblor por exceso de adrenalina. ¿La activación de cuál receptor explica estos efectos?",
+    opciones:["Receptor nuclear que modula la transcripción génica","Receptor β-adrenérgico acoplado a Gs que activa la adenilil ciclasa","Receptor α1-adrenérgico acoplado a Gq que activa fosfolipasa C","Receptor tirosina quinasa que activa la vía Ras/MAPK"],
+    correcta:1,
+    explicacion:"La adrenalina activa receptores β-adrenérgicos, principalmente β₁ en el corazón. Estos se acoplan a Gs, aumentan el AMP cíclico y producen taquicardia y aumento de contractilidad."
+},
+
+{
+    id:114,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"Varón de 15 años presenta intolerancia al ejercicio, debilidad proximal y acidosis láctica tras esfuerzos mínimos. La biopsia muscular sugiere alteraciones mitocondriales. ¿Cuál alteración bioquímica es más probable?",
+    opciones:["Alteración en síntesis de colágeno tipo I","Disminución de síntesis de albúmina hepática","Deficiencia de hidrolasas lisosómicas ácidas","Defecto en enzimas de la cadena respiratoria"],
+    correcta:3,
+    explicacion:"La cadena respiratoria mitocondrial permite la fosforilación oxidativa. Cuando falla, el músculo depende de glucólisis anaerobia, aumenta lactato y aparece intolerancia al ejercicio."
+},
+
+{
+    id:115,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"En un estudio FDG-PET se observa captación ávida de glucosa por células tumorales a pesar de disponibilidad de oxígeno. ¿Cómo se denomina este fenómeno?",
+    opciones:["Ciclo de Cori","Efecto Warburg","Efecto Bohr","Efecto Pasteur"],
+    correcta:1,
+    explicacion:"El efecto Warburg describe la glucólisis aerobia de muchas células tumorales: consumen mucha glucosa y producen lactato aun en presencia de oxígeno."
+},
+
+{
+    id:116,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"Niño de 8 años con hipoglicemia en ayunas presenta niveles bajos de carnitina. ¿Qué paso metabólico se afecta directamente?",
+    opciones:["Transporte de acilos de cadena larga a la matriz mitocondrial","Conversión de acetoacetato a β-hidroxibutirato","Oxidación peroxisomal de ácidos grasos","Conversión de acetil-CoA en malonil-CoA"],
+    correcta:0,
+    explicacion:"La carnitina transporta ácidos grasos de cadena larga hacia la matriz mitocondrial, donde ocurre la β-oxidación."
+},
+
+{
+    id:117,
+    tema:"Bioquímica: Metabolismo tisular",
+    pregunta:"Varón de 50 años con consumo crónico de alcohol presenta lesión hepática. El acetaldehído es un metabolito clave. ¿Cuál mecanismo se atribuye más directamente a su acción tóxica?",
+    opciones:["Incremento de NADH/NAD+ que inhibe β-oxidación","Inhibición de secreción biliar canalicular","Activación de CYP2E1 con generación de ROS","Formación de aductos con proteínas y ADN"],
+    correcta:3,
+    explicacion:"El acetaldehído es altamente reactivo y forma aductos con proteínas, lípidos y ADN. Estos alteran la función celular y favorecen inflamación, fibrosis y daño hepatocelular."
+},
+
+{
+    id:118,
+    tema:"Bioquímica: Bioquímica de las hormonas",
+    pregunta:"Mujer de 42 años con síndrome metabólico presenta aumento de tejido adiposo abdominal y niveles elevados de ácidos grasos libres. ¿Qué proceso en los adipocitos libera estos ácidos grasos?",
+    opciones:["Hidrólisis de triglicéridos por lipoproteinlipasa","Síntesis de ácidos grasos a partir de acetil-CoA","Lipólisis mediada por lipasa sensible a hormonas","Hidrólisis de triglicéridos por lipasa hepática"],
+    correcta:2,
+    explicacion:"La lipasa sensible a hormonas degrada triglicéridos almacenados en adipocitos y libera ácidos grasos libres. Es estimulada por catecolaminas y glucagón e inhibida por insulina."
 },
 ]
