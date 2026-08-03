@@ -23,7 +23,7 @@ const bancoPreguntas = [
     pregunta:"Paciente sometido a endoscopia digestiva recibe un sedante que aumenta la frecuencia de apertura del canal de cloro asociado al receptor GABA-A. Posteriormente desarrolla depresión excesiva del nivel de conciencia y se administra un antagonista específico. ¿Cuál es el fármaco utilizado?",
 
     opciones:[
-        "Sugammadex",
+        "Sugammadex"
         "Naloxona",
         "Flumazenil",
         "Neostigmina"
