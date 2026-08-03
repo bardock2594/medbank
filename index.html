@@ -23,7 +23,7 @@
 
         <h1>🩺 BankMed</h1>
 
-        <p>Banco Inteligente de Preguntas Médicas</p>
+        <p>Plataforma de práctica y aprendizaje médico</p>
 
     </header>
 
@@ -34,50 +34,41 @@
 
     <div class="contenedor" id="pantallaInicio">
 
-        <h2>Bienvenido</h2>
+        <section class="presentacionPrincipal" aria-labelledby="tituloPresentacion">
+            <span>APRENDIZAJE MÉDICO</span>
+            <h2 id="tituloPresentacion">Fortalece tus conocimientos, a tu ritmo</h2>
+            <p>Una plataforma diseñada para acompañar y potenciar tu aprendizaje médico en cualquier momento del día.</p>
+            <button id="btnSimulacroInicio" class="botonSimulacroInicio">📝 Iniciar simulacro general · 20 preguntas</button>
+        </section>
 
-        <p>
-
-            Aprende farmacología resolviendo preguntas tipo
-            ENAM y Residentado Médico.
-
-        </p>
-
-        <div class="infoInicio">
-
-            <button class="infoBox accionPrincipal" id="btnEstudiar">
-                <span class="iconoAccion">📚</span>
-                <strong>Practicar por tema</strong>
-                <span>Elige un tema y pon a prueba tus conocimientos.</span>
-            </button>
-
-            <button class="infoBox" id="btnAprender">
-                <span class="iconoAccion">📝</span>
-                <strong>Simulacro de examen</strong>
-                <span>Resuelve 20 preguntas aleatorias de todo el banco.</span>
-            </button>
-
-            <button class="infoBox" id="btnEstadisticas">
-                <span class="iconoAccion">📊</span>
-                <strong>Ver mi progreso</strong>
-                <span>Revisa tus aciertos, temas y preguntas por reforzar.</span>
-            </button>
-
+        <div class="encabezadoCursos">
+            <div>
+                <h2>Selecciona un curso</h2>
+                <p>Selecciona un curso para ver sus subtemas y empezar a practicar.</p>
+            </div>
+            <button id="btnEstadisticas" class="botonProgreso">📊 Mi progreso</button>
         </div>
 
-        <section class="seccionApoyo" aria-labelledby="tituloApoyo">
-            <div class="textoApoyo">
-                <span class="etiquetaApoyo">APOYO VOLUNTARIO</span>
-                <h3 id="tituloApoyo">Ayuda a que BankMed siga creciendo</h3>
-                <p>Tu aporte voluntario ayuda a crear más preguntas, explicaciones farmacológicas y nuevas herramientas de estudio.</p>
-                <p class="notaApoyo">Escanea el código con Yape y verifica que el destinatario sea <strong>Julian Daniel Espinoza Portilla</strong> antes de confirmar tu pago.</p>
-            </div>
-
-            <figure class="qrApoyo">
-                <img src="WhatsApp%20Image%202026-08-01%20at%202.10.26%20PM.jpeg" alt="Código QR de Yape para apoyar a BankMed. Destinatario: Julian Daniel Espinoza Portilla." loading="lazy">
-                <figcaption>Escanea para apoyar con Yape</figcaption>
-            </figure>
-        </section>
+        <div class="gridCursos" aria-label="Cursos disponibles">
+            <button class="cursoBoton cursoDisponible" data-curso="Farmacología">
+                <span>💊</span><strong>Farmacología</strong><small>Preguntas y simulacros</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Anatomía">
+                <span>🫀</span><strong>Anatomía</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Embriología">
+                <span>🧬</span><strong>Embriología</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Histología">
+                <span>🔬</span><strong>Histología</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Bioquímica">
+                <span>⚗️</span><strong>Bioquímica</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton" disabled><span>🫁</span><strong>Fisiología</strong><small>Próximamente</small></button>
+            <button class="cursoBoton" disabled><span>🧫</span><strong>Patología</strong><small>Próximamente</small></button>
+            <button class="cursoBoton" disabled><span>🦠</span><strong>Microbiología y Parasitología</strong><small>Próximamente</small></button>
+        </div>
 
     </div>
 
@@ -88,13 +79,17 @@
 
     <div class="contenedor" id="pantallaSeleccion" style="display:none;">
 
-        <h2>Selecciona un tema</h2>
+        <button id="btnVolverCursos" class="enlaceVolver">← Volver al inicio</button>
+
+        <h2 id="tituloSeleccion">Farmacología</h2>
+
+        <p id="descripcionSeleccion">Selecciona un subtema y la cantidad de preguntas.</p>
 
         <br>
 
         <label>
 
-            📚 Tema
+            📚 Subtema
 
         </label>
 
@@ -130,7 +125,13 @@
 
         <button id="btnIniciar">
 
-            ▶ Iniciar examen
+            ▶ Iniciar práctica
+
+        </button>
+
+        <button id="btnSimulacro" class="botonSecundario">
+
+            📝 Simulacro general (20 preguntas)
 
         </button>
 
@@ -173,7 +174,7 @@
 
             <h3>
 
-                🧠 Fundamento farmacológico
+                🧠 Fundamento
 
             </h3>
 
