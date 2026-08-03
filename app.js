@@ -17,8 +17,39 @@ let puntaje = 0;
 let modoRevision = false;
 let respuestasSesion = [];
 let temaSesion = "";
+let cursoSeleccionado = "";
 
 const CLAVE_ESTADISTICAS = "bankmed_estadisticas_v1";
+
+// Mantiene visibles los subtemas planificados aunque todavía no tengan preguntas.
+const SUBTEMAS_PLANIFICADOS = {
+    "Anatomía":[
+        "Anatomía: Generalidades",
+        "Anatomía: Locomotor",
+        "Anatomía: Cabeza",
+        "Anatomía: Cuello",
+        "Anatomía: Sistema nervioso",
+        "Anatomía: Tórax",
+        "Anatomía: Abdomen",
+        "Anatomía: Retroperitoneo",
+        "Anatomía: Pelvis"
+    ],
+    "Histología":[
+        "Histología: Tejidos básicos",
+        "Histología: Sistema linfoide cardio-respiratorio",
+        "Histología: Órganos metabólicos",
+        "Histología: Aparato reproductor femenino y masculino",
+        "Histología: Órganos de los sentidos",
+        "Histología: Sistema tegumentario"
+    ],
+    "Bioquímica":[
+        "Bioquímica: Estructura y función a nivel celular",
+        "Bioquímica: Señalización celular",
+        "Bioquímica: Metabolismo general",
+        "Bioquímica: Metabolismo tisular",
+        "Bioquímica: Bioquímica de las hormonas"
+    ]
+};
 
 //===============================
 // PANTALLAS
@@ -42,12 +73,6 @@ document.getElementById("pantallaEstadisticas");
 //===============================
 // BOTONES
 //===============================
-
-const btnEstudiar =
-document.getElementById("btnEstudiar");
-
-const btnAprender =
-document.getElementById("btnAprender");
 
 const btnEstadisticas =
 document.getElementById("btnEstadisticas");
@@ -76,6 +101,18 @@ document.getElementById("btnVolverEstadisticas");
 const btnBorrarEstadisticas =
 document.getElementById("btnBorrarEstadisticas");
 
+const btnVolverCursos =
+document.getElementById("btnVolverCursos");
+
+const btnSimulacro =
+document.getElementById("btnSimulacro");
+
+const btnSimulacroInicio =
+document.getElementById("btnSimulacroInicio");
+
+const botonesCurso =
+document.querySelectorAll(".cursoDisponible");
+
 //===============================
 // CONTROLES
 //===============================
@@ -85,6 +122,9 @@ document.getElementById("sistema");
 
 const selectCantidad =
 document.getElementById("cantidad");
+
+const tituloSeleccion =
+document.getElementById("tituloSeleccion");
 
 //===============================
 // PREGUNTA
@@ -199,23 +239,40 @@ function cargarTemas(){
 
     selectTema.innerHTML="";
 
-    const temas =
-    [...new Set(
+    const preguntasDelCurso=bancoPreguntas.filter(function(pregunta){
 
-        bancoPreguntas.map(
+        const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica"];
 
-            p=>p.tema
+        if(cursosConPreguntas.includes(cursoSeleccionado)){
 
-        )
+            return pregunta.tema.startsWith(cursoSeleccionado+":");
 
-    )];
+        }
 
-    temas.sort();
+        // Las preguntas sin prefijo de otro curso pertenecen a Farmacología.
+        return !cursosConPreguntas.some(function(curso){
+
+            return pregunta.tema.startsWith(curso+":");
+
+        });
+
+    });
+
+    const temasBanco=preguntasDelCurso.map(p=>p.tema);
+    const temasPlanificados=SUBTEMAS_PLANIFICADOS[cursoSeleccionado] || [];
+    const temas=[...new Set([...temasPlanificados,...temasBanco])];
+
+    // Mantiene el orden curricular cuando hay subtemas planificados.
+    if(temasPlanificados.length===0){
+
+        temas.sort();
+
+    }
 
     temas.forEach(function(tema){
 
         const total =
-        bancoPreguntas.filter(
+        preguntasDelCurso.filter(
 
             p=>p.tema===tema
 
@@ -226,8 +283,12 @@ function cargarTemas(){
 
         option.value=tema;
 
+        const prefijoCurso=cursoSeleccionado ? cursoSeleccionado+":" : "";
+        const nombreSubtema=tema.startsWith(prefijoCurso) ?
+        tema.slice(prefijoCurso.length).trim() : tema;
+
         option.textContent=
-        tema+" ("+total+")";
+        nombreSubtema+" ("+total+")";
 
         selectTema.appendChild(option);
 
@@ -239,17 +300,21 @@ function cargarTemas(){
 // BOTONES
 //===============================
 
-btnEstudiar.onclick=function(){
+botonesCurso.forEach(function(boton){
 
-    mostrarPantalla("seleccion");
+    boton.onclick=function(){
 
-}
+        cursoSeleccionado=this.dataset.curso;
 
-btnAprender.onclick=function(){
+        tituloSeleccion.textContent=cursoSeleccionado;
 
-    iniciarSimulacro();
+        cargarTemas();
 
-}
+        mostrarPantalla("seleccion");
+
+    }
+
+});
 
 function iniciarSimulacro(){
 
@@ -263,7 +328,7 @@ function iniciarSimulacro(){
 
     modoRevision=false;
 
-    temaSesion="Simulacro general";
+    temaSesion="Simulacro general · Todos los cursos";
 
     // Se toma una muestra aleatoria de todo el banco, sin filtrar por tema.
     preguntasExamen=[...bancoPreguntas];
@@ -271,6 +336,8 @@ function iniciarSimulacro(){
     mezclarPreguntas();
 
     preguntasExamen=preguntasExamen.slice(0,20);
+
+    prepararExamen();
 
     mostrarPantalla("pregunta");
 
@@ -318,6 +385,14 @@ function iniciarExamen(){
 
     });
 
+    if(preguntasExamen.length===0){
+
+        alert("Este subtema aún no tiene preguntas disponibles.");
+
+        return;
+
+    }
+
     mezclarPreguntas();
 
     if(selectCantidad.value!="Todas"){
@@ -333,6 +408,8 @@ function iniciarExamen(){
 
     }
 
+    prepararExamen();
+
     mostrarPantalla("pregunta");
 
     mostrarPregunta();
@@ -345,11 +422,42 @@ function iniciarExamen(){
 
 function mezclarPreguntas(){
 
-    preguntasExamen.sort(function(){
+    preguntasExamen=mezclarArreglo(preguntasExamen);
 
-        return Math.random()-0.5;
+}
 
-    });
+btnSimulacro.onclick=function(){
+
+    iniciarSimulacro();
+
+}
+
+btnSimulacroInicio.onclick=function(){
+
+    iniciarSimulacro();
+
+}
+
+btnVolverCursos.onclick=function(){
+
+    mostrarPantalla("inicio");
+
+}
+
+function mezclarArreglo(arreglo){
+
+    const copia=[...arreglo];
+
+    for(let i=copia.length-1;i>0;i--){
+
+        const indiceAleatorio=Math.floor(Math.random()*(i+1));
+
+        [copia[i],copia[indiceAleatorio]]=
+        [copia[indiceAleatorio],copia[i]];
+
+    }
+
+    return copia;
 
 }
 
@@ -725,17 +833,13 @@ function mezclarOpciones(pregunta){
 
     });
 
-    opciones.sort(function(){
+    const opcionesMezcladas=mezclarArreglo(opciones);
 
-        return Math.random()-0.5;
-
-    });
-
-    pregunta.opciones =
-    opciones.map(o=>o.texto);
-
-    pregunta.correcta =
-    opciones.findIndex(o=>o.correcta);
+    return{
+        ...pregunta,
+        opciones:opcionesMezcladas.map(o=>o.texto),
+        correcta:opcionesMezcladas.findIndex(o=>o.correcta)
+    };
 
 }
 
@@ -745,11 +849,7 @@ function mezclarOpciones(pregunta){
 
 function prepararExamen(){
 
-    preguntasExamen.forEach(function(p){
-
-        mezclarOpciones(p);
-
-    });
+    preguntasExamen=preguntasExamen.map(mezclarOpciones);
 
 }
 
