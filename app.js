@@ -49,8 +49,62 @@ const SUBTEMAS_PLANIFICADOS = {
         "Bioquímica: Metabolismo general",
         "Bioquímica: Metabolismo tisular",
         "Bioquímica: Bioquímica de las hormonas"
+    ],
+    "Fisiología":[
+        "Fisiología: Fisiología neuromuscular",
+        "Fisiología: Fisiología respiratoria",
+        "Fisiología: Equilibrio hídrico, intercambio capilar y circulación",
+        "Fisiología: Fisiología renal",
+        "Fisiología: Fisiología digestiva y hepática",
+        "Fisiología: Fisiología endocrina y reproductiva"
+    ],
+    "Patología":[
+        "Patología: Patología neoplásica",
+        "Patología: Patología vascular e inmunopatología",
+        "Patología: Patología inflamatoria e infecciosa"
     ]
 };
+
+SUBTEMAS_PLANIFICADOS["Fisiología"]=[
+    "Fisiología: Fisiología cardiovascular",
+    "Fisiología: Fisiología respiratoria",
+    "Fisiología: Fisiología digestiva",
+    "Fisiología: Fisiología del sistema excretor y medio interno",
+    "Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    "Fisiología: Sistema hemato-inmune",
+    "Fisiología: Fisiología del sistema nervioso",
+    "Fisiología: Fisiología del sistema locomotor",
+    "Fisiología: Integración fisiológica"
+];
+
+SUBTEMAS_PLANIFICADOS["Patología"]=[
+    "Patología: Adaptación, lesiones y muerte celular",
+    "Patología: Inflamación y reparación",
+    "Patología: Trastornos hemodinámicos",
+    "Patología: Inmunopatología",
+    "Patología: Neoplasias",
+    "Patología: Enfermedades medioambientales",
+    "Patología: Patología infecciosa",
+    "Patología: Patología cardiovascular",
+    "Patología: Patología del sistema hematopoyético",
+    "Patología: Patología del sistema respiratorio",
+    "Patología: Patología del sistema digestivo",
+    "Patología: Patología renal y de vías urinarias",
+    "Patología: Patología del aparato reproductor y de la mama",
+    "Patología: Patología del sistema endocrino",
+    "Patología: Patología de la piel",
+    "Patología: Patología ósea y de tejidos blandos",
+    "Patología: Patología del sistema nervioso periférico y central"
+];
+
+SUBTEMAS_PLANIFICADOS["Microbiología y Parasitología"]=[
+    "Microbiología y Parasitología: Bacteriología",
+    "Microbiología y Parasitología: Micología",
+    "Microbiología y Parasitología: Virología",
+    "Microbiología y Parasitología: Helmintos",
+    "Microbiología y Parasitología: Protozoos",
+    "Microbiología y Parasitología: Artrópodos"
+];
 
 //===============================
 // PANTALLAS
@@ -71,12 +125,21 @@ document.getElementById("pantallaResultados");
 const pantallaEstadisticas =
 document.getElementById("pantallaEstadisticas");
 
+const pantallaQuienSoy =
+document.getElementById("pantallaQuienSoy");
+
 //===============================
 // BOTONES
 //===============================
 
 const btnEstadisticas =
 document.getElementById("btnEstadisticas");
+
+const btnQuienSoy =
+document.getElementById("btnQuienSoy");
+
+const btnVolverQuienSoy =
+document.getElementById("btnVolverQuienSoy");
 
 const btnIniciar =
 document.getElementById("btnIniciar");
@@ -134,6 +197,9 @@ document.getElementById("btnGuardarNombre");
 
 const btnOmitirNombre =
 document.getElementById("btnOmitirNombre");
+
+const saludoUsuario =
+document.getElementById("saludoUsuario");
 
 //===============================
 // CONTROLES
@@ -210,6 +276,18 @@ function iniciarAplicacion(){
 
     configurarMascota();
 
+    btnQuienSoy.onclick=function(){
+
+        mostrarPantalla("quienSoy");
+
+    };
+
+    btnVolverQuienSoy.onclick=function(){
+
+        mostrarPantalla("inicio");
+
+    };
+
 }
 
 function configurarMascota(){
@@ -226,16 +304,7 @@ function configurarMascota(){
 
     btnMascota.onclick=function(){
 
-        const nombre=localStorage.getItem(CLAVE_NOMBRE_USUARIO);
-
-        if(!nombre){
-
-            mostrarModalNombre();
-            return;
-
-        }
-
-        mascotaSaludo.classList.toggle("mascotaAbierta");
+        mostrarModalNombre();
 
     };
 
@@ -245,6 +314,7 @@ function configurarMascota(){
 
         cerrarModalNombre();
         mensajeMascota.textContent="¡Hola! Soy Guilbert. Cuando quieras, toca mi patita para saludar.";
+        saludoUsuario.textContent="";
 
     };
 
@@ -266,16 +336,22 @@ function actualizarSaludoMascota(nombre){
         ? "¡Hola, "+nombre+"! Soy Guilbert. ¿Listo para aprender hoy?"
         : "¡Hola! Soy Guilbert. ¿Cómo te llamas?";
 
+    saludoUsuario.textContent=nombre
+        ? "¡Hola, "+nombre+"! ¿Qué curso te gustaría estudiar hoy?"
+        : "";
+
 }
 
 function mostrarModalNombre(){
 
+    inputNombre.value=localStorage.getItem(CLAVE_NOMBRE_USUARIO) || "";
     modalNombre.style.display="flex";
     mascotaSaludo.classList.add("mascotaAbierta");
 
     setTimeout(function(){
 
         inputNombre.focus();
+        inputNombre.select();
 
     },100);
 
@@ -315,6 +391,7 @@ function mostrarPantalla(nombre){
     pantallaPregunta.style.display="none";
     pantallaResultados.style.display="none";
     pantallaEstadisticas.style.display="none";
+    pantallaQuienSoy.style.display="none";
 
     switch(nombre){
 
@@ -343,6 +420,11 @@ function mostrarPantalla(nombre){
             pantallaEstadisticas.style.display="block";
             break;
 
+        case "quienSoy":
+
+            pantallaQuienSoy.style.display="block";
+            break;
+
     }
 
 }
@@ -357,7 +439,7 @@ function cargarTemas(){
 
     const preguntasDelCurso=bancoPreguntas.filter(function(pregunta){
 
-        const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica"];
+        const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica","Fisiología","Patología","Microbiología y Parasitología"];
 
         if(cursosConPreguntas.includes(cursoSeleccionado)){
 
