@@ -25,6 +25,10 @@
 
         <p>Plataforma de práctica y aprendizaje de ciencias básicas de la salud</p>
 
+        <nav class="navegacionHeader" aria-label="Navegación principal">
+            <button id="btnQuienSoy" class="botonQuienSoy" type="button">Quién soy y qué es BankMed</button>
+        </nav>
+
     </header>
 
 
@@ -37,6 +41,7 @@
         <div class="encabezadoCursos">
             <div>
                 <h2>Selecciona un curso</h2>
+                <p id="saludoUsuario" class="saludoUsuario" aria-live="polite"></p>
                 <p>Selecciona un curso para ver sus subtemas y empezar a practicar.</p>
             </div>
             <button id="btnEstadisticas" class="botonProgreso">📊 Mi progreso</button>
@@ -58,9 +63,15 @@
             <button class="cursoBoton cursoDisponible" data-curso="Bioquímica">
                 <span>⚗️</span><strong>Bioquímica</strong><small>Preguntas por subtema</small>
             </button>
-            <button class="cursoBoton" disabled><span>🫁</span><strong>Fisiología</strong><small>Próximamente</small></button>
-            <button class="cursoBoton" disabled><span>🧫</span><strong>Patología</strong><small>Próximamente</small></button>
-            <button class="cursoBoton" disabled><span>🦠</span><strong>Microbiología y Parasitología</strong><small>Próximamente</small></button>
+            <button class="cursoBoton cursoDisponible" data-curso="Fisiología">
+                <span>🫁</span><strong>Fisiología</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Patología">
+                <span>🧫</span><strong>Patología</strong><small>Preguntas por subtema</small>
+            </button>
+            <button class="cursoBoton cursoDisponible" data-curso="Microbiología y Parasitología">
+                <span>🦠</span><strong>Microbiología y Parasitología</strong><small>Preguntas por subtema</small>
+            </button>
         </div>
 
         <section class="presentacionPrincipal" aria-labelledby="tituloPresentacion">
@@ -70,6 +81,36 @@
             <button id="btnSimulacroInicio" class="botonSimulacroInicio">📝 Iniciar simulacro general · 20 preguntas</button>
         </section>
 
+    </div>
+
+    <!--========================================-->
+    <!-- QUIÉN SOY -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaQuienSoy" style="display:none;">
+        <button id="btnVolverQuienSoy" class="enlaceVolver" type="button">← Volver al inicio</button>
+
+        <section class="seccionQuienSoy">
+            <span class="etiquetaSeccion">SOBRE BANKMED</span>
+            <h2>Una plataforma para aprender con propósito</h2>
+            <p>BankMed es una plataforma de práctica de ciencias básicas de la salud. Reúne preguntas explicadas, organizadas por cursos y subtemas, para facilitar un estudio activo, flexible y progresivo.</p>
+            <p>El banco combina preguntas de autoría propia y preguntas de práctica basadas en los principales exámenes de ciencias básicas, como el ENCIB en Perú.</p>
+            <p>El objetivo es acompañar la preparación académica mediante práctica por temas, simulacros de 20 preguntas y estadísticas de progreso guardadas en el navegador.</p>
+        </section>
+
+        <section class="perfilCreador">
+            <img class="fotoCreador" src="Julian foto formal.jpeg" alt="Dr. Julián Daniel Espinoza Portilla">
+            <div>
+                <span class="etiquetaSeccion">QUIÉN SOY</span>
+                <h2>Dr. Julián Daniel Espinoza Portilla</h2>
+                <p>Soy Julián Daniel Espinoza Portilla, médico y creador de BankMed. Desarrollé este proyecto con la intención de ofrecer un espacio accesible para reforzar conocimientos de ciencias básicas de la salud en cualquier momento del día.</p>
+                <p>Mi compromiso es seguir ampliando el banco de preguntas y sus explicaciones para contribuir a un aprendizaje médico más práctico, ordenado y continuo.</p>
+                <div class="redesSociales" aria-label="Redes sociales de Julián Daniel Espinoza Portilla">
+                    <a href="https://www.tiktok.com/@dr.julian01" target="_blank" rel="noopener noreferrer">TikTok: @dr.julian01</a>
+                    <a href="https://www.instagram.com/julian_med0?igsh=MXZzdG9mY2M0d2ZwcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram: @julian_med0</a>
+                </div>
+            </div>
+        </section>
     </div>
 
 
