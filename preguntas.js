@@ -2021,4 +2021,831 @@ const bancoPreguntas = [
     correcta:0,
     explicacion:"El dengue es transmitido principalmente por la picadura de la hembra infectada de Aedes aegypti. Este mosquito se reproduce en recipientes con agua estancada y tiene actividad predominante durante el día."
 },
+
+{
+    id:176,
+    tema:"Anatomía: Locomotor",
+    pregunta:"Varón de 45 años sufre una fractura en la porción media del cuerpo del húmero. Presenta falta de fuerza para extender la mano. ¿Cuál es el nervio comprometido?",
+    opciones:["Cubital","Mediano","Radial","Musculocutáneo"],
+    correcta:2,
+    explicacion:"El nervio radial recorre el surco radial en la cara posterior del cuerpo del húmero. Una fractura diafisaria puede lesionarlo y causar debilidad para extender la muñeca y los dedos, conocida como mano caída."
+},
+
+{
+    id:177,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Mujer de 55 años presenta parálisis de la musculatura facial derecha desde hace dos días. ¿Qué otro trastorno podría presentar en el mismo lado?",
+    opciones:["Excesiva producción de secreción lagrimal","Erupción vesicular en la entrada del pabellón auricular","Excesiva secreción salival","Hipogeusia en el tercio posterior de la lengua"],
+    correcta:1,
+    explicacion:"La parálisis facial periférica asociada a vesículas en el pabellón auricular sugiere síndrome de Ramsay Hunt, causado por reactivación del virus varicela-zóster en el ganglio geniculado del nervio facial."
+},
+
+{
+    id:178,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Mujer de 70 años con diabetes no controlada presenta visión borrosa, como mirando nublado, y dificultad para leer. ¿Qué estructura del globo ocular se encuentra afectada?",
+    opciones:["Cristalino","Córnea","Mácula","Iris"],
+    correcta:0,
+    explicacion:"La diabetes es un factor de riesgo para catarata. La opacificación del cristalino impide el paso adecuado de la luz y genera visión borrosa o sensación de observar a través de una nube."
+},
+
+{
+    id:179,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Varón de 65 años sufre traumatismo craneal grave. Se palpa un crujido en el pterión y se prepara cirugía de emergencia. ¿Qué estructura está probablemente comprometida?",
+    opciones:["Vena cerebral superficial","Arteria meníngea menor","Venas emisarias","Arteria meníngea media"],
+    correcta:3,
+    explicacion:"El pterión es una zona ósea delgada relacionada con la rama anterior de la arteria meníngea media. Su lesión puede generar un hematoma epidural, una emergencia neuroquirúrgica."
+},
+
+{
+    id:180,
+    tema:"Anatomía: Cabeza",
+    pregunta:"Varón de 60 años presenta anosmia, cefalea y salida de líquido transparente por las fosas nasales después de un traumatismo craneal. Se sospecha rinorraquia. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Fractura temporal","Meningioma frontal","Fractura de la lámina cribosa","Fractura frontal"],
+    correcta:2,
+    explicacion:"La lámina cribosa del etmoides es atravesada por los filetes del nervio olfatorio. Su fractura puede causar anosmia y comunicación con el espacio subaracnoideo, permitiendo salida de líquido cefalorraquídeo por la nariz."
+},
+
+{
+    id:181,
+    tema:"Anatomía: Cuello",
+    pregunta:"¿Cuál de los siguientes elementos NO forma parte de la glotis, aparato vocal de la laringe?",
+    opciones:["Hendidura vestibular","Ligamento vocal","Músculo vocal","Hendidura glótica"],
+    correcta:0,
+    explicacion:"La glotis está constituida por los pliegues vocales verdaderos y la hendidura glótica. La hendidura vestibular se ubica entre los pliegues vestibulares o cuerdas vocales falsas, por lo que no forma parte de la glotis."
+},
+
+{
+    id:182,
+    tema:"Anatomía: Cuello",
+    pregunta:"Mujer de 45 años es operada por un tumor maligno de tiroides. Al día siguiente presenta disfonía y espasmo laríngeo. ¿Qué nervio puede haberse afectado?",
+    opciones:["Laríngeo recurrente","Vago","Laríngeo superior","Glosofaríngeo"],
+    correcta:0,
+    explicacion:"El nervio laríngeo recurrente inerva la mayoría de los músculos intrínsecos de la laringe. Puede lesionarse durante cirugía tiroidea, causando disfonía; su lesión bilateral puede ocasionar compromiso respiratorio."
+},
+
+{
+    id:183,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 50 años deja de fumar y presenta una respuesta desagradable del sistema nervioso central mediada por la producción de noradrenalina. ¿En qué estructura se produce principalmente?",
+    opciones:["Corteza cerebral","Núcleo accumbens","Área tegmentaria ventral","Locus cerúleo"],
+    correcta:3,
+    explicacion:"El locus cerúleo es el principal núcleo noradrenérgico del sistema nervioso central. Participa en alerta, ansiedad y síntomas de abstinencia durante la suspensión de nicotina."
+},
+
+{
+    id:184,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 63 años con hipertensión mal controlada presenta hemianopsia homónima, alucinaciones y perseveraciones visuales. ¿Cuál es la arteria probablemente afectada?",
+    opciones:["Temporal posterior","Parietooccipital","Rolándica","Calcarina"],
+    correcta:3,
+    explicacion:"La arteria calcarina, rama de la arteria cerebral posterior, irriga la corteza visual primaria alrededor de la cisura calcarina. Su lesión puede causar hemianopsia homónima contralateral y fenómenos visuales positivos."
+},
+
+{
+    id:185,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"Varón de 85 años sufre una lesión contusa en el ángulo superior medial de la órbita. Con la mirada aducida tiene dificultad para mirar hacia abajo. ¿Cuál es el nervio afectado?",
+    opciones:["Troclear","Motor ocular externo","Motor ocular común","Trigémino"],
+    correcta:0,
+    explicacion:"El nervio troclear, IV par craneal, inerva al músculo oblicuo superior. Este músculo deprime el ojo principalmente cuando se encuentra aducido; por ello, su lesión ocasiona dificultad para mirar hacia abajo en esa posición."
+},
+
+{
+    id:186,
+    tema:"Anatomía: Tórax",
+    pregunta:"Varón de 52 años con neumonía lobar derecha presenta crepitantes en el sexto espacio intercostal, línea medioclavicular derecha. ¿Qué lóbulo pulmonar está afectado con mayor probabilidad?",
+    opciones:["Lingular","Medio","Inferior","Superior"],
+    correcta:1,
+    explicacion:"El lóbulo medio existe únicamente en el pulmón derecho y se proyecta en la región anterolateral del tórax, aproximadamente entre el cuarto y sexto espacio intercostal en la línea medioclavicular."
+},
+
+{
+    id:187,
+    tema:"Anatomía: Abdomen",
+    pregunta:"Varón de 46 años presenta dolor al hacer esfuerzo para defecar, sangre en las heces y protrusiones dolorosas en la región anal. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Fístula anal","Absceso","Hemorroides externas","Hemorroides internas"],
+    correcta:2,
+    explicacion:"Las hemorroides externas se localizan por debajo de la línea pectínea, donde la sensibilidad es somática. Por ello, suelen producir dolor y protrusiones sensibles; las hemorroides internas tienden a ser indoloras."
+},
+
+{
+    id:188,
+    tema:"Anatomía: Abdomen",
+    pregunta:"Durante una colecistectomía, el límite inferior del hiato de Winslow está formado por: ",
+    opciones:["Vena cava inferior","Primera parte del duodeno","Lóbulo caudado del hígado","Vena porta"],
+    correcta:1,
+    explicacion:"El hiato de Winslow, o foramen epiploico, comunica la bolsa omental con la cavidad peritoneal mayor. Su límite inferior es la primera porción del duodeno; anteriormente se ubica el ligamento hepatoduodenal."
+},
+
+{
+    id:189,
+    tema:"Anatomía: Retroperitoneo",
+    pregunta:"Mujer de 45 años es sometida a histerectomía por tumor uterino. En el postoperatorio presenta dolor lumbar, fiebre y anuria. ¿Cuál es la causa más probable?",
+    opciones:["Deshidratación","Ligadura de uréteres","Hipovolemia","Infección intraoperatoria"],
+    correcta:1,
+    explicacion:"Los uréteres pasan cerca de la arteria uterina en su trayecto pélvico. Durante una histerectomía pueden lesionarse o ligarse accidentalmente, provocando obstrucción urinaria, anuria y dolor lumbar."
+},
+
+{
+    id:190,
+    tema:"Anatomía: Retroperitoneo",
+    pregunta:"Durante la respiración, ambos riñones pueden descender aproximadamente hasta:",
+    opciones:["5 cm","1 cm","7 cm","3 cm"],
+    correcta:3,
+    explicacion:"Los riñones se desplazan con los movimientos del diafragma durante la respiración. En la inspiración profunda pueden descender aproximadamente 3 cm."
+},
+
+{
+    id:191,
+    tema:"Anatomía: Pelvis",
+    pregunta:"¿Cuál ligamento ayuda a mantener el útero en posición anteversa y a fijarlo hacia la pared anterior de la pelvis?",
+    opciones:["Cardinal","Pubocervical","Redondo","Uterosacro"],
+    correcta:2,
+    explicacion:"El ligamento redondo del útero se dirige hacia los labios mayores a través del conducto inguinal. Ayuda a mantener la anteversión uterina al traccionar el fondo del útero hacia adelante."
+},
+
+{
+    id:192,
+    tema:"Embriología: Introducción",
+    pregunta:"Mujer de 30 años con retraso menstrual, náuseas y aumento del apetito tiene una prueba de embarazo en orina positiva. ¿Qué hormona detectó esta prueba?",
+    opciones:["Progesterona","Gonadotropina coriónica humana","Lactógeno placentario","Estradiol"],
+    correcta:1,
+    explicacion:"La gonadotropina coriónica humana, hCG, es producida inicialmente por el sincitiotrofoblasto. Puede detectarse en orina poco después de la implantación y permite confirmar tempranamente el embarazo."
+},
+
+{
+    id:193,
+    tema:"Embriología: Embriología y alteraciones más frecuentes",
+    pregunta:"Mujer de 24 años con ocho semanas de gestación tiene antecedente de consumo diario de talidomida desde hace tres meses. ¿Qué alteraciones son más probables en el producto de la gestación?",
+    opciones:["Labio y paladar hendido","Ceguera y sordera","Amelia y focomelia","Hidrocefalia y anencefalia"],
+    correcta:2,
+    explicacion:"La talidomida es un teratógeno clásico que, cuando se administra durante el periodo de formación de las extremidades, puede causar defectos de reducción de miembros. La focomelia se caracteriza por extremidades cortas con manos o pies próximos al tronco."
+},
+
+{
+    id:194,
+    tema:"Embriología: Embriología y alteraciones más frecuentes",
+    pregunta:"Lactante de dos meses presenta macroglosia, hipotonía, cuello corto, orejas de implantación baja, epicanto y puente nasal aplanado. ¿Cuáles son las complicaciones más frecuentes en estos pacientes?",
+    opciones:["Oftalmopatías","Cardiopatías","Nefropatías","Dermatopatías"],
+    correcta:1,
+    explicacion:"Los hallazgos son compatibles con síndrome de Down. Las cardiopatías congénitas, en particular los defectos de los cojinetes endocárdicos y las comunicaciones auriculoventriculares, son complicaciones frecuentes."
+},
+
+{
+    id:195,
+    tema:"Embriología: Embriología y alteraciones más frecuentes",
+    pregunta:"Lactante de dos meses presenta una masa sacrococcígea compuesta por restos de piel, pelo y cartílago. ¿Cuál es el origen embriológico más probable?",
+    opciones:["Endodermo y alantoides","Saco vitelino y amniótico","Mesenterio lateral y paraaxial","Ectodermo y mesodermo"],
+    correcta:3,
+    explicacion:"El teratoma sacrococcígeo se origina de células pluripotenciales de la región del nódulo primitivo. Puede contener tejidos derivados de varias capas germinales, como piel y pelo de origen ectodérmico, y cartílago de origen mesodérmico."
+},
+
+{
+    id:196,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"Recién nacido presenta vómito bilioso en proyectil, polihidramnios, abdomen superior distendido y radiografía con gas en abdomen superior sin gas distal. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Estenosis pilórica hipertrófica","Enfermedad de Hirschsprung","Atresia duodenal","Malrotación con vólvulo"],
+    correcta:2,
+    explicacion:"La atresia duodenal causa el signo radiológico de doble burbuja: aire en estómago y duodeno proximal, sin gas distal. Se debe a falla de recanalización del duodeno y se asocia con polihidramnios."
+},
+
+{
+    id:197,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"Recién nacido presenta abundante salivación, tos con el calostro e imposibilidad para pasar una sonda orogástrica. Durante la gestación hubo polihidramnios. ¿Dónde se ubica la malformación congénita?",
+    opciones:["Cuarto arco faríngeo","Tubo neural","Alantoides","Tabique traqueoesofágico"],
+    correcta:3,
+    explicacion:"La fístula traqueoesofágica, usualmente asociada a atresia esofágica, se debe a una división anormal del intestino anterior por el tabique traqueoesofágico. Causa imposibilidad para deglutir, tos durante la alimentación y polihidramnios."
+},
+
+{
+    id:198,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"Primigesta de 32 semanas por fecha de última regla es atendida por parto inminente, sin complicaciones maternas o fetales. ¿Qué sistema debe haber madurado lo suficiente para permitir la sobrevida extrauterina?",
+    opciones:["Respiratorio","Nervioso","Endocrino","Locomotor"],
+    correcta:0,
+    explicacion:"La supervivencia extrauterina depende principalmente de la capacidad pulmonar para realizar intercambio gaseoso. Hacia las 32 semanas la producción de surfactante aumenta, reduciendo el riesgo de síndrome de dificultad respiratoria neonatal."
+},
+
+{
+    id:199,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"Recién nacida de parto podálico presenta Ortolani, Barlow y Galeazzi positivos en la cadera izquierda. ¿Qué defectos se espera encontrar?",
+    opciones:["Anomalía del acetábulo y de la cabeza del fémur","Pectus excavatum e hiperflexibilidad","Laxitud articular y fragilidad ósea generalizada","Pie equino varo y agenesia muscular"],
+    correcta:0,
+    explicacion:"Los signos de Ortolani y Barlow positivos indican displasia del desarrollo de la cadera. Esta anomalía incluye acetábulo poco profundo e inestabilidad o desplazamiento de la cabeza femoral. La presentación podálica es un factor de riesgo importante."
+},
+
+{
+    id:200,
+    tema:"Histología: Tejidos básicos",
+    pregunta:"Varón de 25 años presenta hiperextensibilidad de piel, hipermovilidad articular y esguinces o subluxaciones frecuentes. Tiene antecedente de desprendimiento de retina. ¿Qué tipo de tejido está comprometido?",
+    opciones:["Nervioso","Conectivo","Muscular","Epitelial"],
+    correcta:1,
+    explicacion:"El cuadro es compatible con una alteración del colágeno, como en el síndrome de Ehlers-Danlos. El tejido conectivo proporciona resistencia y soporte a piel, articulaciones, tendones y otras estructuras."
+},
+
+{
+    id:201,
+    tema:"Histología: Sistema linfoide cardio-respiratorio",
+    pregunta:"¿Cuál tipo de epitelio es imprescindible para la función de intercambio de gases en el alvéolo pulmonar?",
+    opciones:["Simple escamoso","Estratificado plano","Simple cúbico","Pseudoestratificado cilíndrico ciliado"],
+    correcta:0,
+    explicacion:"Los neumocitos tipo I forman la mayor parte de la pared alveolar y corresponden a un epitelio simple escamoso. Su extrema delgadez permite el intercambio eficiente de oxígeno y dióxido de carbono."
+},
+
+{
+    id:202,
+    tema:"Histología: Órganos metabólicos",
+    pregunta:"Varón de 72 años con anemia crónica, hormigueo en extremidades y macrocitosis. Se sospecha déficit de vitamina B12 por ausencia de factor intrínseco gástrico. ¿Cuál tipo de célula está comprometida?",
+    opciones:["Caliciforme","Principal","Parietal","Mucosa"],
+    correcta:2,
+    explicacion:"Las células parietales del estómago producen ácido clorhídrico y factor intrínseco. Este último es indispensable para la absorción de vitamina B12 en el íleon terminal; su ausencia provoca anemia megaloblástica."
+},
+
+{
+    id:203,
+    tema:"Histología: Aparato reproductor femenino y masculino",
+    pregunta:"Varón de 40 años presenta una alteración de la barrera hematotesticular, con antecedente de parotiditis, infertilidad y oligoespermia. ¿Cuál es la célula afectada con mayor probabilidad?",
+    opciones:["Sertoli","Espermátide","Espermatogonia","Leydig"],
+    correcta:0,
+    explicacion:"Las células de Sertoli forman la barrera hematotesticular mediante uniones estrechas entre ellas. Esta barrera protege a las células germinales en desarrollo y regula el microambiente de los túbulos seminíferos."
+},
+
+{
+    id:204,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"Mujer de 40 años presenta una uña del pie descolorida e hiperqueratósica. El examen directo muestra hifas y esporas. ¿Qué estructura se ha distorsionado con mayor probabilidad?",
+    opciones:["Lúnula","Hiponiquio","Raíz","Cutícula"],
+    correcta:1,
+    explicacion:"La onicomicosis afecta estructuras queratinizadas de la uña. El hiponiquio se ubica debajo del borde libre de la lámina ungueal y puede alterarse en infecciones fúngicas, contribuyendo a la hiperqueratosis subungueal."
+},
+
+{
+    id:205,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"Mujer de 40 años presenta fatiga, diarrea, hipotensión, hipocortisolismo e hiperpigmentación en mucosa bucal y pliegues palmares. ¿En qué capa de la epidermis se encuentran las células responsables de la hiperpigmentación?",
+    opciones:["Córneo","Lúcido","Espinoso","Basal"],
+    correcta:3,
+    explicacion:"Los melanocitos se localizan en el estrato basal de la epidermis. En el hipocortisolismo primario aumenta la ACTH, que posee actividad estimulante sobre los melanocitos y causa hiperpigmentación."
+},
+
+{
+    id:206,
+    tema:"Bioquímica: Estructura y función a nivel celular",
+    pregunta:"Varón de 8 años presenta retraso mental y hepatoesplenomegalia. La biopsia hepática sugiere enfermedad de Niemann-Pick. ¿Qué compuesto se encuentra incrementado?",
+    opciones:["Esfingomielina","Fosfatidilcolina","Fosfatidilserina","Glucocerebrósido"],
+    correcta:0,
+    explicacion:"La enfermedad de Niemann-Pick clásica se produce por deficiencia de esfingomielinasa ácida. Esto ocasiona acumulación de esfingomielina en macrófagos y otros tejidos, causando hepatoesplenomegalia y compromiso neurológico."
+},
+
+{
+    id:207,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"Para sintetizar ácido palmítico de 16 carbonos en tejido adiposo, ¿cuántos moles de malonil-CoA por mol de este ácido graso se requieren?",
+    opciones:["6","8","7","9"],
+    correcta:2,
+    explicacion:"La síntesis de palmitato comienza con un acetil-CoA como cebador y requiere siete moléculas de malonil-CoA. Cada malonil-CoA aporta dos carbonos netos, hasta completar los 16 carbonos del ácido palmítico."
+},
+
+{
+    id:208,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"Infante de 3 años presenta debilidad muscular proximal, acidosis láctica, infartos cortico-subcorticales y alteraciones mitocondriales. Se diagnostica MELAS. ¿A qué deficiencia se debe esta enfermedad?",
+    opciones:["Citocromo P450-C4","Fosfoenolpiruvato sintetasa","Piruvato cinasa","Complejo I o IV"],
+    correcta:3,
+    explicacion:"MELAS es una enfermedad mitocondrial que altera la fosforilación oxidativa, con frecuencia por compromiso de complejos de la cadena respiratoria. El déficit energético obliga a mayor glucólisis anaerobia, elevando el lactato y causando acidosis láctica."
+},
+
+{
+    id:209,
+    tema:"Bioquímica: Metabolismo general",
+    pregunta:"Mujer de 52 años presenta fatiga, palidez, hemoglobina de 8 g/dL, aumento del volumen corpuscular medio, homocisteína elevada y ácido metilmalónico normal. ¿Cuál es el nutriente deficiente?",
+    opciones:["Ácido fólico","Hierro","Vitamina C","Vitamina B12"],
+    correcta:0,
+    explicacion:"La deficiencia de ácido fólico causa anemia megaloblástica y aumento de homocisteína. A diferencia del déficit de vitamina B12, no incrementa el ácido metilmalónico."
+},
+
+{
+    id:210,
+    tema:"Bioquímica: Metabolismo tisular",
+    pregunta:"Mujer de 42 años presenta distensión abdominal, flatulencia y antecedente de automedicación habitual con omeprazol. ¿Qué alteración bioquímica está implicada?",
+    opciones:["Menor actividad de las enzimas pancreáticas","Jugo gástrico con pH superior a 5,5","Jugo gástrico con pH inferior a 3,0","Mayor secreción enzimática pancreática"],
+    correcta:1,
+    explicacion:"El omeprazol inhibe irreversiblemente la bomba de protones H⁺/K⁺-ATPasa de las células parietales. Como resultado, disminuye la secreción de ácido clorhídrico y aumenta el pH gástrico."
+},
+{
+    id:211,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Qué estructura lleva el impulso eléctrico desde el nodo auriculoventricular a los ventrículos, asegurando una transmisión eficiente?",
+    opciones:["Fibras de Purkinje","Fascículos internodales","Nodo sinoauricular","Fascículo auriculoventricular"],
+    correcta:3,
+    explicacion:"El fascículo auriculoventricular o haz de His es la vía normal que conduce el impulso desde el nodo AV hacia los ventrículos. Luego se divide en ramas derecha e izquierda y continúa por las fibras de Purkinje."
+},
+{
+    id:212,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"Varón de 55 años recibe un fármaco que disminuye la velocidad de conducción del potencial de acción en el nodo AV. ¿Qué componente del ECG aumenta su duración?",
+    opciones:["Segmento ST","Onda P","Intervalo PR","Complejo QRS"],
+    correcta:2,
+    explicacion:"El intervalo PR refleja el tiempo de conducción desde las aurículas hasta los ventrículos, incluido el retraso fisiológico en el nodo AV. Si la conducción nodal se enlentece, el intervalo PR se prolonga."
+},
+{
+    id:213,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"Mujer de 67 años presenta edema en miembros inferiores secundario a insuficiencia cardíaca congestiva. ¿Qué mecanismo fisiopatológico originó el edema?",
+    opciones:["Retención de sodio","Obstrucción linfática","Aumento de la presión hidrostática","Reducción de la presión osmótica del plasma"],
+    correcta:2,
+    explicacion:"En la insuficiencia cardíaca aumenta la presión venosa y capilar. Esto favorece la salida de líquido desde el capilar hacia el intersticio, produciendo edema periférico."
+},
+{
+    id:214,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"Mujer de 40 años con hemoglobina de 5 g/dL recibe dos unidades de paquete globular. ¿En qué segmento del lecho vascular se encontrará la mayor parte del volumen transfundido?",
+    opciones:["Venas","Capilares","Arteriolas","Arterias"],
+    correcta:0,
+    explicacion:"Las venas y vénulas sistémicas actúan como vasos de capacitancia y contienen la mayor parte del volumen sanguíneo. Por ello, la mayor proporción del volumen transfundido se distribuye en el sistema venoso."
+},
+{
+    id:215,
+    tema:"Fisiología: Fisiología respiratoria",
+    pregunta:"Varón de 45 años presenta tos y disnea al caminar, que mejoran con broncodilatadores β₂-adrenérgicos. ¿Cuál es el hallazgo espirométrico más característico?",
+    opciones:["Flujo espiratorio pico aumentado","Capacidad vital incrementada","Volumen espiratorio forzado en el primer segundo disminuido","Capacidad vital forzada incrementada"],
+    correcta:2,
+    explicacion:"El asma produce obstrucción reversible de las vías aéreas. Esto disminuye el VEF1 y reduce la relación VEF1/CVF, especialmente durante una exacerbación."
+},
+{
+    id:216,
+    tema:"Fisiología: Fisiología respiratoria",
+    pregunta:"Varón de 25 años viaja de Lima a Cerro de Pasco y presenta cefalea y dificultad respiratoria. ¿Cuál es el mecanismo compensatorio inmediato ante la exposición aguda a gran altura?",
+    opciones:["Incremento de la ventilación pulmonar","Secreción constitutiva de eritropoyetina por los riñones","Producción de 2,3-difosfoglicerato por los eritrocitos","Incremento del número de eritrocitos"],
+    correcta:0,
+    explicacion:"La disminución de la presión parcial de oxígeno a gran altitud estimula los quimiorreceptores periféricos y aumenta rápidamente la ventilación. El incremento de eritropoyetina y de glóbulos rojos es una adaptación más tardía."
+},
+{
+    id:217,
+    tema:"Fisiología: Fisiología respiratoria",
+    pregunta:"Mujer de 30 años presenta debilidad ascendente con dificultad para la ventilación. ¿Qué cambio se producirá?",
+    opciones:["Aumento del volumen residual funcional","Aumento de la presión alveolar de O₂","Aumento de la ventilación alveolar","Aumento de la presión alveolar de CO₂"],
+    correcta:3,
+    explicacion:"La debilidad de los músculos respiratorios reduce la ventilación alveolar. Al eliminarse menos dióxido de carbono, aumenta la presión alveolar y arterial de CO₂, produciendo hipercapnia."
+},
+{
+    id:218,
+    tema:"Fisiología: Fisiología digestiva",
+    pregunta:"Varón de 28 años con enfermedad inflamatoria intestinal es sometido a resección ileal. ¿Cuál es el cambio fisiológico más probable?",
+    opciones:["Disminución de la producción del factor intrínseco","Aumento de la actividad de la 7-alfa-hidroxilasa hepática","Aumento de la actividad de las glucuronidasas","Incremento de la absorción intestinal de calcio y hierro"],
+    correcta:1,
+    explicacion:"El íleon terminal reabsorbe sales biliares. Cuando se reseca, disminuye su retorno al hígado, lo que estimula la 7-alfa-hidroxilasa, enzima limitante en la síntesis hepática de ácidos biliares."
+},
+{
+    id:219,
+    tema:"Fisiología: Fisiología digestiva",
+    pregunta:"Varón de 40 años con IMC de 42 es sometido a cirugía bariátrica. En el seguimiento, ¿cuál sustancia se encontrará reducida?",
+    opciones:["Nesfatina","Ghrelina","Neurotensina","Glucosa"],
+    correcta:1,
+    explicacion:"La ghrelina se produce principalmente en el fundus gástrico y estimula el apetito. Muchos procedimientos bariátricos reducen el tejido gástrico productor de ghrelina, ayudando a disminuir la ingesta alimentaria."
+},
+{
+    id:220,
+    tema:"Fisiología: Fisiología del sistema excretor y medio interno",
+    pregunta:"Varón de 81 años, hipertenso desde hace 10 años, presenta disminución del flujo urinario. ¿Cuál es el mecanismo más probable?",
+    opciones:["Aumento de presión hidrostática del capilar glomerular","Aumento de la resistencia de la arteriola eferente","Disminución de la presión hidrostática en la cápsula de Bowman","Disminución del coeficiente de filtración glomerular"],
+    correcta:3,
+    explicacion:"La hipertensión crónica puede generar nefroesclerosis, con daño de capilares glomerulares y reducción de la superficie efectiva de filtración. Esto disminuye el coeficiente de filtración y reduce la formación de orina."
+},
+{
+    id:221,
+    tema:"Fisiología: Fisiología del sistema excretor y medio interno",
+    pregunta:"Joven universitario consume alcohol en exceso y luego presenta aumento del volumen urinario. La menor secreción de hormona antidiurética disminuye la acción renal de: ",
+    opciones:["Péptido natriurético","Aquaporina","Aldosterona","Angiotensina"],
+    correcta:1,
+    explicacion:"La hormona antidiurética estimula la inserción de acuaporina-2 en la membrana apical de las células principales del túbulo colector. El alcohol inhibe la liberación de ADH, disminuye la reabsorción de agua y causa diuresis."
+},
+{
+    id:222,
+    tema:"Fisiología: Fisiología del sistema excretor y medio interno",
+    pregunta:"Varón de 48 años presenta deposiciones frecuentes y de gran volumen. Laboratorio: pH 7,2, HCO₃⁻ 12 mEq/L, pCO₂ 30 mmHg, sodio 130 mEq/L y cloro 108 mEq/L. ¿Qué tipo de acidosis presenta?",
+    opciones:["Metabólica con anión gap alto","Metabólica con anión gap bajo","Metabólica con anión gap normal","Respiratoria con anión gap normal"],
+    correcta:2,
+    explicacion:"La diarrea causa pérdida intestinal de bicarbonato, generando acidosis metabólica hiperclorémica. El anión gap se mantiene normal porque el cloro aumenta en reemplazo del bicarbonato perdido."
+},
+{
+    id:223,
+    tema:"Fisiología: Fisiología del sistema excretor y medio interno",
+    pregunta:"Varón de 52 años presenta molestias al orinar y hematuria. La radiografía de pelvis evidencia una imagen radiopaca redondeada de 1 cm en la vejiga. ¿Cuál hallazgo sería más probable?",
+    opciones:["Albuminuria","Hipercalciuria","Hemoglobinuria","Hiperuricemia"],
+    correcta:1,
+    explicacion:"Los cálculos radiopacos se asocian con mayor frecuencia a sales de calcio. La hipercalciuria incrementa la saturación urinaria de calcio y favorece la formación de cálculos urinarios."
+},
+{
+    id:224,
+    tema:"Fisiología: Fisiología del sistema excretor y medio interno",
+    pregunta:"Varón de 55 años con diabetes mellitus tipo 2 e insuficiencia renal crónica tiene una TFG de 10%. ¿Qué producto nitrogenado sintetizado en músculo esquelético se utiliza para estimar este parámetro?",
+    opciones:["Creatinina","Ácido úrico","Amoníaco","Urea"],
+    correcta:0,
+    explicacion:"La creatinina deriva del metabolismo de creatina y fosfocreatina del músculo esquelético. Su concentración sérica se utiliza para estimar la tasa de filtración glomerular."
+},
+{
+    id:225,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"Mujer de 16 años presenta aumento de peso, estreñimiento, somnolencia, voz engrosada, macroglosia, piel fría y bradipsiquia. El cuadro se explica por deficiencia de secreción de: ",
+    opciones:["Prolactina","Tiroxina","Estrógenos","Cortisol"],
+    correcta:1,
+    explicacion:"El hipotiroidismo reduce el metabolismo basal y produce intolerancia al frío, aumento de peso, estreñimiento, bradicinesia, lentitud mental y cambios cutáneos por acumulación de glucosaminoglucanos."
+},
+{
+    id:226,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"Mujer de 30 años presenta una tumoración de ovario con compromiso de células de la granulosa. ¿Cuál es la función principal de estas células?",
+    opciones:["Secretar estrógenos","Sintetizar andrógenos","Producir LH","Liberar óvulos"],
+    correcta:0,
+    explicacion:"Las células de la granulosa convierten andrógenos de la teca interna en estrógenos mediante aromatasa, bajo estímulo de la hormona foliculoestimulante, FSH."
+},
+{
+    id:227,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"Mujer de 40 semanas de gestación presenta ruptura uterina con gran pérdida sanguínea durante el parto. Un infarto central de la hipófisis condiciona hipotiroidismo secundario. ¿Cuál es el patrón hormonal esperado?",
+    opciones:["TSH alta y T4 libre alta","TSH alta y T4 libre baja","TSH normal y T4 libre normal","TSH baja y T4 libre baja"],
+    correcta:3,
+    explicacion:"El infarto hipofisario posparto, síndrome de Sheehan, causa insuficiencia hipofisaria. En el hipotiroidismo central disminuyen la TSH y la T4 libre, a diferencia del hipotiroidismo primario, donde la TSH aumenta."
+},
+{
+    id:228,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Qué hormona hipofisaria incrementa su producción cuando se interrumpe la comunicación entre el hipotálamo y la hipófisis?",
+    opciones:["GH","ACTH","Prolactina","FSH"],
+    correcta:2,
+    explicacion:"La dopamina hipotalámica inhibe de manera tónica la secreción de prolactina. Al interrumpirse la conexión hipotálamo-hipófisis, se pierde esta inhibición y aumentan los niveles de prolactina."
+},
+{
+    id:229,
+    tema:"Fisiología: Fisiología del sistema nervioso",
+    pregunta:"¿Cuál es la finalidad básica de la activación del sistema nervioso autónomo?",
+    opciones:["Mantener la homeostasis del cuerpo","Reaccionar adecuadamente al estrés","Mantener la hemostasia del cuerpo","Regular únicamente la función del sistema entérico"],
+    correcta:0,
+    explicacion:"El sistema nervioso autónomo regula de manera involuntaria la actividad cardiovascular, respiratoria, digestiva, glandular y metabólica para mantener estable el medio interno."
+},
+{
+    id:230,
+    tema:"Fisiología: Integración fisiológica",
+    pregunta:"Mujer de 30 años viaja de Estados Unidos a Puno y presenta mal de montaña agudo. ¿Qué tipo de hipoxia presenta?",
+    opciones:["Isquémica","Histotóxica","Anémica","Hipóxica"],
+    correcta:3,
+    explicacion:"En la gran altitud disminuye la presión inspirada de oxígeno y, por tanto, la presión arterial de oxígeno. Esto produce hipoxia hipóxica, aun cuando la hemoglobina y la perfusión tisular sean normales."
+},
+{
+    id:231,
+    tema:"Patología: Trastornos hemodinámicos",
+    pregunta:"Mujer de 27 años practica buceo recreativo y asciende muy rápido a la superficie. A los minutos presenta dolor torácico, dificultad respiratoria, alteración del sensorio, pérdida de conciencia y hemiparesia. ¿Qué tipo de embolia se sospecha?",
+    opciones:["Paradójica","Trombótica","Grasa","Gaseosa"],
+    correcta:3,
+    explicacion:"El ascenso rápido reduce súbitamente la presión ambiental, permitiendo que el nitrógeno disuelto forme burbujas en sangre y tejidos. Estas burbujas pueden obstruir vasos y causar síntomas respiratorios y neurológicos."
+},
+{
+    id:232,
+    tema:"Patología: Inmunopatología",
+    pregunta:"Mujer de 44 años con artritis reumatoide presenta dolor crónico de rodilla. ¿Cuál citocina secretada por macrófagos estimula a las células sinoviales para secretar proteasas y destruir el cartílago hialino?",
+    opciones:["Interleucina 8","Interleucina 1","Interleucina 17","Interleucina 7"],
+    correcta:1,
+    explicacion:"La IL-1 es una citocina proinflamatoria clave en la artritis reumatoide. Estimula a las células sinoviales para producir metaloproteinasas y otras proteasas que degradan cartílago y favorecen erosión articular."
+},
+{
+    id:233,
+    tema:"Patología: Inmunopatología",
+    pregunta:"En relación con las enfermedades autoinmunitarias, señale el enunciado correcto:",
+    opciones:["La incidencia de estas enfermedades está disminuyendo en países desarrollados.","Las manifestaciones clínicas son de espectro limitado.","La sola presencia de autoanticuerpos es indicador de enfermedad.","El mecanismo patogénico comprende la pérdida de la autotolerancia."],
+    correcta:3,
+    explicacion:"Las enfermedades autoinmunitarias aparecen cuando se pierde la tolerancia frente a antígenos propios. Los autoanticuerpos pueden estar presentes sin enfermedad clínica, por lo que no son diagnósticos por sí solos."
+},
+{
+    id:234,
+    tema:"Patología: Neoplasias",
+    pregunta:"Mujer de 48 años con carcinoma ductal infiltrante de mama. ¿Qué estudio debe realizarse principalmente por sus implicaciones clínico-terapéuticas?",
+    opciones:["Estudio fenotípico mediante citometría de flujo","Mutaciones de genes BRCA1 y BRCA2","Antecedentes familiares en primer grado","Receptores de estrógeno, progesterona y HER2"],
+    correcta:3,
+    explicacion:"La determinación de receptores hormonales y HER2 orienta el pronóstico y el tratamiento del cáncer de mama. Permite seleccionar terapias endocrinas y anti-HER2 cuando corresponda."
+},
+{
+    id:235,
+    tema:"Patología: Neoplasias",
+    pregunta:"Varón de 65 años, agricultor con exposición solar crónica, presenta una pápula perlada frontal con telangiectasias. En la microscopía se observan formaciones nodulares basófilas dispuestas en empalizada. ¿Cuál es el diagnóstico?",
+    opciones:["Carcinoma basocelular","Carcinoma de células de Merkel","Carcinoma epidermoide","Melanoma lentiginoso"],
+    correcta:0,
+    explicacion:"El carcinoma basocelular se relaciona con exposición crónica a radiación ultravioleta. La pápula perlada con telangiectasias y las células basaloides en empalizada son hallazgos característicos."
+},
+{
+    id:236,
+    tema:"Patología: Patología cardiovascular",
+    pregunta:"Varón de 54 años, fumador de más de 30 cigarrillos al día, ingresa por infarto agudo de miocardio. Si se sospecha que la causa fue su hábito tabáquico, ¿cuál sería el mecanismo patológico involucrado?",
+    opciones:["Aumento de concentración de HDL","Disminución de factores de coagulación","Aumento de agregación plaquetaria","Aumento de viscosidad sanguínea"],
+    correcta:2,
+    explicacion:"El tabaquismo promueve disfunción endotelial, aterosclerosis y un estado protrombótico. El aumento de la agregación plaquetaria favorece la formación de trombos coronarios responsables de infarto agudo de miocardio."
+},
+{
+    id:237,
+    tema:"Patología: Patología cardiovascular",
+    pregunta:"Varón de 68 años, fumador e hipertenso, tiene antecedentes familiares de infarto de miocardio y accidente cerebrovascular. ¿Cuál factor de riesgo para aterosclerosis es modificable?",
+    opciones:["Hábito tabáquico","Edad avanzada","Antecedentes familiares","Sexo masculino"],
+    correcta:0,
+    explicacion:"El tabaquismo es un factor de riesgo modificable para aterosclerosis. La edad, el sexo y los antecedentes familiares no pueden modificarse, aunque permiten estimar el riesgo cardiovascular global."
+},
+{
+    id:238,
+    tema:"Patología: Patología del sistema hematopoyético",
+    pregunta:"Varón de 37 años con linfoadenopatías axilares. En la biopsia se observan células en palomita de maíz, con células CD20 positivas y negativas para virus Epstein-Barr. ¿Cuál es el diagnóstico?",
+    opciones:["Esclerosis nodular","Celularidad mixta","Linfoma de Hodgkin con predominio linfocítico","Depleción linfocítica"],
+    correcta:2,
+    explicacion:"Este subtipo se caracteriza por células LP o popcorn, CD20 positivas y generalmente CD15/CD30 negativas. Tiene un comportamiento clínico distinto al linfoma de Hodgkin clásico."
+},
+{
+    id:239,
+    tema:"Patología: Patología del sistema hematopoyético",
+    pregunta:"Varón de 44 años presenta engrosamiento y enrojecimiento progresivo de la piel del rostro. La biopsia cutánea muestra infiltración por linfocitos T neoplásicos CD4 positivos. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Linfoma de Hodgkin","Micosis fungoide","Linfoma de Burkitt","Leucemia linfocítica aguda"],
+    correcta:1,
+    explicacion:"La micosis fungoide es un linfoma cutáneo de células T, habitualmente CD4 positivas. Puede presentarse con lesiones cutáneas progresivas, infiltración epidérmica y, en fases avanzadas, compromiso sistémico."
+},
+{
+    id:240,
+    tema:"Patología: Patología del sistema digestivo",
+    pregunta:"Neonato varón presenta incapacidad para eliminar meconio en el periodo posnatal inmediato. Si se considera enfermedad de Hirschsprung, ¿qué alteración patológica se espera en el segmento distal del intestino?",
+    opciones:["Infarto mural de la mucosa intestinal","Ausencia del plexo de Meissner y de Auerbach","Hernia de asa intestinal delgada o gruesa","Tracción de mesenterio por segmento invaginado"],
+    correcta:1,
+    explicacion:"La enfermedad de Hirschsprung se debe a falta de migración de células de la cresta neural hacia el intestino distal. Esto causa aganglionosis de los plexos submucoso de Meissner y mientérico de Auerbach, con obstrucción funcional."
+},
+{
+    id:241,
+    tema:"Patología: Patología del aparato reproductor y de la mama",
+    pregunta:"¿Cuál enunciado corresponde a hiperplasia benigna de próstata?",
+    opciones:["Los niveles de antígeno prostático específico se mantienen sin alteración.","Los estrógenos inhiben la proliferación celular global en la hiperplasia benigna de próstata.","Los inhibidores de la 5-alfa reductasa exacerban los síntomas.","Afecta con mayor frecuencia a la zona periuretral interna y a la zona de transición."],
+    correcta:3,
+    explicacion:"La hiperplasia benigna de próstata se desarrolla principalmente en la zona de transición, alrededor de la uretra prostática. Esto explica los síntomas obstructivos urinarios que produce."
+},
+{
+    id:242,
+    tema:"Patología: Patología del sistema endocrino",
+    pregunta:"La presencia de una masa tiroidea dura y fija, asociada a fibrosis de la glándula y de zonas adyacentes, que puede simular una neoplasia, corresponde a:",
+    opciones:["Tiroiditis de Riedel","Tiroiditis de Quervain","Tiroiditis de Hashimoto","Tiroiditis linfocítica"],
+    correcta:0,
+    explicacion:"La tiroiditis de Riedel es una enfermedad fibroinflamatoria poco frecuente que reemplaza el parénquima tiroideo por fibrosis densa. La glándula se vuelve dura, fija y puede confundirse clínicamente con cáncer de tiroides."
+},
+{
+    id:243,
+    tema:"Patología: Patología ósea y de tejidos blandos",
+    pregunta:"Niño de 6 años presenta debilidad e hipotonía muscular progresiva desde la infancia, dificultad respiratoria y miocardiopatía dilatada. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Esclerosis lateral amiotrófica","Síndrome de Guillain-Barré","Distrofia muscular de Duchenne","Distrofia muscular de Becker"],
+    correcta:2,
+    explicacion:"La distrofia muscular de Duchenne es una enfermedad ligada al cromosoma X causada por ausencia de distrofina. Produce debilidad muscular progresiva desde la infancia, compromiso respiratorio y miocardiopatía dilatada."
+},
+{
+    id:244,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Gestante de 20 semanas con aumento de la presión arterial. ¿Cuál antihipertensivo sería de primera elección?",
+    opciones:["Captopril","Alfa-metildopa","Irbesartán","Atenolol"],
+    correcta:1,
+    explicacion:"La alfa-metildopa es un antihipertensivo seguro durante el embarazo y posee amplia experiencia clínica. Los inhibidores de la enzima convertidora de angiotensina y los antagonistas del receptor de angiotensina II están contraindicados por su riesgo fetal."
+},
+{
+    id:245,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Varón de 30 años ingiere organofosforados. ¿Cuál es el mecanismo por el que esta sustancia altera los impulsos nerviosos en la placa mioneural?",
+    opciones:["Antagonismo de la acetilcolina","Estimulación de la liberación de acetilcolina","Inhibición de la degradación de acetilcolina","Competencia por los receptores nicotínicos"],
+    correcta:2,
+    explicacion:"Los organofosforados inhiben de manera irreversible la acetilcolinesterasa. Esto produce acumulación de acetilcolina en receptores muscarínicos, nicotínicos y del sistema nervioso central."
+},
+{
+    id:246,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Mujer de 79 años con fibrilación auricular recibe warfarina. Este medicamento produce inhibición de:",
+    opciones:["Vía intrínseca de la coagulación","Factores dependientes de vitamina K","Factor tisular de la coagulación","Agregación plaquetaria"],
+    correcta:1,
+    explicacion:"La warfarina inhibe la vitamina K epóxido reductasa hepática. Esto disminuye la activación de los factores II, VII, IX y X, además de las proteínas C y S."
+},
+{
+    id:247,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Niño de 7 años ingiere gotas para el glaucoma y presenta sudoración excesiva, sialorrea, rinorrea, dificultad respiratoria, hipotensión y diarrea. ¿Qué fármaco puede revertir estos efectos?",
+    opciones:["Neostigmina","Pilocarpina","Carbacol","Atropina"],
+    correcta:3,
+    explicacion:"El cuadro corresponde a toxicidad colinérgica. La atropina bloquea receptores muscarínicos y revierte manifestaciones como broncorrea, broncoconstricción, bradicardia, hipotensión, diarrea y sialorrea."
+},
+{
+    id:248,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Varón de 30 años desarrolla choque anafiláctico con hipotensión severa tras una inyección intramuscular de penicilina. La adrenalina revierte la hipotensión principalmente por su acción en receptores:",
+    opciones:["Alfa 1","Alfa 2","Beta 2","Beta 3"],
+    correcta:0,
+    explicacion:"La activación de receptores alfa 1 produce vasoconstricción periférica, aumenta la resistencia vascular sistémica y eleva la presión arterial. La adrenalina también activa receptores beta 2, útiles para broncodilatación."
+},
+{
+    id:249,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"Preescolar de 3 años presenta compromiso de conciencia, sialorrea, vómitos, bradicardia, fasciculaciones musculares y miosis. ¿Qué fármaco se debe administrar?",
+    opciones:["Propranolol","Adrenalina","Dexametasona","Atropina"],
+    correcta:3,
+    explicacion:"El cuadro es compatible con intoxicación por organofosforados, que produce exceso de acetilcolina. La atropina bloquea los efectos muscarínicos potencialmente mortales, como broncorrea, broncoespasmo y bradicardia."
+},
+{
+    id:250,
+    tema:"Antimicrobianos",
+    pregunta:"Mujer de 29 años con VIH se confirma embarazada. ¿Qué medicamento debe indicarse para reducir el riesgo de transmisión de VIH al feto?",
+    opciones:["Zidovudina","Saquinavir","Ritonavir","Interferón alfa"],
+    correcta:0,
+    explicacion:"La zidovudina es un inhibidor nucleósido de la transcriptasa reversa y ha sido empleada para disminuir la transmisión vertical del VIH. Actualmente se usa como parte de un esquema antirretroviral combinado según el contexto clínico."
+},
+{
+    id:251,
+    tema:"Antimicrobianos",
+    pregunta:"Varón de 70 años presenta neumonía adquirida en la comunidad por Haemophilus influenzae. ¿Cuál sería el antibiótico de elección?",
+    opciones:["Cefalotina con inhibidor enzimático","Penicilina benzatínica con inhibidor de betalactamasa","Ácido clavulánico con penicilina V","Amoxicilina con ácido clavulánico"],
+    correcta:3,
+    explicacion:"H. influenzae puede producir betalactamasas. La combinación amoxicilina/ácido clavulánico mantiene actividad frente a cepas productoras de estas enzimas y es útil en neumonía adquirida en la comunidad."
+},
+{
+    id:252,
+    tema:"Antimicrobianos",
+    pregunta:"La eficacia de la amikacina en el tratamiento de un absceso hepático es baja debido a que existen:",
+    opciones:["Hipoosmolaridad","Condiciones anaerobias","Déficit de perfusión","Acumulación de calcio"],
+    correcta:1,
+    explicacion:"Los aminoglucósidos, como la amikacina, requieren transporte dependiente de oxígeno para ingresar a las bacterias. Por ello, pierden eficacia en ambientes anaerobios, como el interior de un absceso."
+},
+{
+    id:253,
+    tema:"Antimicrobianos",
+    pregunta:"Varón de 40 años en terapia antituberculosa presenta problemas de visión para la discriminación de colores. ¿Cuál fármaco del esquema produce esta reacción adversa?",
+    opciones:["Etambutol","Pirazinamida","Isoniazida","Rifampicina"],
+    correcta:0,
+    explicacion:"El etambutol puede causar neuritis óptica, con disminución de agudeza visual y alteración de la discriminación rojo-verde. Es necesario vigilar la función visual durante el tratamiento."
+},
+{
+    id:254,
+    tema:"Farmacología del sistema nervioso y toxicología",
+    pregunta:"Varón de 55 años bajo anestesia general comienza a agitarse, respira irregularmente, ríe, grita, actúa de forma incoherente y presenta micción involuntaria. ¿En qué etapa de anestesia general se encuentra?",
+    opciones:["De delirio","De mantenimiento","De recuperación","De inducción"],
+    correcta:0,
+    explicacion:"La fase de excitación o delirio corresponde al estadio II de la anestesia general. Se caracteriza por conducta desinhibida, respiración irregular, movimientos involuntarios y riesgo de vómito o laringoespasmo."
+},
+{
+    id:255,
+    tema:"Farmacología del sistema nervioso y toxicología",
+    pregunta:"Varón de 20 años ingiere 6 g de paracetamol al día para aliviar dolor articular agudo. ¿Qué fármaco debería utilizarse para tratar esta sobredosis?",
+    opciones:["Atropina","Diazepam","N-acetilcisteína","Manitol"],
+    correcta:2,
+    explicacion:"La N-acetilcisteína repone las reservas de glutatión hepático y facilita la neutralización del metabolito tóxico NAPQI. Es el antídoto específico para sobredosis de paracetamol."
+},
+{
+    id:256,
+    tema:"Farmacología del sistema nervioso y toxicología",
+    pregunta:"Adolescente de 15 años consume drogas con sus compañeros y posteriormente presenta una crisis de pánico. ¿Cuál es la droga más probable responsable de este cuadro?",
+    opciones:["LSD","Pasta básica de cocaína","Éxtasis","Cannabis sativa"],
+    correcta:3,
+    explicacion:"El cannabis puede provocar ansiedad intensa, ataques de pánico, paranoia y alteraciones perceptivas, en especial con dosis altas o en personas susceptibles."
+},
+{
+    id:257,
+    tema:"Farmacología del sistema nervioso y toxicología",
+    pregunta:"Niño de 12 años presenta microcefalia, retraso mental, ptosis palpebral y puente nasal hundido y ancho. Su madre recibió tratamiento anticonvulsivante durante el embarazo. ¿Cuál fármaco se relaciona con este cuadro?",
+    opciones:["Gabapentina","Clobazam","Topiramato","Fenitoína"],
+    correcta:3,
+    explicacion:"La exposición fetal a fenitoína se asocia con síndrome fetal por hidantoína, que puede incluir retraso del crecimiento, alteraciones craneofaciales, hipoplasia ungueal y discapacidad del neurodesarrollo."
+},
+{
+    id:258,
+    tema:"Farmacología endocrina, renal y respiratoria",
+    pregunta:"Mujer de 55 años con diabetes mellitus tipo 2 recibe un inhibidor de SGLT2. ¿Qué efecto adverso deriva de su mecanismo de acción?",
+    opciones:["Acidosis láctica","Aumento de eventos cardiovasculares","Mayor riesgo de hipoglicemia","Aumento de infecciones urinarias"],
+    correcta:3,
+    explicacion:"Los inhibidores de SGLT2 aumentan la excreción urinaria de glucosa. La glucosuria favorece infecciones urinarias y genitales micóticas."
+},
+{
+    id:259,
+    tema:"Farmacología endocrina, renal y respiratoria",
+    pregunta:"Varón de 24 años asciende al nevado Huascarán y presenta mal de montaña agudo. ¿Qué medicamento puede prevenir este problema?",
+    opciones:["Furosemida","Acetazolamida","Amilorida","Manitol"],
+    correcta:1,
+    explicacion:"La acetazolamida inhibe la anhidrasa carbónica, produce acidosis metabólica leve y estimula la ventilación. Esto facilita la aclimatación y se utiliza en prevención del mal agudo de montaña."
+},
+{
+    id:260,
+    tema:"Farmacología endocrina, renal y respiratoria",
+    pregunta:"Niño asmático tratado con corticoides durante cuatro años presenta talla baja. ¿En cuál tipo de receptores actúan los corticoides?",
+    opciones:["Canales iónicos","Asociados a proteína G","Nucleares","Enzimáticos"],
+    correcta:2,
+    explicacion:"Los glucocorticoides atraviesan la membrana celular y se unen a receptores intracelulares. El complejo fármaco-receptor regula la transcripción génica en el núcleo, explicando sus efectos antiinflamatorios y metabólicos."
+},
+{
+    id:261,
+    tema:"Microbiología y Parasitología: Bacteriología",
+    pregunta:"Varón de 20 años con VIH presenta tos persistente de un mes, hemoptisis, pérdida de peso y sudoración nocturna. ¿Cuál es el agente etiológico más probable?",
+    opciones:["Streptococcus pyogenes","Mycobacterium tuberculosis","Pseudomonas aeruginosa","Aspergillus fumigatus"],
+    correcta:1,
+    explicacion:"La tos crónica, hemoptisis, pérdida de peso y sudoración nocturna son manifestaciones típicas de tuberculosis pulmonar. La inmunosupresión por VIH aumenta el riesgo de infección activa y de presentaciones graves."
+},
+{
+    id:262,
+    tema:"Microbiología y Parasitología: Bacteriología",
+    pregunta:"Varón de 45 años presenta diarrea acuosa como agua de arroz tras comer mariscos crudos. Se sospecha infección por Vibrio cholerae. ¿Cuál es una característica de esta especie?",
+    opciones:["Cocos gramnegativos y móviles","Bacilos grampositivos y no móviles","Bacilos gramnegativos y móviles","Cocos grampositivos y móviles"],
+    correcta:2,
+    explicacion:"Vibrio cholerae es un bacilo gramnegativo curvo, móvil mediante un flagelo polar. Produce una enterotoxina que aumenta el AMP cíclico en enterocitos y ocasiona diarrea acuosa profusa."
+},
+{
+    id:263,
+    tema:"Microbiología y Parasitología: Bacteriología",
+    pregunta:"Varón de 72 años con accidente cerebrovascular hemorrágico e inconsciencia inicia doce horas después un cuadro de neumonía. ¿Qué tipo de neumonía presentaría?",
+    opciones:["Nosocomial","Oportunista","Atípica","Aspirativa"],
+    correcta:3,
+    explicacion:"La disminución del estado de conciencia altera los mecanismos protectores de la vía aérea y favorece la aspiración de contenido orofaríngeo o gástrico. Esto puede producir neumonía aspirativa, especialmente en pacientes con compromiso neurológico."
+},
+{
+    id:264,
+    tema:"Microbiología y Parasitología: Bacteriología",
+    pregunta:"Varón de 25 años con fiebre y dolor en fosa iliaca derecha presenta 90% de neutrófilos y desviación izquierda. ¿Qué agentes patógenos causales son más probables?",
+    opciones:["Bacterias","Hongos","Virus","Parásitos"],
+    correcta:0,
+    explicacion:"La neutrofilia con desviación a la izquierda, es decir, aumento de formas inmaduras de neutrófilos, es característica de infección bacteriana aguda, como podría ocurrir en apendicitis."
+},
+{
+    id:265,
+    tema:"Microbiología y Parasitología: Bacteriología",
+    pregunta:"Niño de 4 años presenta fiebre, vómitos explosivos, estupor, rigidez de nuca, petequias y equimosis. El LCR muestra patrón de meningitis bacteriana. ¿Cuál es el agente etiológico más probable?",
+    opciones:["Streptococcus pneumoniae","Neisseria meningitidis","Haemophilus influenzae","Staphylococcus aureus"],
+    correcta:1,
+    explicacion:"La meningitis por meningococo puede acompañarse de meningococcemia, que produce petequias y púrpura. El LCR presenta pleocitosis, hipoglucorraquia y proteínas elevadas."
+},
+{
+    id:266,
+    tema:"Microbiología y Parasitología: Micología",
+    pregunta:"Paciente diabético con antecedente de tuberculosis pulmonar presenta hemoptisis. En esputo se observan hifas hialinas tabicadas y ramificadas en ángulo agudo. ¿Cuál es el diagnóstico más probable?",
+    opciones:["Criptococosis","Mucormicosis","Aspergilosis","Histoplasmosis"],
+    correcta:2,
+    explicacion:"Las hifas septadas con ramificación en ángulo agudo son características de Aspergillus. Las cavidades pulmonares previas por tuberculosis pueden favorecer la formación de un aspergiloma."
+},
+{
+    id:267,
+    tema:"Microbiología y Parasitología: Micología",
+    pregunta:"Varón de 45 años con VIH presenta cefalea intensa, fiebre y confusión progresiva; se sospecha meningitis criptococócica. ¿Qué prueba debe utilizarse en el análisis del LCR?",
+    opciones:["Observación directa","Gota gruesa","Producción de urea","Tinta china"],
+    correcta:3,
+    explicacion:"La tinción con tinta china permite observar la cápsula polisacárida de Cryptococcus neoformans como un halo claro alrededor de la levadura. Es una prueba clásica para sospecha de meningitis criptococócica."
+},
+{
+    id:268,
+    tema:"Microbiología y Parasitología: Virología",
+    pregunta:"Varón de 40 años con múltiples parejas sexuales presenta lesiones genitales dolorosas y vesículas perineales. El test de Tzanck es positivo. ¿Para qué virus sería positivo el PCR?",
+    opciones:["Herpes simple","Citomegalovirus","Epstein-Barr","Virus varicela-zóster"],
+    correcta:0,
+    explicacion:"El herpes genital suele ser causado por virus herpes simple, principalmente HSV-2. Se caracteriza por vesículas dolorosas agrupadas y el test de Tzanck puede mostrar células gigantes multinucleadas."
+},
+{
+    id:269,
+    tema:"Microbiología y Parasitología: Virología",
+    pregunta:"La infección viral caracterizada por producción continua de virus sin que las células hospederas mueran se denomina infección:",
+    opciones:["Lítica","Persistente","Abortiva","Lisogénica"],
+    correcta:1,
+    explicacion:"En una infección persistente el virus continúa replicándose y liberándose sin destruir necesariamente a la célula huésped. Esto permite que la infección se mantenga durante periodos prolongados."
+},
+{
+    id:270,
+    tema:"Microbiología y Parasitología: Virología",
+    pregunta:"Paciente de 60 años en tratamiento por cáncer presenta lesiones vesículo-ampollosas dolorosas en el dermatoma T8, precedidas por ardor. ¿Cuál es el diagnóstico?",
+    opciones:["Impétigo ampolloso","Sarampión","Herpes zóster","Ectima"],
+    correcta:2,
+    explicacion:"El herpes zóster corresponde a la reactivación del virus varicela-zóster en un ganglio sensitivo. Se presenta con dolor o ardor previo y erupción vesicular unilateral, limitada a un dermatoma."
+},
+{
+    id:271,
+    tema:"Microbiología y Parasitología: Helmintos",
+    pregunta:"Mujer de 30 años presenta prurito anal nocturno e insomnio. Tiene excoriaciones perianales y el test de Graham es positivo. ¿Qué mecanismo patogénico explica los síntomas?",
+    opciones:["Migración de larvas hacia los pulmones","Producción de sustancias alergénicas en intestino","Neurotoxinas en el tracto gastrointestinal","Emisión de huevos en región perianal"],
+    correcta:3,
+    explicacion:"Enterobius vermicularis migra durante la noche hacia la región perianal para depositar huevos. Esto desencadena prurito nocturno y permite el diagnóstico mediante la prueba de la cinta adhesiva o test de Graham."
+},
+{
+    id:272,
+    tema:"Microbiología y Parasitología: Protozoos",
+    pregunta:"Varón de 23 años natural de Iquitos presenta una lesión ulcerosa, indurada, firme e hiperémica en el brazo derecho, que aumenta progresivamente y se ha vuelto pruriginosa. ¿Cuál es el agente causal?",
+    opciones:["Leishmania peruviana","Trypanosoma gambiense","Trypanosoma cruzi","Leishmania braziliensis"],
+    correcta:0,
+    explicacion:"La leishmaniasis tegumentaria se presenta como una lesión cutánea crónica ulcerada en áreas expuestas. Se transmite por la picadura de flebótomos y es endémica en diversas regiones del Perú."
+},
+{
+    id:273,
+    tema:"Microbiología y Parasitología: Protozoos",
+    pregunta:"Niño de 9 años presenta fiebre alta, cefalea y convulsiones tras bañarse en una piscina pública. Se detectan trofozoítos en LCR y fallece a los cuatro días. ¿Cuál es el agente etiológico más probable?",
+    opciones:["Naegleria fowleri","Acanthamoeba spp.","Entamoeba histolytica","Balamuthia mandrillaris"],
+    correcta:0,
+    explicacion:"Naegleria fowleri causa meningoencefalitis amebiana primaria, una infección fulminante. Entra por la mucosa nasal tras exposición a agua contaminada y migra al sistema nervioso central a través de la lámina cribosa."
+},
+{
+    id:274,
+    tema:"Microbiología y Parasitología: Artrópodos",
+    pregunta:"Una persona observa al lado de su piscina un mosquito negro con manchas blancas en las patas que se acerca para picarle. ¿Con cuál vector se relaciona esta descripción?",
+    opciones:["Culex","Aedes","Anopheles","Lutzomyia"],
+    correcta:1,
+    explicacion:"Aedes aegypti es un mosquito oscuro con bandas blancas en patas y cuerpo. Es el principal vector urbano de dengue, zika, chikunguña y fiebre amarilla."
+},
 ]
