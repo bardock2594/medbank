@@ -50,6 +50,10 @@ HEADER
 }
 
 .navegacionHeader{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
     margin-top:14px;
 }
 
@@ -145,6 +149,92 @@ HEADER
     border-color:#0d6efd;
     background:#0d6efd;
     color:white;
+}
+
+.materialesProximamente{
+    margin-top:28px;
+    padding:30px;
+    border:1px dashed #9fc2f9;
+    border-radius:16px;
+    background:#f5f9ff;
+    text-align:center;
+}
+
+.materialesProximamente > span{
+    display:block;
+    margin-bottom:10px;
+    font-size:35px;
+}
+
+.materialesProximamente h3{
+    margin-bottom:8px;
+    color:#12376d;
+}
+
+.tituloMaterialEstudio{
+    color:#12376d !important;
+}
+
+.etiquetaPotenciaEstudio{
+    color:#0d6efd;
+}
+
+.materialesProximamente p{
+    max-width:570px;
+    margin:auto;
+    color:#52657d;
+}
+
+.seleccionBanqueo{
+    margin-top:28px;
+    padding:28px;
+    border:1px solid #dbe7f7;
+    border-radius:16px;
+    background:#f8fbff;
+}
+
+.seleccionBanqueo h3{
+    margin-bottom:18px;
+    color:#12376d;
+}
+
+.opcionesBanqueo{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.opcionesBanqueo label{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-height:52px;
+    padding:12px 14px;
+    border:1px solid #d7e1ef;
+    border-radius:11px;
+    background:white;
+    color:#24446f;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.opcionesBanqueo label:hover{
+    border-color:#0d6efd;
+    background:#eef5ff;
+}
+
+.opcionesBanqueo input{
+    width:18px;
+    height:18px;
+    accent-color:#0d6efd;
+}
+
+.botonBanqueo{
+    width:auto;
+    margin-top:24px;
+    padding:14px 20px;
+    font-weight:700;
 }
 
 /*======================================================
@@ -413,6 +503,51 @@ SELECCIÓN DE CURSOS
 
     background:#e7f0ff;
     box-shadow:0 8px 15px rgba(0,0,0,.18);
+
+}
+
+.resumenBanco{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    margin:0 0 34px;
+    padding:24px 28px;
+    border:1px solid #cfe0ff;
+    border-radius:18px;
+    background:#f5f9ff;
+
+}
+
+.resumenBanco span{
+
+    display:block;
+    margin-bottom:6px;
+    color:#0d6efd;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+.resumenBanco p{
+
+    margin:0;
+    color:#52657d;
+
+}
+
+.resumenBanco strong{
+
+    min-width:84px;
+    padding:10px 16px;
+    border-radius:14px;
+    background:#0d6efd;
+    color:white;
+    font-size:34px;
+    line-height:1;
+    text-align:center;
 
 }
 
@@ -1112,6 +1247,39 @@ MÓVIL
     .presentacionPrincipal h2{
 
         font-size:26px;
+
+    }
+
+    .resumenBanco{
+
+        align-items:flex-start;
+        padding:22px;
+
+    }
+
+    .resumenBanco strong{
+
+        min-width:68px;
+        padding:10px;
+        font-size:28px;
+
+    }
+
+    .seleccionBanqueo{
+
+        padding:22px;
+
+    }
+
+    .opcionesBanqueo{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .botonBanqueo{
+
+        width:100%;
 
     }
 
