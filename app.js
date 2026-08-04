@@ -106,6 +106,16 @@ SUBTEMAS_PLANIFICADOS["Microbiología y Parasitología"]=[
     "Microbiología y Parasitología: Artrópodos"
 ];
 
+SUBTEMAS_PLANIFICADOS["Farmacología"]=[
+    "Fundamentos farmacológicos",
+    "Sistema nervioso autónomo",
+    "Cardiovascular y hematología",
+    "Antimicrobianos",
+    "Sistema nervioso central y toxicología",
+    "Endocrino, renal y respiratorio",
+    "Digestivo, inflamación y dolor"
+];
+
 //===============================
 // PANTALLAS
 //===============================
@@ -128,6 +138,12 @@ document.getElementById("pantallaEstadisticas");
 const pantallaQuienSoy =
 document.getElementById("pantallaQuienSoy");
 
+const pantallaTablasApuntes =
+document.getElementById("pantallaTablasApuntes");
+
+const pantallaBanqueo =
+document.getElementById("pantallaBanqueo");
+
 //===============================
 // BOTONES
 //===============================
@@ -135,11 +151,29 @@ document.getElementById("pantallaQuienSoy");
 const btnEstadisticas =
 document.getElementById("btnEstadisticas");
 
+const btnPreguntasCursos =
+document.getElementById("btnPreguntasCursos");
+
 const btnQuienSoy =
 document.getElementById("btnQuienSoy");
 
 const btnVolverQuienSoy =
 document.getElementById("btnVolverQuienSoy");
+
+const btnTablasApuntes =
+document.getElementById("btnTablasApuntes");
+
+const btnVolverTablasApuntes =
+document.getElementById("btnVolverTablasApuntes");
+
+const btnBanqueo =
+document.getElementById("btnBanqueo");
+
+const btnVolverBanqueo =
+document.getElementById("btnVolverBanqueo");
+
+const btnIniciarBanqueo =
+document.getElementById("btnIniciarBanqueo");
 
 const btnIniciar =
 document.getElementById("btnIniciar");
@@ -176,6 +210,9 @@ document.getElementById("btnSimulacroInicio");
 
 const botonesCurso =
 document.querySelectorAll(".cursoDisponible");
+
+const opcionesBanqueo =
+document.querySelectorAll('input[name="cursoBanqueo"]');
 
 const mascotaSaludo =
 document.getElementById("mascotaSaludo");
@@ -262,6 +299,9 @@ document.getElementById("mensajeResultado");
 const contenidoEstadisticas =
 document.getElementById("contenidoEstadisticas");
 
+const totalPreguntasBanco =
+document.getElementById("totalPreguntasBanco");
+
 //===============================
 // INICIO
 //===============================
@@ -272,9 +312,17 @@ function iniciarAplicacion(){
 
     cargarTemas();
 
+    actualizarTotalPreguntasBanco();
+
     mostrarPantalla("inicio");
 
     configurarMascota();
+
+    btnPreguntasCursos.onclick=function(){
+
+        mostrarPantalla("inicio");
+
+    };
 
     btnQuienSoy.onclick=function(){
 
@@ -287,6 +335,36 @@ function iniciarAplicacion(){
         mostrarPantalla("inicio");
 
     };
+
+    btnTablasApuntes.onclick=function(){
+
+        mostrarPantalla("tablasApuntes");
+
+    };
+
+    btnVolverTablasApuntes.onclick=function(){
+
+        mostrarPantalla("inicio");
+
+    };
+
+    btnBanqueo.onclick=function(){
+
+        mostrarPantalla("banqueo");
+
+    };
+
+    btnVolverBanqueo.onclick=function(){
+
+        mostrarPantalla("inicio");
+
+    };
+
+}
+
+function actualizarTotalPreguntasBanco(){
+
+    totalPreguntasBanco.textContent=bancoPreguntas.length;
 
 }
 
@@ -392,6 +470,8 @@ function mostrarPantalla(nombre){
     pantallaResultados.style.display="none";
     pantallaEstadisticas.style.display="none";
     pantallaQuienSoy.style.display="none";
+    pantallaTablasApuntes.style.display="none";
+    pantallaBanqueo.style.display="none";
 
     switch(nombre){
 
@@ -425,6 +505,16 @@ function mostrarPantalla(nombre){
             pantallaQuienSoy.style.display="block";
             break;
 
+        case "tablasApuntes":
+
+            pantallaTablasApuntes.style.display="block";
+            break;
+
+        case "banqueo":
+
+            pantallaBanqueo.style.display="block";
+            break;
+
     }
 
 }
@@ -433,30 +523,92 @@ function mostrarPantalla(nombre){
 // CARGAR TEMAS
 //===============================
 
+function clasificarTemaFarmacologia(pregunta){
+
+    const id=pregunta.id;
+
+    if((id>=57 && id<=76)){
+
+        return "Fundamentos farmacológicos";
+
+    }
+
+    if(id===1 || (id>=245 && id<=249 && id!==246) || id===165){
+
+        return "Sistema nervioso autónomo";
+
+    }
+
+    if((id>=8 && id<=20) || id===39 || id===40 || id===159 || id===164 || id===244 || id===246){
+
+        return "Cardiovascular y hematología";
+
+    }
+
+    if((id>=41 && id<=56) || (id>=151 && id<=153) || (id>=250 && id<=253)){
+
+        return "Antimicrobianos";
+
+    }
+
+    if((id>=2 && id<=5) || (id>=154 && id<=158) || (id>=254 && id<=257)){
+
+        return "Sistema nervioso central y toxicología";
+
+    }
+
+    if((id>=21 && id<=26) || (id>=33 && id<=38) || (id>=160 && id<=163) || (id>=258 && id<=260)){
+
+        return "Endocrino, renal y respiratorio";
+
+    }
+
+    if((id>=6 && id<=7) || (id>=27 && id<=32)){
+
+        return "Digestivo, inflamación y dolor";
+
+    }
+
+    return pregunta.tema;
+
+}
+
+function obtenerTemaPregunta(pregunta){
+
+    return cursoSeleccionado==="Farmacología" ?
+    clasificarTemaFarmacologia(pregunta) : pregunta.tema;
+
+}
+
+function perteneceACurso(pregunta,curso){
+
+    const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica","Fisiología","Patología","Microbiología y Parasitología"];
+
+    if(curso==="Farmacología"){
+
+        return !cursosConPreguntas.some(function(nombreCurso){
+
+            return pregunta.tema.startsWith(nombreCurso+":");
+
+        });
+
+    }
+
+    return pregunta.tema.startsWith(curso+":");
+
+}
+
 function cargarTemas(){
 
     selectTema.innerHTML="";
 
     const preguntasDelCurso=bancoPreguntas.filter(function(pregunta){
 
-        const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica","Fisiología","Patología","Microbiología y Parasitología"];
-
-        if(cursosConPreguntas.includes(cursoSeleccionado)){
-
-            return pregunta.tema.startsWith(cursoSeleccionado+":");
-
-        }
-
-        // Las preguntas sin prefijo de otro curso pertenecen a Farmacología.
-        return !cursosConPreguntas.some(function(curso){
-
-            return pregunta.tema.startsWith(curso+":");
-
-        });
+        return perteneceACurso(pregunta,cursoSeleccionado);
 
     });
 
-    const temasBanco=preguntasDelCurso.map(p=>p.tema);
+    const temasBanco=preguntasDelCurso.map(obtenerTemaPregunta);
     const temasPlanificados=SUBTEMAS_PLANIFICADOS[cursoSeleccionado] || [];
     const temas=[...new Set([...temasPlanificados,...temasBanco])];
 
@@ -472,7 +624,7 @@ function cargarTemas(){
         const total =
         preguntasDelCurso.filter(
 
-            p=>p.tema===tema
+            p=>obtenerTemaPregunta(p)===tema
 
         ).length;
 
@@ -543,6 +695,50 @@ function iniciarSimulacro(){
 
 }
 
+function iniciarBanqueo(){
+
+    const cursosElegidos=[...opcionesBanqueo]
+    .filter(opcion=>opcion.checked)
+    .map(opcion=>opcion.value);
+
+    if(cursosElegidos.length===0){
+
+        alert("Selecciona al menos un curso para iniciar tu banqueo.");
+
+        return;
+
+    }
+
+    indicePregunta=0;
+    puntaje=0;
+    preguntasIncorrectas=[];
+    respuestasSesion=[];
+    modoRevision=false;
+
+    temaSesion="Banqueo · "+cursosElegidos.join(", ");
+
+    preguntasExamen=bancoPreguntas.filter(function(pregunta){
+
+        return cursosElegidos.some(function(curso){
+
+            return perteneceACurso(pregunta,curso);
+
+        });
+
+    });
+
+    mezclarPreguntas();
+
+    preguntasExamen=preguntasExamen.slice(0,20);
+
+    prepararExamen();
+
+    mostrarPantalla("pregunta");
+
+    mostrarPregunta();
+
+}
+
 btnEstadisticas.onclick=function(){
 
     mostrarEstadisticas();
@@ -554,6 +750,12 @@ btnEstadisticas.onclick=function(){
 btnIniciar.onclick=function(){
 
     iniciarExamen();
+
+}
+
+btnIniciarBanqueo.onclick=function(){
+
+    iniciarBanqueo();
 
 }
 
@@ -579,7 +781,7 @@ function iniciarExamen(){
 
     bancoPreguntas.filter(function(p){
 
-        return p.tema===selectTema.value;
+        return obtenerTemaPregunta(p)===selectTema.value;
 
     });
 
