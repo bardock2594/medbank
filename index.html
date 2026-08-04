@@ -9,7 +9,7 @@
 
     <title>BankMed</title>
 
-    <link rel="stylesheet" href="style.css?v=20260802-guilbert">
+    <link rel="stylesheet" href="style.css?v=20260804-material-colores">
 
 </head>
 
@@ -26,7 +26,10 @@
         <p>Plataforma de práctica y aprendizaje de ciencias básicas de la salud</p>
 
         <nav class="navegacionHeader" aria-label="Navegación principal">
+            <button id="btnPreguntasCursos" class="botonQuienSoy" type="button">Preguntas por cursos</button>
             <button id="btnQuienSoy" class="botonQuienSoy" type="button">Quién soy y qué es BankMed</button>
+            <button id="btnTablasApuntes" class="botonQuienSoy" type="button">Material de estudio</button>
+            <button id="btnBanqueo" class="botonQuienSoy" type="button">Banqueo</button>
         </nav>
 
     </header>
@@ -81,6 +84,64 @@
             <button id="btnSimulacroInicio" class="botonSimulacroInicio">📝 Iniciar simulacro general · 20 preguntas</button>
         </section>
 
+        <section class="resumenBanco" aria-label="Total de preguntas disponibles">
+            <div>
+                <span>BANCO DE PREGUNTAS</span>
+                <p>Preguntas disponibles para practicar en todos los cursos.</p>
+            </div>
+            <strong id="totalPreguntasBanco" aria-live="polite">0</strong>
+        </section>
+
+    </div>
+
+    <!--========================================-->
+    <!-- BANQUEO PERSONALIZADO -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaBanqueo" style="display:none;">
+        <button id="btnVolverBanqueo" class="enlaceVolver" type="button">← Volver al inicio</button>
+
+        <section class="seccionQuienSoy">
+            <span class="etiquetaSeccion">PRÁCTICA PERSONALIZADA</span>
+            <h2>Arma tu banqueo</h2>
+            <p>Elige uno o más cursos. Generaremos 20 preguntas aleatorias únicamente de las áreas que selecciones.</p>
+        </section>
+
+        <section class="seleccionBanqueo" aria-label="Cursos para el banqueo">
+            <h3>¿Qué cursos deseas estudiar?</h3>
+            <div class="opcionesBanqueo">
+                <label><input type="checkbox" name="cursoBanqueo" value="Farmacología"> 💊 Farmacología</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Anatomía"> 🫀 Anatomía</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Embriología"> 🧬 Embriología</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Histología"> 🔬 Histología</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Bioquímica"> ⚗️ Bioquímica</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Fisiología"> 🫁 Fisiología</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Patología"> 🧫 Patología</label>
+                <label><input type="checkbox" name="cursoBanqueo" value="Microbiología y Parasitología"> 🦠 Microbiología y Parasitología</label>
+            </div>
+            <button id="btnIniciarBanqueo" class="botonBanqueo" type="button">📝 Iniciar banqueo · 20 preguntas</button>
+        </section>
+    </div>
+
+    <!--========================================-->
+    <!-- MATERIAL DE ESTUDIO -->
+    <!--========================================-->
+
+    <div class="contenedor" id="pantallaTablasApuntes" style="display:none;">
+        <button id="btnVolverTablasApuntes" class="enlaceVolver" type="button">← Volver al inicio</button>
+
+        <section class="seccionQuienSoy">
+            <span class="etiquetaSeccion etiquetaPotenciaEstudio">POTENCIA TU ESTUDIO</span>
+            <h2 class="tituloMaterialEstudio">Material de estudio</h2>
+            <p>En esta sección encontrarás tablas de resumen, esquemas y apuntes elaborados para complementar tu práctica con preguntas.</p>
+            <p>El material se organizará por curso y tema para que puedas localizarlo rápidamente mientras estudias.</p>
+        </section>
+
+        <section class="materialesProximamente" aria-label="Próximos materiales">
+            <span>📚</span>
+            <h3>Próximamente</h3>
+            <p>Aquí iré incorporando tablas comparativas, resúmenes y apuntes de ciencias básicas de la salud.</p>
+        </section>
     </div>
 
     <!--========================================-->
@@ -376,9 +437,9 @@
     <!-- JAVASCRIPT -->
     <!--========================================-->
 
-    <script src="preguntas.js"></script>
+    <script src="preguntas.js?v=20260804-contenido"></script>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260804-cursos"></script>
 
 </body>
 
