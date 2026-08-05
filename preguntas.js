@@ -2848,4 +2848,436 @@ const bancoPreguntas = [
     correcta:1,
     explicacion:"Aedes aegypti es un mosquito oscuro con bandas blancas en patas y cuerpo. Es el principal vector urbano de dengue, zika, chikunguña y fiebre amarilla."
 },
+{
+    id:275,
+    tema:"Anatomía: Pelvis",
+    pregunta:"¿Cuál de los siguientes músculos forma parte del elevador del ano?",
+    opciones:["Transverso profundo del periné","Piramidal","Pubococcígeo","Iliopsoas"],
+    correcta:2,
+    explicacion:"El elevador del ano está formado principalmente por los músculos puborrectal, pubococcígeo e iliococcígeo. Es un componente esencial del diafragma pélvico."
+},
+{
+    id:276,
+    tema:"Anatomía: Pelvis",
+    pregunta:"¿Qué estructuras forman parte del nivel II del sistema de sostén de la vagina?",
+    opciones:["Músculo elevador del ano y fascia endopélvica","Uniones paravaginales hacia el arco tendíneo","Ligamentos uterosacros y cardinales","Cuerpo perineal y hiato genital"],
+    correcta:1,
+    explicacion:"Según los niveles de sostén vaginal de DeLancey, el nivel II corresponde a la fijación lateral de la vagina media a la fascia pélvica y al arco tendíneo de la fascia endopélvica."
+},
+{
+    id:277,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Durante una histerectomía abdominal total con salpingooforectomía bilateral se realiza la ligadura del ligamento infundibulopélvico. ¿Qué vasos contiene principalmente este ligamento?",
+    opciones:["Vasos ováricos","Vasos uterinos","Vasos cervicales","Vasos vesicales"],
+    correcta:0,
+    explicacion:"El ligamento infundibulopélvico, también llamado ligamento suspensorio del ovario, contiene los vasos ováricos, linfáticos y fibras nerviosas que llegan al ovario."
+},
+{
+    id:278,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"¿Cuál de las siguientes malformaciones uterinas se debe a la falta total de fusión de los conductos de Müller?",
+    opciones:["Útero bicorne","Útero septado","Útero didelfo","Útero tabicado"],
+    correcta:2,
+    explicacion:"La falta completa de fusión de los conductos paramesonéfricos o de Müller produce duplicación uterina, conocida como útero didelfo. Puede acompañarse de duplicación cervical y vaginal."
+},
+{
+    id:279,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"La 17-hidroxiprogesterona es secretada fundamentalmente por:",
+    opciones:["Células de la granulosa","Glándula suprarrenal","Células del tejido adiposo","Células de la teca interna"],
+    correcta:3,
+    explicacion:"Las células de la teca interna producen andrógenos y esteroides precursores, incluida la 17-hidroxiprogesterona, bajo estimulación de la hormona luteinizante, LH."
+},
+{
+    id:280,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Qué hormona promueve principalmente el desarrollo del sistema ductal de la mama?",
+    opciones:["Activina","Estradiol","Progesterona","Relaxina"],
+    correcta:1,
+    explicacion:"Los estrógenos, especialmente el estradiol, estimulan el crecimiento y ramificación del sistema ductal mamario. La progesterona favorece principalmente el desarrollo lobuloalveolar."
+},
+{
+    id:281,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Cuál es la hormona responsable de estimular la producción de leche materna?",
+    opciones:["Oxitocina","Estrógeno","Progesterona","Prolactina"],
+    correcta:3,
+    explicacion:"La prolactina estimula la síntesis de leche en las glándulas mamarias. La oxitocina, en cambio, desencadena la eyección de leche mediante contracción de las células mioepiteliales."
+},
+{
+    id:282,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Qué capa del endometrio permite la regeneración endometrial después de cada menstruación?",
+    opciones:["Capa basal","Capa funcional","Capa esponjosa","Capa compacta"],
+    correcta:0,
+    explicacion:"La capa basal del endometrio no se desprende durante la menstruación. Sus células regeneran la capa funcional en cada nuevo ciclo menstrual."
+},
+{
+    id:283,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Cuál de las siguientes es una función de los estrógenos?",
+    opciones:["Disminuir la frecuencia de las contracciones uterinas","Inhibir la actividad osteoclástica en el hueso","Promover la excreción de agua y sal","Promover cambios secretorios en el endometrio uterino"],
+    correcta:1,
+    explicacion:"Los estrógenos limitan la resorción ósea al disminuir la actividad de los osteoclastos. Su reducción después de la menopausia favorece la osteoporosis."
+},
+{
+    id:284,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Qué hormona es imprescindible para el crecimiento folicular final y participa en la ovulación durante el ciclo ovárico?",
+    opciones:["Estrógeno","Progesterona","Hormona foliculoestimulante, FSH","Follistatina"],
+    correcta:2,
+    explicacion:"La FSH estimula el crecimiento y maduración de los folículos ováricos, así como la producción de estrógenos por las células de la granulosa. El pico de LH desencadena directamente la ovulación."
+},
+{
+    id:285,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"En una paciente con ciclos menstruales regulares de 30 días, ¿en qué día es más probable que ocurra la ovulación?",
+    opciones:["Día 16","Día 12","Día 13","Día 14"],
+    correcta:0,
+    explicacion:"La fase lútea suele durar aproximadamente 14 días. Por ello, en un ciclo de 30 días, la ovulación ocurre cerca del día 16, es decir, unos 14 días antes de la siguiente menstruación."
+},
+{
+    id:286,
+    tema:"Anatomía: Abdomen",
+    pregunta:"¿Cuáles son las localizaciones más frecuentes de la punta del apéndice vermiforme?",
+    opciones:["Preileal, pericólica derecha e infraovárica","Retrocecal, pélvica e intraperitoneal","Pericólica derecha, infraovárica y pélvica","Retrocecal, retroperitoneal y subcecal"],
+    correcta:1,
+    explicacion:"La posición retrocecal es la más frecuente. Las posiciones pélvica e intraperitoneal también son habituales y pueden cambiar la localización del dolor y los signos de apendicitis."
+},
+{
+    id:287,
+    tema:"Anatomía: Abdomen",
+    pregunta:"La irrigación arterial del apéndice cecal procede de una rama de la arteria:",
+    opciones:["Rectal superior","Cólica izquierda","Mesentérica superior","Sigmoidea superior"],
+    correcta:2,
+    explicacion:"La arteria apendicular es rama de la arteria ileocólica, la cual se origina de la arteria mesentérica superior. Es una arteria terminal y su compromiso puede producir isquemia del apéndice."
+},
+{
+    id:288,
+    tema:"Anatomía: Abdomen",
+    pregunta:"Varón de 60 años presenta dolor abdominal intenso y signos de shock. Durante la cirugía se evidencia necrosis del colon izquierdo. ¿Qué arteria se encuentra comprometida con mayor probabilidad?",
+    opciones:["Mesentérica inferior","Cólica superior","Mesentérica superior","Cólica derecha"],
+    correcta:0,
+    explicacion:"La arteria mesentérica inferior irriga el colon descendente, el sigmoide y el recto superior. La obstrucción de esta arteria puede causar isquemia y necrosis del colon izquierdo."
+},
+{
+    id:289,
+    tema:"Anatomía: Retroperitoneo",
+    pregunta:"Las arterias suprarrenales superiores se originan principalmente de:",
+    opciones:["Arterias renales","Aorta abdominal","Arterias ureterales","Arterias frénicas inferiores"],
+    correcta:3,
+    explicacion:"Las arterias suprarrenales superiores nacen de las arterias frénicas inferiores. Las arterias suprarrenales medias proceden de la aorta abdominal y las inferiores de las arterias renales."
+},
+{
+    id:290,
+    tema:"Fisiología: Fisiología digestiva",
+    pregunta:"En el triángulo de solubilidad de la bilis, dos de sus componentes principales son las sales biliares y la lecitina. ¿Cuál es el tercer componente?",
+    opciones:["Calcio","Colesterol","Ferritina","Oxalato"],
+    correcta:1,
+    explicacion:"La solubilidad biliar depende del equilibrio entre colesterol, sales biliares y fosfolípidos, principalmente lecitina. La sobresaturación de colesterol favorece la formación de cálculos biliares."
+},
+{
+    id:291,
+    tema:"Patología: Patología del sistema digestivo",
+    pregunta:"Los abscesos hepáticos se localizan con mayor frecuencia en el lóbulo hepático:",
+    opciones:["Izquierdo","Caudado","Derecho","Bilobular"],
+    correcta:2,
+    explicacion:"El lóbulo derecho es de mayor tamaño y recibe mayor flujo sanguíneo portal. Por ello, los abscesos hepáticos suelen presentarse con más frecuencia en este lóbulo."
+},
+{
+    id:292,
+    tema:"Patología: Patología del sistema digestivo",
+    pregunta:"¿Cuál es la causa más frecuente de absceso hepático piógeno?",
+    opciones:["Infección biliar ascendente","Diseminación hematógena por la vena porta","Septicemia","Diverticulitis"],
+    correcta:0,
+    explicacion:"La infección ascendente de la vía biliar, por ejemplo, durante una colangitis obstructiva, es una causa frecuente de absceso hepático piógeno. También puede ocurrir por diseminación portal desde infecciones intraabdominales."
+},
+{
+    id:293,
+    tema:"Anatomía: Tórax",
+    pregunta:"¿Cuál es el origen del plexo cardíaco?",
+    opciones:["Ramos anteriores del nervio vago y del nervio T12","Ramos cervicales y rama anterior del nervio T12","Ganglios simpáticos y ramos posteriores de los nervios C3 a C5","Ramos cervicales del nervio vago y del tronco simpático"],
+    correcta:3,
+    explicacion:"El plexo cardíaco recibe fibras parasimpáticas de los nervios vagos y fibras simpáticas de los ganglios cervicales y torácicos superiores del tronco simpático."
+},
+{
+    id:294,
+    tema:"Anatomía: Tórax",
+    pregunta:"La arteria circunfleja del corazón es rama de la arteria:",
+    opciones:["Septal anterior","Coronaria izquierda","Marginal","Septal posterior"],
+    correcta:1,
+    explicacion:"La arteria coronaria izquierda se divide principalmente en la arteria interventricular anterior y la arteria circunfleja. Esta última recorre el surco coronario hacia la cara posterior del corazón."
+},
+{
+    id:295,
+    tema:"Anatomía: Tórax",
+    pregunta:"En la mayoría de los casos, el nodo sinoauricular y el nodo auriculoventricular están irrigados por ramas de la arteria:",
+    opciones:["Circunfleja","Coronaria izquierda","Coronaria derecha","Interventricular anterior"],
+    correcta:2,
+    explicacion:"La arteria coronaria derecha irriga con frecuencia el nodo sinoauricular y, en la mayoría de los corazones, el nodo auriculoventricular. Esto depende del patrón de dominancia coronaria."
+},
+{
+    id:296,
+    tema:"Anatomía: Tórax",
+    pregunta:"El nodo sinoauricular es irrigado con mayor frecuencia por una rama de la arteria:",
+    opciones:["Coronaria derecha","Marginal izquierda","Ventricular anterior","Interventricular anterior"],
+    correcta:0,
+    explicacion:"La arteria del nodo sinoauricular suele originarse de la coronaria derecha, aunque en una proporción menor de casos puede originarse de la arteria circunfleja."
+},
+{
+    id:297,
+    tema:"Anatomía: Tórax",
+    pregunta:"¿Qué estructuras se dirigen desde el nódulo auriculoventricular hacia los ventrículos y se caracterizan por ser grandes y de rápida conducción?",
+    opciones:["Fibras del nódulo auriculoventricular","Fibras de Purkinje","Haz auriculoventricular derecho","Nervios simpáticos posganglionares"],
+    correcta:1,
+    explicacion:"Las fibras de Purkinje son células musculares cardíacas especializadas en conducción rápida. Distribuyen el impulso eléctrico por el miocardio ventricular y coordinan la contracción de los ventrículos."
+},
+{
+    id:298,
+    tema:"Farmacología endocrina, renal y respiratoria",
+    pregunta:"La furosemida es un diurético cuyo mecanismo de acción consiste en inhibir:",
+    opciones:["El receptor V2 de vasopresina","La anhidrasa carbónica","El canal epitelial de sodio","El cotransportador Na⁺/K⁺/2Cl⁻"],
+    correcta:3,
+    explicacion:"La furosemida es un diurético de asa que bloquea el cotransportador Na⁺/K⁺/2Cl⁻ en la rama ascendente gruesa del asa de Henle, produciendo una diuresis intensa."
+},
+{
+    id:299,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"En la clasificación de antihipertensivos según su mecanismo de acción, el atenolol corresponde a:",
+    opciones:["Antagonista del receptor alfa","Antagonista del receptor beta","Agente adrenérgico de acción central","Antagonista mixto de receptores alfa y beta"],
+    correcta:1,
+    explicacion:"El atenolol es un bloqueador beta, con predominio de acción sobre receptores β₁ cardíacos. Reduce la frecuencia cardíaca, la contractilidad y la liberación de renina."
+},
+{
+    id:300,
+    tema:"Farmacología cardiovascular y del sistema nervioso autónomo",
+    pregunta:"El aumento de la presión arterial secundario a la administración rápida de dosis altas de adrenalina endovenosa se produce principalmente por:",
+    opciones:["Efecto inotrópico negativo directo","Vasodilatación de las arterias coronarias","Predominio del efecto alfa-1 adrenérgico","Vasodilatación venosa"],
+    correcta:2,
+    explicacion:"A dosis altas, la adrenalina activa predominantemente receptores α₁, generando vasoconstricción periférica. Esto aumenta la resistencia vascular sistémica y eleva la presión arterial."
+},
+{
+    id:301,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"Respecto al período refractario absoluto durante la despolarización de una célula miocárdica, señale lo correcto:",
+    opciones:["Es el período en que la célula no puede responder a ningún estímulo, sin importar su intensidad.","Se debe al flujo de calcio hacia el espacio intracelular.","Es el período en que la célula responde a un estímulo de mayor intensidad.","Es el período en que la célula responde a un estímulo de menor intensidad."],
+    correcta:0,
+    explicacion:"Durante el período refractario absoluto, los canales de sodio se encuentran inactivados. Por ello, no puede generarse un nuevo potencial de acción, incluso frente a un estímulo intenso."
+},
+{
+    id:302,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Desde qué organela ocurre una gran liberación de calcio hacia el citoplasma durante la contracción del músculo cardíaco?",
+    opciones:["Lisosoma","Proteasoma","Retículo sarcoplásmico","Nucléolo"],
+    correcta:2,
+    explicacion:"La entrada inicial de calcio desde el exterior activa los receptores de rianodina del retículo sarcoplásmico. Esto libera grandes cantidades de calcio al citoplasma y permite la contracción cardíaca."
+},
+{
+    id:303,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Durante qué fase del ciclo cardíaco está abierta la válvula aórtica?",
+    opciones:["Llenado ventricular rápido","Relajación isovolumétrica","Sístole auricular","Eyección ventricular rápida"],
+    correcta:3,
+    explicacion:"La válvula aórtica se abre cuando la presión del ventrículo izquierdo supera la presión de la aorta. Esto ocurre durante la fase de eyección ventricular."
+},
+{
+    id:304,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Cuál es el ruido cardíaco producido por el cierre de las válvulas auriculoventriculares al inicio de la sístole?",
+    opciones:["S1","S2","S3","S4"],
+    correcta:0,
+    explicacion:"El primer ruido cardíaco, S1, se produce por el cierre de las válvulas mitral y tricúspide. Marca el inicio de la sístole ventricular."
+},
+{
+    id:305,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"Durante la despolarización rápida, fase 0, del potencial de acción de la célula miocárdica contráctil, ¿qué mecanismo ocurre?",
+    opciones:["Entrada lenta de calcio a la célula","Entrada rápida de sodio a la célula","Salida rápida de calcio desde la célula","Salida de potasio desde la célula"],
+    correcta:1,
+    explicacion:"La fase 0 del potencial de acción de los miocitos contráctiles ocurre por apertura de canales rápidos de sodio. La entrada masiva de Na⁺ produce una despolarización rápida."
+},
+{
+    id:306,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"El sistema de conducción especializado del corazón genera impulsos rítmicos y los conduce por el corazón. ¿Cómo se denomina la propiedad de las células cardíacas de contraerse?",
+    opciones:["Cronotropismo","Dromotropismo","Inotropismo","Batmotropismo"],
+    correcta:2,
+    explicacion:"El inotropismo es la capacidad del músculo cardíaco de contraerse. El cronotropismo se refiere a la frecuencia, el dromotropismo a la conducción y el batmotropismo a la excitabilidad."
+},
+{
+    id:307,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"En la fisiología de la actividad eléctrica del corazón, ¿qué estructura posee la mayor velocidad de conducción?",
+    opciones:["Miocitos cardíacos contráctiles","Nódulo auriculoventricular","Nódulo sinoauricular","Fibras de Purkinje"],
+    correcta:3,
+    explicacion:"Las fibras de Purkinje presentan la mayor velocidad de conducción del sistema cardíaco. Esto permite una activación rápida y sincronizada del miocardio ventricular."
+},
+{
+    id:308,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"En niños y adultos jóvenes, la distensión ventricular súbita durante la fase de llenado rápido corresponde al ruido cardíaco:",
+    opciones:["S3","S1","S2","S4"],
+    correcta:0,
+    explicacion:"El tercer ruido cardíaco, S3, aparece en la fase de llenado ventricular rápido. Puede ser fisiológico en niños y adultos jóvenes, pero en adultos mayores puede indicar sobrecarga de volumen o insuficiencia cardíaca."
+},
+{
+    id:309,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Qué parámetro representa uno de los determinantes de la precarga en la curva presión-volumen del ventrículo izquierdo?",
+    opciones:["Presión al inicio de la diástole","Volumen al inicio de la diástole","Volumen al final de la diástole","Presión al final de la sístole"],
+    correcta:2,
+    explicacion:"La precarga se relaciona con el grado de estiramiento de las fibras ventriculares antes de la contracción. El volumen telediastólico ventricular es uno de sus principales indicadores."
+},
+{
+    id:310,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Cuál de los siguientes órganos presenta el mayor flujo sanguíneo por cada 100 g de tejido?",
+    opciones:["Hígado","Riñón","Cerebro","Miocardio"],
+    correcta:1,
+    explicacion:"Los riñones reciben un flujo sanguíneo muy elevado en relación con su peso, necesario para mantener la filtración glomerular y regular el equilibrio hidroelectrolítico."
+},
+{
+    id:311,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Dónde se sintetiza la hormona cardionatrina?",
+    opciones:["Pericardio","Epicardio","Endocardio","Miocardio"],
+    correcta:3,
+    explicacion:"La cardionatrina, relacionada con el péptido natriurético auricular, se sintetiza principalmente en los cardiomiocitos auriculares. Favorece natriuresis, diuresis y vasodilatación."
+},
+{
+    id:312,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"En la regulación del flujo sanguíneo a nivel del músculo liso vascular, ¿qué sustancia aumenta la resistencia arteriolar al producir vasoconstricción?",
+    opciones:["Endotelina","Óxido nítrico","Sustancia P","Histamina"],
+    correcta:0,
+    explicacion:"La endotelina es uno de los vasoconstrictores endógenos más potentes. Aumenta el tono del músculo liso vascular y, por tanto, la resistencia arteriolar."
+},
+{
+    id:313,
+    tema:"Fisiología: Fisiología cardiovascular",
+    pregunta:"¿Qué canal iónico cardíaco explica principalmente la fase 0 del potencial de acción en las células miocárdicas contráctiles?",
+    opciones:["Canal de Ca²⁺","Canal rápido de Na⁺","Canal de K⁺ rectificador interno","Canal de K⁺ sensible a ATP"],
+    correcta:1,
+    explicacion:"La fase 0 depende de la apertura rápida de canales de sodio voltaje-dependientes. El influjo de Na⁺ genera la despolarización rápida de los miocitos ventriculares y auriculares."
+},
+{
+    id:314,
+    tema:"Histología: Sistema linfoide cardio-respiratorio",
+    pregunta:"¿Cuál de las siguientes túnicas de las arteriolas participa principalmente en la regulación de la resistencia vascular periférica?",
+    opciones:["Adventicia","Elástica interna","Media","Endotelio"],
+    correcta:2,
+    explicacion:"La túnica media de las arteriolas contiene músculo liso. Su contracción o relajación modifica el diámetro vascular y regula la resistencia periférica y la presión arterial."
+},
+{
+    id:315,
+    tema:"Histología: Sistema linfoide cardio-respiratorio",
+    pregunta:"La túnica adventicia contiene tejido conjuntivo laxo principalmente en:",
+    opciones:["Arterias musculares","Venas grandes","Arterias elásticas","Arteriolas"],
+    correcta:3,
+    explicacion:"En las arteriolas, la adventicia es una capa delgada de tejido conjuntivo laxo. A diferencia de las arterias grandes, presenta una estructura externa poco desarrollada."
+},
+{
+    id:316,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"¿Qué tejido es indispensable para dividir el corazón en cuatro cámaras y separar los canales pulmonar y aórtico?",
+    opciones:["Almohadillas endocárdicas","Membrana cloacal","Mesocardio dorsal","Membrana bucofaríngea"],
+    correcta:0,
+    explicacion:"Las almohadillas endocárdicas participan en la formación de los tabiques auriculoventriculares, las válvulas auriculoventriculares y parte de la separación del tracto de salida cardíaco."
+},
+{
+    id:317,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"¿Qué aminoácido es el precursor para la síntesis de melanina?",
+    opciones:["Arginina","Tirosina","Prolina","Glutamina"],
+    correcta:1,
+    explicacion:"La melanina se sintetiza en los melanocitos a partir de tirosina mediante la enzima tirosinasa. Este pigmento protege a las células epidérmicas frente al daño inducido por radiación ultravioleta."
+},
+{
+    id:318,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"¿Cómo se denomina la estructura cutánea relacionada con la sensibilidad táctil y el estiramiento sostenido de la piel?",
+    opciones:["Corpúsculo de Pacini","Corpúsculo de Merkel","Corpúsculo de Ruffini","Bulbo de Krause"],
+    correcta:2,
+    explicacion:"Los corpúsculos de Ruffini son mecanorreceptores encapsulados que responden principalmente al estiramiento sostenido de la piel y a la presión mantenida. Participan en la percepción táctil y en la información sobre la posición de los dedos."
+},
+{
+    id:319,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"¿En qué capa de la epidermis los melanocitos y los complejos melanoproteínicos alcanzan su máxima concentración?",
+    opciones:["Capa espinosa","Capa granulosa","Dermis","Capa basal"],
+    correcta:3,
+    explicacion:"Los melanocitos se localizan principalmente en el estrato basal de la epidermis. Desde allí transfieren melanosomas con melanina a los queratinocitos vecinos, formando una barrera protectora frente a la radiación ultravioleta."
+},
+{
+    id:320,
+    tema:"Histología: Sistema tegumentario",
+    pregunta:"¿Qué zona de la piel se caracteriza por epidermis gruesa, numerosos corpúsculos de Meissner, corpúsculos de Pacini en dermis profunda y cuerpos glómicos?",
+    opciones:["Pulpejos de los dedos","Axila","Abdomen","Cuero cabelludo"],
+    correcta:0,
+    explicacion:"Los pulpejos de los dedos corresponden a piel gruesa, especializada para discriminación táctil fina. Contienen numerosos mecanorreceptores y cuerpos glómicos, que participan en la termorregulación mediante comunicaciones arteriovenosas."
+},
+{
+    id:321,
+    tema:"Antidiabéticos orales",
+    pregunta:"¿Cuál de los siguientes fármacos incrementa directamente la secreción de insulina por las células beta del páncreas?",
+    opciones:["Linagliptina","Acarbosa","Glimepirida","Empagliflozina"],
+    correcta:2,
+    explicacion:"La glimepirida es una sulfonilurea que bloquea los canales de potasio sensibles a ATP de las células beta pancreáticas. Esto causa despolarización, entrada de calcio y liberación de insulina."
+},
+{
+    id:322,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"Mujer de 40 años presenta nerviosismo, pérdida de peso, hiperfagia, intolerancia al calor y piel caliente, suave e hiperhúmeda. La hormona alterada en este cuadro es de naturaleza:",
+    opciones:["Lipídica","Peptídica","Amínica","Glucoproteica"],
+    correcta:2,
+    explicacion:"Las hormonas tiroideas T3 y T4 derivan del aminoácido tirosina y contienen yodo. Por ello, se clasifican como hormonas amínicas, aunque actúan mediante receptores nucleares."
+},
+{
+    id:323,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"La apertura de canales estimulados por voltaje promueve la secreción de insulina por las células beta pancreáticas. ¿Qué ion ingresa a la célula y desencadena directamente la exocitosis de insulina?",
+    opciones:["Potasio","Sodio","Calcio","Magnesio"],
+    correcta:2,
+    explicacion:"La despolarización de la célula beta abre canales de calcio dependientes de voltaje. La entrada de Ca²⁺ desencadena la fusión de los gránulos de insulina con la membrana celular."
+},
+{
+    id:324,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Cuál es una función de las hormonas tiroideas?",
+    opciones:["Incrementar la acción de la Na⁺/K⁺-ATPasa","Disminuir la frecuencia cardíaca","Reducir la motilidad intestinal","Disminuir el requerimiento de oxígeno y vitaminas"],
+    correcta:0,
+    explicacion:"Las hormonas tiroideas aumentan la síntesis y actividad de la Na⁺/K⁺-ATPasa. Esto incrementa el consumo de oxígeno, la producción de calor y el metabolismo basal."
+},
+{
+    id:325,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Cuál es la hormona sintetizada en la glándula suprarrenal con mayor actividad mineralocorticoide?",
+    opciones:["Cortisol","Dexametasona","Cortisona","Aldosterona"],
+    correcta:3,
+    explicacion:"La aldosterona es el principal mineralocorticoide producido por la zona glomerulosa de la corteza suprarrenal. Aumenta la reabsorción renal de sodio y agua, así como la excreción de potasio."
+},
+{
+    id:326,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿En qué situación se estimula la secreción de insulina?",
+    opciones:["Ayuno prolongado","Aumento de somatostatina","Aumento de la glucemia","Disminución de ácidos grasos libres en sangre"],
+    correcta:2,
+    explicacion:"El aumento de glucosa plasmática es el principal estímulo para la secreción de insulina. La insulina favorece la captación de glucosa por tejidos sensibles y reduce la producción hepática de glucosa."
+},
+{
+    id:327,
+    tema:"Fisiología: Fisiología del sistema endocrino, sistemas reproductor femenino y masculino",
+    pregunta:"¿Cuál es la hormona que se activa en la tercera fase de una hipoglicemia prolongada?",
+    opciones:["Glucagón","Cortisol","Epinefrina","Insulina"],
+    correcta:1,
+    explicacion:"Durante una hipoglicemia, primero disminuye la secreción de insulina y luego se liberan glucagón y epinefrina. En fases más tardías, el cortisol y la hormona de crecimiento ayudan a mantener la glucemia mediante aumento de gluconeogénesis y reducción de la utilización periférica de glucosa."
+},
+{
+    id:328,
+    tema:"Histología: Órganos metabólicos",
+    pregunta:"¿Qué tipo de epitelio constituye habitualmente los folículos tiroideos?",
+    opciones:["Simple cilíndrico","Pseudoestratificado","Estratificado plano","Simple cúbico"],
+    correcta:3,
+    explicacion:"Los folículos tiroideos están revestidos habitualmente por epitelio simple cúbico. Cuando la glándula está muy activa, las células pueden adoptar una forma más cilíndrica; cuando está inactiva, tienden a aplanarse."
+},
 ]
