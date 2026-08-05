@@ -166,6 +166,60 @@ document.getElementById("btnTablasApuntes");
 const btnVolverTablasApuntes =
 document.getElementById("btnVolverTablasApuntes");
 
+const catalogoMaterial =
+document.getElementById("catalogoMaterial");
+
+const materialAntimicrobianos =
+document.getElementById("materialAntimicrobianos");
+
+const materialMetabolismo =
+document.getElementById("materialMetabolismo");
+
+const materialTiposBacterias =
+document.getElementById("materialTiposBacterias");
+
+const materialAntiarritmicos =
+document.getElementById("materialAntiarritmicos");
+
+const materialAntiagregantes =
+document.getElementById("materialAntiagregantes");
+
+const materialAnticoagulantes =
+document.getElementById("materialAnticoagulantes");
+
+const materialVasoactivos =
+document.getElementById("materialVasoactivos");
+
+const selectCursoMaterial =
+document.getElementById("selectCursoMaterial");
+
+const selectTemaMaterial =
+document.getElementById("selectTemaMaterial");
+
+const btnVerMaterial =
+document.getElementById("btnVerMaterial");
+
+const btnVolverCatalogoMaterial =
+document.getElementById("btnVolverCatalogoMaterial");
+
+const btnVolverCatalogoMetabolismo =
+document.getElementById("btnVolverCatalogoMetabolismo");
+
+const btnVolverCatalogoTiposBacterias =
+document.getElementById("btnVolverCatalogoTiposBacterias");
+
+const btnVolverCatalogoAntiarritmicos =
+document.getElementById("btnVolverCatalogoAntiarritmicos");
+
+const btnVolverCatalogoAntiagregantes =
+document.getElementById("btnVolverCatalogoAntiagregantes");
+
+const btnVolverCatalogoAnticoagulantes =
+document.getElementById("btnVolverCatalogoAnticoagulantes");
+
+const btnVolverCatalogoVasoactivos =
+document.getElementById("btnVolverCatalogoVasoactivos");
+
 const btnBanqueo =
 document.getElementById("btnBanqueo");
 
@@ -204,9 +258,6 @@ document.getElementById("btnVolverCursos");
 
 const btnSimulacro =
 document.getElementById("btnSimulacro");
-
-const btnSimulacroInicio =
-document.getElementById("btnSimulacroInicio");
 
 const botonesCurso =
 document.querySelectorAll(".cursoDisponible");
@@ -302,6 +353,20 @@ document.getElementById("contenidoEstadisticas");
 const totalPreguntasBanco =
 document.getElementById("totalPreguntasBanco");
 
+const TEMAS_MATERIAL={
+    farmacologia:[
+        {valor:"paredBacteriana",nombre:"Antimicrobianos · Inhibidores de la pared bacteriana"},
+        {valor:"metabolismo",nombre:"Antimicrobianos · Inhibidores del metabolismo"},
+        {valor:"antiarritmicos",nombre:"Cardiovascular · Antiarrítmicos"},
+        {valor:"antiagregantes",nombre:"Cardiovascular · Antiagregantes plaquetarios"},
+        {valor:"anticoagulantes",nombre:"Cardiovascular · Anticoagulantes orales y parenterales"},
+        {valor:"vasoactivos",nombre:"Cardiovascular · Inodilatadores e inoconstrictores"}
+    ],
+    microbiologia:[
+        {valor:"tiposBacterias",nombre:"Bacteriología · Tipos de bacterias"}
+    ]
+};
+
 //===============================
 // INICIO
 //===============================
@@ -313,6 +378,8 @@ function iniciarAplicacion(){
     cargarTemas();
 
     actualizarTotalPreguntasBanco();
+
+    cargarTemasMaterial();
 
     mostrarPantalla("inicio");
 
@@ -338,6 +405,8 @@ function iniciarAplicacion(){
 
     btnTablasApuntes.onclick=function(){
 
+        mostrarCatalogoMaterial();
+
         mostrarPantalla("tablasApuntes");
 
     };
@@ -345,6 +414,60 @@ function iniciarAplicacion(){
     btnVolverTablasApuntes.onclick=function(){
 
         mostrarPantalla("inicio");
+
+    };
+
+    btnVerMaterial.onclick=function(){
+
+        mostrarMaterialSeleccionado();
+
+    };
+
+    selectCursoMaterial.onchange=function(){
+
+        cargarTemasMaterial();
+
+    };
+
+    btnVolverCatalogoMaterial.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoMetabolismo.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoTiposBacterias.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoAntiarritmicos.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoAntiagregantes.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoAnticoagulantes.onclick=function(){
+
+        mostrarCatalogoMaterial();
+
+    };
+
+    btnVolverCatalogoVasoactivos.onclick=function(){
+
+        mostrarCatalogoMaterial();
 
     };
 
@@ -365,6 +488,101 @@ function iniciarAplicacion(){
 function actualizarTotalPreguntasBanco(){
 
     totalPreguntasBanco.textContent=bancoPreguntas.length;
+
+}
+
+function cargarTemasMaterial(){
+
+    const temas=TEMAS_MATERIAL[selectCursoMaterial.value] || [];
+
+    selectTemaMaterial.innerHTML="";
+
+    temas.forEach(function(tema){
+
+        const opcion=document.createElement("option");
+
+        opcion.value=tema.valor;
+        opcion.textContent=tema.nombre;
+
+        selectTemaMaterial.appendChild(opcion);
+
+    });
+
+}
+
+function mostrarMaterialSeleccionado(){
+
+    catalogoMaterial.style.display="none";
+    materialAntimicrobianos.style.display="none";
+    materialMetabolismo.style.display="none";
+    materialTiposBacterias.style.display="none";
+    materialAntiarritmicos.style.display="none";
+    materialAntiagregantes.style.display="none";
+    materialAnticoagulantes.style.display="none";
+    materialVasoactivos.style.display="none";
+
+    if(selectTemaMaterial.value==="metabolismo"){
+
+        materialMetabolismo.style.display="block";
+
+        return;
+
+    }
+
+    if(selectTemaMaterial.value==="tiposBacterias"){
+
+        materialTiposBacterias.style.display="block";
+
+        return;
+
+    }
+
+    if(selectTemaMaterial.value==="antiarritmicos"){
+
+        materialAntiarritmicos.style.display="block";
+
+        return;
+
+    }
+
+    if(selectTemaMaterial.value==="antiagregantes"){
+
+        materialAntiagregantes.style.display="block";
+
+        return;
+
+    }
+
+    if(selectTemaMaterial.value==="anticoagulantes"){
+
+        materialAnticoagulantes.style.display="block";
+
+        return;
+
+    }
+
+    if(selectTemaMaterial.value==="vasoactivos"){
+
+        materialVasoactivos.style.display="block";
+
+        return;
+
+    }
+
+    materialAntimicrobianos.style.display="block";
+
+}
+
+function mostrarCatalogoMaterial(){
+
+    catalogoMaterial.style.display="block";
+    materialAntimicrobianos.style.display="none";
+    materialMetabolismo.style.display="none";
+    materialTiposBacterias.style.display="none";
+    materialAntiarritmicos.style.display="none";
+    materialAntiagregantes.style.display="none";
+    materialAnticoagulantes.style.display="none";
+    materialVasoactivos.style.display="none";
 
 }
 
@@ -533,13 +751,13 @@ function clasificarTemaFarmacologia(pregunta){
 
     }
 
-    if(id===1 || (id>=245 && id<=249 && id!==246) || id===165){
+    if(id===1 || (id>=245 && id<=249 && id!==246) || id===165 || id===300){
 
         return "Sistema nervioso autónomo";
 
     }
 
-    if((id>=8 && id<=20) || id===39 || id===40 || id===159 || id===164 || id===244 || id===246){
+    if((id>=8 && id<=20) || id===39 || id===40 || id===159 || id===164 || id===244 || id===246 || id===299){
 
         return "Cardiovascular y hematología";
 
@@ -557,7 +775,7 @@ function clasificarTemaFarmacologia(pregunta){
 
     }
 
-    if((id>=21 && id<=26) || (id>=33 && id<=38) || (id>=160 && id<=163) || (id>=258 && id<=260)){
+    if((id>=21 && id<=26) || (id>=33 && id<=38) || (id>=160 && id<=163) || (id>=258 && id<=260) || id===298 || id===321){
 
         return "Endocrino, renal y respiratorio";
 
@@ -827,12 +1045,6 @@ function mezclarPreguntas(){
 }
 
 btnSimulacro.onclick=function(){
-
-    iniciarSimulacro();
-
-}
-
-btnSimulacroInicio.onclick=function(){
 
     iniciarSimulacro();
 
