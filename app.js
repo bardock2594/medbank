@@ -21,6 +21,8 @@ let cursoSeleccionado = "";
 
 const CLAVE_ESTADISTICAS = "bankmed_estadisticas_v1";
 const CLAVE_NOMBRE_USUARIO = "bankmed_nombre_usuario";
+const CLAVE_PREGUNTAS_RECIENTES = "bankmed_preguntas_recientes_v1";
+const CLAVE_AVISO_LEGAL = "bankmed_aviso_legal_v1";
 
 // Mantiene visibles los subtemas planificados aunque todavía no tengan preguntas.
 const SUBTEMAS_PLANIFICADOS = {
@@ -196,6 +198,12 @@ document.getElementById("selectCursoMaterial");
 const selectTemaMaterial =
 document.getElementById("selectTemaMaterial");
 
+const grupoTemaMaterial =
+document.getElementById("grupoTemaMaterial");
+
+const avisoMaterialPremium =
+document.getElementById("avisoMaterialPremium");
+
 const btnVerMaterial =
 document.getElementById("btnVerMaterial");
 
@@ -286,6 +294,18 @@ document.getElementById("btnGuardarNombre");
 const btnOmitirNombre =
 document.getElementById("btnOmitirNombre");
 
+const modalAvisoLegal =
+document.getElementById("modalAvisoLegal");
+
+const btnCerrarAvisoLegal =
+document.getElementById("btnCerrarAvisoLegal");
+
+const btnAceptarAvisoLegal =
+document.getElementById("btnAceptarAvisoLegal");
+
+const btnAbrirAvisoLegal =
+document.getElementById("btnAbrirAvisoLegal");
+
 const saludoUsuario =
 document.getElementById("saludoUsuario");
 
@@ -298,6 +318,9 @@ document.getElementById("sistema");
 
 const selectCantidad =
 document.getElementById("cantidad");
+
+const descripcionModalidad =
+document.getElementById("descripcionModalidad");
 
 const tituloSeleccion =
 document.getElementById("tituloSeleccion");
@@ -355,15 +378,10 @@ document.getElementById("totalPreguntasBanco");
 
 const TEMAS_MATERIAL={
     farmacologia:[
-        {valor:"paredBacteriana",nombre:"Antimicrobianos · Inhibidores de la pared bacteriana"},
-        {valor:"metabolismo",nombre:"Antimicrobianos · Inhibidores del metabolismo"},
         {valor:"antiarritmicos",nombre:"Cardiovascular · Antiarrítmicos"},
         {valor:"antiagregantes",nombre:"Cardiovascular · Antiagregantes plaquetarios"},
         {valor:"anticoagulantes",nombre:"Cardiovascular · Anticoagulantes orales y parenterales"},
         {valor:"vasoactivos",nombre:"Cardiovascular · Inodilatadores e inoconstrictores"}
-    ],
-    microbiologia:[
-        {valor:"tiposBacterias",nombre:"Bacteriología · Tipos de bacterias"}
     ]
 };
 
@@ -384,6 +402,8 @@ function iniciarAplicacion(){
     mostrarPantalla("inicio");
 
     configurarMascota();
+
+    configurarAvisoLegal();
 
     btnPreguntasCursos.onclick=function(){
 
@@ -428,6 +448,8 @@ function iniciarAplicacion(){
         cargarTemasMaterial();
 
     };
+
+    selectCantidad.onchange=actualizarDescripcionModalidad;
 
     btnVolverCatalogoMaterial.onclick=function(){
 
@@ -485,6 +507,59 @@ function iniciarAplicacion(){
 
 }
 
+function configurarAvisoLegal(){
+
+    btnCerrarAvisoLegal.onclick=cerrarAvisoLegal;
+
+    btnAceptarAvisoLegal.onclick=cerrarAvisoLegal;
+
+    btnAbrirAvisoLegal.onclick=abrirAvisoLegal;
+
+    modalAvisoLegal.onclick=function(evento){
+
+        if(evento.target===modalAvisoLegal){
+
+            cerrarAvisoLegal();
+
+        }
+
+    };
+
+    document.addEventListener("keydown",function(evento){
+
+        if(evento.key==="Escape" && !modalAvisoLegal.hidden){
+
+            cerrarAvisoLegal();
+
+        }
+
+    });
+
+    if(localStorage.getItem(CLAVE_AVISO_LEGAL)!=="visto"){
+
+        abrirAvisoLegal();
+
+    }
+
+}
+
+function abrirAvisoLegal(){
+
+    modalAvisoLegal.hidden=false;
+    document.body.classList.add("modalAbierto");
+
+    btnAceptarAvisoLegal.focus();
+
+}
+
+function cerrarAvisoLegal(){
+
+    modalAvisoLegal.hidden=true;
+    document.body.classList.remove("modalAbierto");
+    localStorage.setItem(CLAVE_AVISO_LEGAL,"visto");
+
+}
+
 function actualizarTotalPreguntasBanco(){
 
     totalPreguntasBanco.textContent=bancoPreguntas.length;
@@ -492,6 +567,19 @@ function actualizarTotalPreguntasBanco(){
 }
 
 function cargarTemasMaterial(){
+
+    const esFarmacologia=selectCursoMaterial.value==="farmacologia";
+
+    grupoTemaMaterial.style.display=esFarmacologia ? "block" : "none";
+    avisoMaterialPremium.style.display=esFarmacologia ? "none" : "block";
+
+    if(!esFarmacologia){
+
+        selectTemaMaterial.innerHTML="";
+
+        return;
+
+    }
 
     const temas=TEMAS_MATERIAL[selectCursoMaterial.value] || [];
 
@@ -511,6 +599,14 @@ function cargarTemasMaterial(){
 }
 
 function mostrarMaterialSeleccionado(){
+
+    if(selectCursoMaterial.value!=="farmacologia"){
+
+        cargarTemasMaterial();
+
+        return;
+
+    }
 
     catalogoMaterial.style.display="none";
     materialAntimicrobianos.style.display="none";
@@ -569,7 +665,7 @@ function mostrarMaterialSeleccionado(){
 
     }
 
-    materialAntimicrobianos.style.display="block";
+    mostrarCatalogoMaterial();
 
 }
 
@@ -816,6 +912,33 @@ function perteneceACurso(pregunta,curso){
 
 }
 
+function obtenerCursoDePregunta(pregunta){
+
+    const cursosConPreguntas=["Anatomía","Embriología","Histología","Bioquímica","Fisiología","Patología","Microbiología y Parasitología"];
+
+    return cursosConPreguntas.find(function(curso){
+
+        return pregunta.tema.startsWith(curso+":");
+
+    }) || "Farmacología";
+
+}
+
+function obtenerSubtemaDePregunta(pregunta,curso){
+
+    if(curso==="Farmacología"){
+
+        return clasificarTemaFarmacologia(pregunta);
+
+    }
+
+    const prefijo=curso+":";
+
+    return pregunta.tema.startsWith(prefijo) ?
+    pregunta.tema.slice(prefijo.length).trim() : pregunta.tema;
+
+}
+
 function cargarTemas(){
 
     selectTema.innerHTML="";
@@ -862,6 +985,25 @@ function cargarTemas(){
 
     });
 
+    actualizarDescripcionModalidad();
+
+}
+
+function actualizarDescripcionModalidad(){
+
+    if(selectCantidad.value==="Mix"){
+
+        descripcionModalidad.textContent=cursoSeleccionado ?
+        "🎲 Mix: se tomarán 10 preguntas aleatorias de todos los subtemas de "+cursoSeleccionado+". El subtema seleccionado no se usará en este modo." :
+        "🎲 Mix: se tomarán 10 preguntas aleatorias de todos los subtemas del curso elegido.";
+
+        return;
+
+    }
+
+    descripcionModalidad.textContent=
+    "📚 Práctica por subtema: se tomarán "+selectCantidad.value+" preguntas aleatorias del subtema seleccionado.";
+
 }
 
 //===============================
@@ -898,12 +1040,8 @@ function iniciarSimulacro(){
 
     temaSesion="Simulacro general · Todos los cursos";
 
-    // Se toma una muestra aleatoria de todo el banco, sin filtrar por tema.
-    preguntasExamen=[...bancoPreguntas];
-
-    mezclarPreguntas();
-
-    preguntasExamen=preguntasExamen.slice(0,20);
+    // Se toma una muestra de todo el banco y se priorizan preguntas no vistas recientemente.
+    preguntasExamen=seleccionarPreguntasSinRepetir(bancoPreguntas,20);
 
     prepararExamen();
 
@@ -945,9 +1083,7 @@ function iniciarBanqueo(){
 
     });
 
-    mezclarPreguntas();
-
-    preguntasExamen=preguntasExamen.slice(0,20);
+    preguntasExamen=seleccionarPreguntasSinRepetir(preguntasExamen,20);
 
     prepararExamen();
 
@@ -993,9 +1129,17 @@ function iniciarExamen(){
 
     respuestasSesion=[];
 
-    temaSesion=selectTema.value;
+    const esMix=selectCantidad.value==="Mix";
 
-    preguntasExamen=
+    temaSesion=esMix ? "Mix de preguntas · "+cursoSeleccionado : selectTema.value;
+
+    preguntasExamen=esMix ?
+
+    bancoPreguntas.filter(function(p){
+
+        return perteneceACurso(p,cursoSeleccionado);
+
+    }) :
 
     bancoPreguntas.filter(function(p){
 
@@ -1011,20 +1155,12 @@ function iniciarExamen(){
 
     }
 
-    mezclarPreguntas();
+    const cantidadSolicitada=esMix ? 10 : parseInt(selectCantidad.value);
 
-    if(selectCantidad.value!="Todas"){
-
-        preguntasExamen=
-        preguntasExamen.slice(
-
-            0,
-
-            parseInt(selectCantidad.value)
-
-        );
-
-    }
+    preguntasExamen=seleccionarPreguntasSinRepetir(
+        preguntasExamen,
+        cantidadSolicitada
+    );
 
     prepararExamen();
 
@@ -1041,6 +1177,45 @@ function iniciarExamen(){
 function mezclarPreguntas(){
 
     preguntasExamen=mezclarArreglo(preguntasExamen);
+
+}
+
+function leerPreguntasRecientes(){
+
+    try{
+
+        const recientes=JSON.parse(localStorage.getItem(CLAVE_PREGUNTAS_RECIENTES));
+
+        return Array.isArray(recientes) ? recientes : [];
+
+    }
+
+    catch(error){
+
+        return [];
+
+    }
+
+}
+
+function seleccionarPreguntasSinRepetir(candidatas,cantidad){
+
+    const recientes=leerPreguntasRecientes();
+    const idsRecientes=new Set(recientes);
+    const nuevas=candidatas.filter(pregunta=>!idsRecientes.has(pregunta.id));
+    const repetidas=candidatas.filter(pregunta=>idsRecientes.has(pregunta.id));
+    const seleccion=mezclarArreglo(nuevas)
+    .concat(mezclarArreglo(repetidas))
+    .slice(0,cantidad);
+    const idsSeleccionados=new Set(seleccion.map(pregunta=>pregunta.id));
+    const historialActualizado=[
+        ...seleccion.map(pregunta=>pregunta.id),
+        ...recientes.filter(id=>!idsSeleccionados.has(id))
+    ].slice(0,80);
+
+    localStorage.setItem(CLAVE_PREGUNTAS_RECIENTES, JSON.stringify(historialActualizado));
+
+    return seleccion;
 
 }
 
@@ -1229,9 +1404,14 @@ function corregirPregunta(){
     // La revisión de errores no altera el historial de rendimiento.
     if(!modoRevision){
 
+        const cursoPregunta=obtenerCursoDePregunta(pregunta);
+        const subtemaPregunta=obtenerSubtemaDePregunta(pregunta,cursoPregunta);
+
         respuestasSesion.push({
             id:pregunta.id,
-            tema:pregunta.tema,
+            tema:subtemaPregunta,
+            curso:cursoPregunta,
+            subtema:subtemaPregunta,
             correcta:respuesta===pregunta.correcta
         });
 
@@ -1924,24 +2104,53 @@ function mostrarEstadisticas(){
     const respuestas=historial.flatMap(sesion=>
         Array.isArray(sesion.respuestas) ? sesion.respuestas : []
     );
+
+    if(respuestas.length===0){
+
+        contenidoEstadisticas.innerHTML=`
+            <div class="estadoVacio">
+                <div>📈</div>
+                <h3>Aún no hay respuestas para analizar</h3>
+                <p>Completa al menos un examen para ver tu rendimiento por curso y subtema.</p>
+            </div>`;
+
+        return;
+
+    }
+
     const correctas=respuestas.filter(respuesta=>respuesta.correcta).length;
     const porcentaje=respuestas.length ? Math.round((correctas/respuestas.length)*100) : 0;
-    const porTema={};
+    const porCurso={};
+    const porSubtema={};
     const erroresPorPregunta={};
 
     respuestas.forEach(function(respuesta){
 
-        if(!porTema[respuesta.tema]){
+        const pregunta=bancoPreguntas.find(p=>String(p.id)===String(respuesta.id));
+        const curso=respuesta.curso || (pregunta ? obtenerCursoDePregunta(pregunta) : "Farmacología");
+        const subtema=respuesta.subtema || (pregunta ?
+            obtenerSubtemaDePregunta(pregunta,curso) : respuesta.tema || "Sin clasificar");
+        const claveSubtema=curso+"|"+subtema;
 
-            porTema[respuesta.tema]={total:0,correctas:0};
+        if(!porCurso[curso]){
+
+            porCurso[curso]={total:0,correctas:0};
 
         }
 
-        porTema[respuesta.tema].total++;
+        if(!porSubtema[claveSubtema]){
+
+            porSubtema[claveSubtema]={curso:curso,subtema:subtema,total:0,correctas:0};
+
+        }
+
+        porCurso[curso].total++;
+        porSubtema[claveSubtema].total++;
 
         if(respuesta.correcta){
 
-            porTema[respuesta.tema].correctas++;
+            porCurso[curso].correctas++;
+            porSubtema[claveSubtema].correctas++;
 
         }
 
@@ -1954,19 +2163,39 @@ function mostrarEstadisticas(){
 
     });
 
-    const filasTemas=Object.entries(porTema)
-    .sort((a,b)=>(a[1].correctas/a[1].total)-(b[1].correctas/b[1].total))
-    .map(function([tema,datos]){
+    const crearFilaRendimiento=function(nombre,datos){
 
         const rendimiento=Math.round((datos.correctas/datos.total)*100);
 
         return `<div class="filaTema">
-            <div class="temaFila"><strong>${escaparHTML(tema)}</strong><span>${datos.correctas}/${datos.total} correctas</span></div>
+            <div class="temaFila"><strong>${escaparHTML(nombre)}</strong><span>${datos.correctas}/${datos.total} correctas</span></div>
             <div class="miniBarra"><span style="width:${rendimiento}%"></span></div>
             <strong>${rendimiento}%</strong>
         </div>`;
 
+    };
+
+    const filasCursos=Object.entries(porCurso)
+    .sort((a,b)=>(a[1].correctas/a[1].total)-(b[1].correctas/b[1].total))
+    .map(function([curso,datos]){
+
+        return crearFilaRendimiento(curso,datos);
+
     }).join("");
+
+    const subtemasOrdenados=Object.values(porSubtema)
+    .sort((a,b)=>(a.correctas/a.total)-(b.correctas/b.total));
+
+    const filasSubtemas=subtemasOrdenados.map(function(datos){
+
+        return crearFilaRendimiento(datos.curso+" · "+datos.subtema,datos);
+
+    }).join("");
+
+    const subtemaPrioritario=subtemasOrdenados[0];
+    const rendimientoPrioritario=Math.round(
+        (subtemaPrioritario.correctas/subtemaPrioritario.total)*100
+    );
 
     const preguntasDificiles=Object.entries(erroresPorPregunta)
     .sort((a,b)=>b[1]-a[1])
@@ -2003,8 +2232,16 @@ function mostrarEstadisticas(){
             <div class="datoEstadistica"><strong>${correctas}/${respuestas.length}</strong><span>respuestas correctas</span></div>
         </div>
         <section class="bloqueEstadistica">
-            <h3>Rendimiento por tema</h3>
-            ${filasTemas}
+            <h3>Rendimiento por curso</h3>
+            ${filasCursos}
+        </section>
+        <section class="bloqueEstadistica alertaRendimiento">
+            <h3>🎯 Tu área para reforzar</h3>
+            <p>Conviene repasar <strong>${escaparHTML(subtemaPrioritario.curso)} · ${escaparHTML(subtemaPrioritario.subtema)}</strong>: llevas ${rendimientoPrioritario}% de aciertos (${subtemaPrioritario.correctas}/${subtemaPrioritario.total}).</p>
+        </section>
+        <section class="bloqueEstadistica">
+            <h3>Rendimiento por subtema</h3>
+            ${filasSubtemas}
         </section>
         <section class="bloqueEstadistica">
             <h3>Preguntas para reforzar</h3>
