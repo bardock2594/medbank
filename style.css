@@ -41,6 +41,41 @@ HEADER
 
 }
 
+.marcaBankMed{
+
+    display:block;
+    width:fit-content;
+    max-width:100%;
+    margin:0 auto;
+
+}
+
+.marcoLogoBankMed{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:fit-content;
+    max-width:100%;
+    height:122px;
+    padding:0 14px;
+    border-radius:18px;
+    background:#ffffff;
+    box-shadow:0 5px 12px rgba(0,0,0,.18);
+    overflow:hidden;
+
+}
+
+.logoBankMedHorizontal{
+
+    display:block;
+    width:420px;
+    max-width:100%;
+    height:auto;
+    mix-blend-mode:multiply;
+
+}
+
 .header p{
 
     margin-top:8px;
@@ -245,6 +280,49 @@ HEADER
 .selectorMaterial select{
     margin-bottom:20px;
     background:white;
+}
+
+.descripcionModalidad{
+
+    margin:12px 0 0;
+    padding:12px 14px;
+    border-left:4px solid #0d6efd;
+    border-radius:8px;
+    background:#eef5ff;
+    color:#24466f;
+    font-size:14px;
+    line-height:1.5;
+
+}
+
+.avisoMaterialPremium{
+    margin-top:4px;
+    padding:18px;
+    border:1px solid #f1c56b;
+    border-radius:14px;
+    background:#fff8e7;
+    color:#61420b;
+}
+
+.avisoMaterialPremium span{
+    display:block;
+    margin-bottom:6px;
+    color:#a45c00;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.8px;
+}
+
+.avisoMaterialPremium strong{
+    display:block;
+    color:#8a4d00;
+    font-size:17px;
+}
+
+.avisoMaterialPremium p{
+    margin:8px 0 0;
+    color:#74551d;
+    line-height:1.55;
 }
 
 .botonVerMaterial{
@@ -1234,6 +1312,21 @@ ESTADÍSTICAS
 
 }
 
+.alertaRendimiento{
+
+    border-color:#b8d3ff;
+    background:#f5f9ff;
+
+}
+
+.alertaRendimiento p{
+
+    margin:0;
+    color:#24466f;
+    line-height:1.6;
+
+}
+
 .filaTema{
 
     display:grid;
@@ -1506,6 +1599,21 @@ MÓVIL
 
     }
 
+    .logoBankMedHorizontal{
+
+        width:300px;
+        max-width:100%;
+
+    }
+
+    .marcoLogoBankMed{
+
+        height:90px;
+        padding:0 10px;
+        border-radius:14px;
+
+    }
+
     .infoInicio{
 
         flex-direction:column;
@@ -1687,4 +1795,142 @@ MÓVIL
 
     }
 
+}
+
+/*======================================================
+AVISO DE PRIVACIDAD Y USO EDUCATIVO
+======================================================*/
+
+.enlaceLegal{
+    margin-top:12px;
+    padding:4px 0;
+    border:0;
+    background:transparent;
+    color:#1769ff;
+    font:inherit;
+    font-size:13px;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.enlaceLegal:hover,
+.enlaceLegal:focus-visible{
+    color:#0b3f9e;
+}
+
+.separadorFooter{
+    display:inline-block;
+    margin:0 7px;
+    color:#a0a8b6;
+}
+
+body.modalAbierto{
+    overflow:hidden;
+}
+
+.modalAvisoLegal{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:grid;
+    place-items:center;
+    padding:22px;
+    background:rgba(10,31,68,.58);
+}
+
+.modalAvisoLegal[hidden]{
+    display:none;
+}
+
+.tarjetaAvisoLegal{
+    position:relative;
+    width:min(100%,640px);
+    max-height:calc(100vh - 44px);
+    overflow:auto;
+    padding:32px;
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 24px 60px rgba(4,25,64,.32);
+}
+
+.etiquetaAvisoLegal{
+    display:inline-block;
+    margin-bottom:8px;
+    color:#1769ff;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em;
+}
+
+.tarjetaAvisoLegal h2{
+    margin:0 38px 20px 0;
+    color:#12376d;
+    font-size:28px;
+}
+
+.bloqueAvisoLegal{
+    margin-top:14px;
+    padding:16px 18px;
+    border:1px solid #dbe7fb;
+    border-radius:14px;
+    background:#f7faff;
+}
+
+.bloqueAvisoLegal h3{
+    margin:0 0 8px;
+    color:#12376d;
+    font-size:17px;
+}
+
+.bloqueAvisoLegal p{
+    margin:7px 0 0;
+    color:#435678;
+    line-height:1.55;
+}
+
+.cerrarAvisoLegal{
+    position:absolute;
+    top:17px;
+    right:17px;
+    display:grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#edf3ff;
+    color:#12376d;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+}
+
+.cerrarAvisoLegal:hover,
+.cerrarAvisoLegal:focus-visible{
+    background:#d8e7ff;
+}
+
+.botonAceptarAvisoLegal{
+    width:100%;
+    margin-top:22px;
+}
+
+@media (max-width:600px){
+    .modalAvisoLegal{
+        padding:14px;
+    }
+
+    .tarjetaAvisoLegal{
+        padding:24px 20px;
+        border-radius:18px;
+    }
+
+    .tarjetaAvisoLegal h2{
+        font-size:24px;
+    }
+
+    .bloqueAvisoLegal{
+        padding:14px;
+    }
 }
