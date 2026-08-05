@@ -9,7 +9,7 @@
 
     <title>BankMed</title>
 
-    <link rel="stylesheet" href="style.css?v=20260804-separacion-cursos">
+    <link rel="stylesheet" href="style.css?v=20260805-formulario-sugerencias">
 
 </head>
 
@@ -21,7 +21,11 @@
 
     <header class="header">
 
-        <h1>🩺 BankMed</h1>
+        <h1 class="marcaBankMed">
+            <span class="marcoLogoBankMed">
+                <img class="logoBankMedHorizontal" src="LOGO HORIZONTAL.png" alt="BM MedBank: Aprende, practica y avanza">
+            </span>
+        </h1>
 
         <p>Plataforma de práctica y aprendizaje con preguntas de los principales exámenes de ciencias básicas de la salud</p>
 
@@ -139,16 +143,30 @@
                 <label for="selectCursoMaterial">📚 Curso</label>
                 <select id="selectCursoMaterial">
                     <option value="farmacologia">Farmacología</option>
+                    <option value="anatomia">Anatomía</option>
+                    <option value="embriologia">Embriología</option>
+                    <option value="histologia">Histología</option>
+                    <option value="bioquimica">Bioquímica</option>
+                    <option value="fisiologia">Fisiología</option>
+                    <option value="patologia">Patología</option>
                     <option value="microbiologia">Microbiología y Parasitología</option>
                 </select>
 
-                <label for="selectTemaMaterial">🧪 Tema</label>
-                <select id="selectTemaMaterial">
-                    <option value="paredBacteriana">Antimicrobianos · Inhibidores de la pared bacteriana</option>
-                    <option value="metabolismo">Antimicrobianos · Inhibidores del metabolismo</option>
-                </select>
+                <div id="grupoTemaMaterial">
+                    <label for="selectTemaMaterial">🧪 Tema</label>
+                    <select id="selectTemaMaterial">
+                        <option value="paredBacteriana">Antimicrobianos · Inhibidores de la pared bacteriana</option>
+                        <option value="metabolismo">Antimicrobianos · Inhibidores del metabolismo</option>
+                    </select>
 
-                <button id="btnVerMaterial" class="botonVerMaterial" type="button">📖 Ver material</button>
+                    <button id="btnVerMaterial" class="botonVerMaterial" type="button">📖 Ver material</button>
+                </div>
+
+                <div id="avisoMaterialPremium" class="avisoMaterialPremium" role="status" aria-live="polite" style="display:none;">
+                    <span>✨ MEMBRESÍA PREMIUM</span>
+                    <strong>Función disponible próximamente</strong>
+                    <p>Estamos trabajando para darte un mejor servicio. El material de este curso estará disponible con la Membresía Premium; por ahora puedes disfrutar gratuitamente del material de Farmacología.</p>
+                </div>
             </div>
         </section>
 
@@ -932,7 +950,7 @@ ADN, ARN y división celular</div>
 
         <label>
 
-            🎯 Cantidad de preguntas
+            🎯 Modalidad de práctica
 
         </label>
 
@@ -940,15 +958,19 @@ ADN, ARN y división celular</div>
 
         <select id="cantidad">
 
+            <option value="Mix">🎲 Mix de preguntas · 10 preguntas de todos los temas</option>
+
+            <option value="5">5 preguntas</option>
+
             <option value="10">10 preguntas</option>
+
+            <option value="15">15 preguntas</option>
 
             <option value="20">20 preguntas</option>
 
-            <option value="50">50 preguntas</option>
-
-            <option value="Todas">Todas las preguntas</option>
-
         </select>
+
+        <p id="descripcionModalidad" class="descripcionModalidad" aria-live="polite"></p>
 
         <br><br><br>
 
@@ -1157,7 +1179,38 @@ ADN, ARN y división celular</div>
 
         <small>Uso educativo. No sustituye guías clínicas actualizadas ni el juicio profesional.</small>
 
+        <br>
+
+        <button id="btnAbrirAvisoLegal" class="enlaceLegal" type="button">Privacidad y uso educativo</button>
+
+        <span class="separadorFooter" aria-hidden="true">·</span>
+
+        <a class="enlaceLegal" href="https://docs.google.com/forms/d/e/1FAIpQLSctaBaPcFf-Bj_JrKu-gt19iwxlkHU0csKSbBWyGBlN3zpUzA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">💬 Enviar sugerencia</a>
+
     </footer>
+
+    <!-- AVISO DE PRIVACIDAD Y USO EDUCATIVO -->
+    <div id="modalAvisoLegal" class="modalAvisoLegal" role="dialog" aria-modal="true" aria-labelledby="tituloAvisoLegal" hidden>
+        <section class="tarjetaAvisoLegal">
+            <button id="btnCerrarAvisoLegal" class="cerrarAvisoLegal" type="button" aria-label="Cerrar aviso">×</button>
+
+            <span class="etiquetaAvisoLegal">INFORMACIÓN IMPORTANTE</span>
+            <h2 id="tituloAvisoLegal">Antes de empezar</h2>
+
+            <div class="bloqueAvisoLegal">
+                <h3>🔒 Privacidad</h3>
+                <p>BankMed no crea cuentas ni envía tu nombre, progreso o estadísticas a un servidor. Estos datos se guardan únicamente en el almacenamiento local de este navegador.</p>
+                <p>Si borras los datos de navegación, cambias de navegador o usas otro dispositivo, tu progreso no se conservará.</p>
+            </div>
+
+            <div class="bloqueAvisoLegal">
+                <h3>⚕️ Uso educativo</h3>
+                <p>El contenido de BankMed está destinado a la práctica y al aprendizaje de ciencias básicas de la salud. No sustituye una consulta profesional, el diagnóstico, el tratamiento ni las guías clínicas actualizadas.</p>
+            </div>
+
+            <button id="btnAceptarAvisoLegal" class="botonAceptarAvisoLegal" type="button">Entendido, continuar</button>
+        </section>
+    </div>
 
 
     <!--========================================-->
@@ -1166,7 +1219,7 @@ ADN, ARN y división celular</div>
 
     <script src="preguntas.js?v=20260804-preguntas328"></script>
 
-    <script src="app.js?v=20260804-preguntas328"></script>
+    <script src="app.js?v=20260805-aviso-legal"></script>
 
 </body>
 
