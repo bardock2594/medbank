@@ -243,6 +243,9 @@ document.getElementById("btnIniciar");
 const btnResponder =
 document.getElementById("btnResponder");
 
+const btnSalirExamen =
+document.getElementById("btnSalirExamen");
+
 const btnRevisar =
 document.getElementById("btnRevisar");
 
@@ -263,9 +266,6 @@ document.getElementById("btnBorrarEstadisticas");
 
 const btnVolverCursos =
 document.getElementById("btnVolverCursos");
-
-const btnSimulacro =
-document.getElementById("btnSimulacro");
 
 const botonesCurso =
 document.querySelectorAll(".cursoDisponible");
@@ -318,6 +318,18 @@ document.getElementById("sistema");
 
 const selectCantidad =
 document.getElementById("cantidad");
+
+const grupoSubtema =
+document.getElementById("grupoSubtema");
+
+const grupoCantidadPractica =
+document.getElementById("grupoCantidadPractica");
+
+const accionesPractica =
+document.getElementById("accionesPractica");
+
+const opcionesModalidadPractica =
+document.querySelectorAll('input[name="modalidadPractica"]');
 
 const descripcionModalidad =
 document.getElementById("descripcionModalidad");
@@ -450,6 +462,14 @@ function iniciarAplicacion(){
     };
 
     selectCantidad.onchange=actualizarDescripcionModalidad;
+
+    selectTema.onchange=actualizarDescripcionModalidad;
+
+    opcionesModalidadPractica.forEach(function(opcion){
+
+        opcion.onchange=actualizarDescripcionModalidad;
+
+    });
 
     btnVolverCatalogoMaterial.onclick=function(){
 
@@ -991,18 +1011,63 @@ function cargarTemas(){
 
 function actualizarDescripcionModalidad(){
 
-    if(selectCantidad.value==="Mix"){
+    const modalidad=obtenerModalidadPractica();
+    const esSimulacro=modalidad==="simulacro";
+    const esSubtema=modalidad==="subtema";
 
-        descripcionModalidad.textContent=cursoSeleccionado ?
-        "🎲 Mix: se tomarán 10 preguntas aleatorias de todos los subtemas de "+cursoSeleccionado+". El subtema seleccionado no se usará en este modo." :
-        "🎲 Mix: se tomarán 10 preguntas aleatorias de todos los subtemas del curso elegido.";
+    grupoSubtema.style.display=esSubtema ? "block" : "none";
+    grupoCantidadPractica.style.display=esSimulacro ? "block" : "none";
+    accionesPractica.style.display=modalidad ? "block" : "none";
+
+    if(!modalidad){
+
+        descripcionModalidad.textContent="Selecciona una modalidad para comenzar.";
 
         return;
 
     }
 
-    descripcionModalidad.textContent=
-    "📚 Práctica por subtema: se tomarán "+selectCantidad.value+" preguntas aleatorias del subtema seleccionado.";
+    if(esSimulacro){
+
+        const totalCurso=bancoPreguntas.filter(function(pregunta){
+
+            return perteneceACurso(pregunta,cursoSeleccionado);
+
+        }).length;
+
+        const cantidadSolicitada=parseInt(selectCantidad.value);
+        const cantidadReal=Math.min(cantidadSolicitada,totalCurso);
+
+        descripcionModalidad.textContent=cursoSeleccionado ?
+        "📝 Simulacro general: se tomarán "+cantidadReal+" preguntas aleatorias de todos los subtemas de "+cursoSeleccionado+"." :
+        "📝 Simulacro general: se tomarán preguntas aleatorias de todos los subtemas del curso elegido.";
+
+        btnIniciar.textContent="▶ Iniciar simulacro";
+
+        return;
+
+    }
+
+    const totalSubtema=bancoPreguntas.filter(function(pregunta){
+
+        return perteneceACurso(pregunta,cursoSeleccionado) &&
+        obtenerTemaPregunta(pregunta)===selectTema.value;
+
+    }).length;
+
+    descripcionModalidad.textContent=totalSubtema>0 ?
+    "📚 Práctica por subtema: responderás las "+totalSubtema+" preguntas disponibles de este subtema." :
+    "📚 Este subtema aún no tiene preguntas disponibles.";
+
+    btnIniciar.textContent="▶ Iniciar práctica por subtema";
+
+}
+
+function obtenerModalidadPractica(){
+
+    const opcionSeleccionada=document.querySelector('input[name="modalidadPractica"]:checked');
+
+    return opcionSeleccionada ? opcionSeleccionada.value : "";
 
 }
 
@@ -1129,11 +1194,20 @@ function iniciarExamen(){
 
     respuestasSesion=[];
 
-    const esMix=selectCantidad.value==="Mix";
+    const esSimulacro=obtenerModalidadPractica()==="simulacro";
 
-    temaSesion=esMix ? "Mix de preguntas · "+cursoSeleccionado : selectTema.value;
+    if(!obtenerModalidadPractica()){
 
-    preguntasExamen=esMix ?
+        alert("Selecciona una modalidad de práctica.");
+
+        return;
+
+    }
+
+    temaSesion=esSimulacro ?
+    "Simulacro general · "+cursoSeleccionado : selectTema.value;
+
+    preguntasExamen=esSimulacro ?
 
     bancoPreguntas.filter(function(p){
 
@@ -1143,19 +1217,23 @@ function iniciarExamen(){
 
     bancoPreguntas.filter(function(p){
 
-        return obtenerTemaPregunta(p)===selectTema.value;
+        return perteneceACurso(p,cursoSeleccionado) &&
+        obtenerTemaPregunta(p)===selectTema.value;
 
     });
 
     if(preguntasExamen.length===0){
 
-        alert("Este subtema aún no tiene preguntas disponibles.");
+        alert(esSimulacro ?
+        "Este curso aún no tiene preguntas disponibles." :
+        "Este subtema aún no tiene preguntas disponibles.");
 
         return;
 
     }
 
-    const cantidadSolicitada=esMix ? 10 : parseInt(selectCantidad.value);
+    const cantidadSolicitada=esSimulacro ?
+    parseInt(selectCantidad.value) : preguntasExamen.length;
 
     preguntasExamen=seleccionarPreguntasSinRepetir(
         preguntasExamen,
@@ -1219,11 +1297,26 @@ function seleccionarPreguntasSinRepetir(candidatas,cantidad){
 
 }
 
-btnSimulacro.onclick=function(){
+btnSalirExamen.onclick=function(){
 
-    iniciarSimulacro();
+    const deseaSalir=confirm("¿Deseas abandonar este examen? Las respuestas de esta práctica no se guardarán.");
 
-}
+    if(!deseaSalir){
+
+        return;
+
+    }
+
+    reiniciarExamen();
+    preguntasExamen=[];
+    preguntasIncorrectas=[];
+    respuestasSesion=[];
+    modoRevision=false;
+    temaSesion="";
+
+    mostrarPantalla("inicio");
+
+};
 
 btnVolverCursos.onclick=function(){
 
