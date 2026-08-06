@@ -1601,6 +1601,22 @@ MÓVIL
     gap:8px;
 }
 
+.marcaPropiedad{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    z-index:20;
+    pointer-events:none;
+    opacity:.45;
+}
+
+.marcaPropiedad img{
+    display:block;
+    width:150px;
+    max-width:35vw;
+    height:auto;
+}
+
 .botonMascota{
     width:112px;
     height:112px;
@@ -1910,6 +1926,19 @@ MÓVIL
 
         right:10px;
         bottom:10px;
+
+    }
+
+    .marcaPropiedad{
+
+        left:10px;
+        bottom:10px;
+
+    }
+
+    .marcaPropiedad img{
+
+        width:112px;
 
     }
 
