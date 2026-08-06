@@ -3280,4 +3280,156 @@ const bancoPreguntas = [
     correcta:3,
     explicacion:"Los folículos tiroideos están revestidos habitualmente por epitelio simple cúbico. Cuando la glándula está muy activa, las células pueden adoptar una forma más cilíndrica; cuando está inactiva, tienden a aplanarse."
 },
+{
+    id:329,
+    tema:"Anatomía: Locomotor",
+    pregunta:"Un deportista cae sobre la palma de la mano con la muñeca en hiperextensión. Presenta dolor y edema en la región radial de la muñeca. ¿Qué hueso es más probable que se haya fracturado?",
+    opciones:["Escafoides","Pisiforme","Piramidal","Trapezoide"],
+    correcta:0,
+    explicacion:"El escafoides es el hueso del carpo que se fractura con mayor frecuencia tras una caída sobre la mano extendida."
+},
+{
+    id:330,
+    tema:"Anatomía: Locomotor",
+    pregunta:"Un paciente presenta dolor y dificultad para iniciar la abducción del hombro luego de levantar objetos pesados. ¿Qué músculo está más probablemente afectado?",
+    opciones:["Infraespinoso","Subescapular","Redondo menor","Supraespinoso"],
+    correcta:3,
+    explicacion:"El supraespinoso inicia la abducción del hombro y estabiliza la cabeza del húmero en la cavidad glenoidea."
+},
+{
+    id:331,
+    tema:"Anatomía: Locomotor",
+    pregunta:"Una lesión del compartimento anterior de la pierna produce pie caído y dificultad para realizar dorsiflexión del tobillo. ¿Qué nervio se encuentra comprometido?",
+    opciones:["Nervio tibial","Nervio safeno","Nervio fibular común","Nervio sural"],
+    correcta:2,
+    explicacion:"El nervio fibular común origina las ramas que inervan los músculos dorsiflexores del pie. Su lesión puede causar pie caído."
+},
+{
+    id:332,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué músculo participa tanto en la flexión plantar del tobillo como en la flexión de la rodilla?",
+    opciones:["Sóleo","Gastrocnemio","Tibial posterior","Fibular largo"],
+    correcta:1,
+    explicacion:"El gastrocnemio cruza la articulación de la rodilla y del tobillo; por ello puede flexionar la rodilla y realizar flexión plantar."
+},
+{
+    id:333,
+    tema:"Anatomía: Pelvis",
+    pregunta:"Respecto a la disposición de las estructuras en el triángulo femoral, ¿cuál es la relación correcta de la vena femoral?",
+    opciones:["Se ubica lateral a la arteria femoral.","Se encuentra dentro del conducto femoral.","Se sitúa lateral al nervio femoral.","Se localiza medial a la arteria femoral."],
+    correcta:3,
+    explicacion:"De lateral a medial, las estructuras principales son nervio, arteria, vena y linfáticos. Por ello, la vena femoral está medial a la arteria femoral."
+},
+{
+    id:334,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué nervio inerva principalmente los músculos pronador redondo y pronador cuadrado?",
+    opciones:["Nervio radial","Nervio cubital","Nervio musculocutáneo","Nervio mediano"],
+    correcta:3,
+    explicacion:"El nervio mediano inerva los principales músculos pronadores del antebrazo, por lo que participa en la pronación de la mano."
+},
+{
+    id:335,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué nervio proporciona sensibilidad a la cara anterior del muslo y, a través del nervio safeno, a la cara medial de la pierna?",
+    opciones:["Nervio obturador","Nervio femoral","Nervio ciático","Nervio tibial"],
+    correcta:1,
+    explicacion:"El nervio femoral inerva el compartimento anterior del muslo y origina el nervio safeno, responsable de la sensibilidad medial de la pierna."
+},
+{
+    id:336,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué arteria contribuye de forma principal a la irrigación del escafoides?",
+    opciones:["Arteria cubital","Arteria braquial","Arteria radial","Arteria axilar"],
+    correcta:2,
+    explicacion:"La arteria radial emite ramas dorsales y palmares para el escafoides. La irrigación retrógrada explica la vulnerabilidad del polo proximal."
+},
+{
+    id:337,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué nervio inerva los músculos extensores de la muñeca y de los dedos?",
+    opciones:["Nervio mediano","Nervio axilar","Nervio cubital","Nervio radial"],
+    correcta:3,
+    explicacion:"El nervio radial inerva el compartimento posterior del brazo y antebrazo, incluyendo los músculos responsables de extender la muñeca y los dedos."
+},
+{
+    id:338,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Cuál es el principal músculo extensor de la articulación coxofemoral?",
+    opciones:["Psoas mayor","Glúteo mayor","Glúteo medio","Glúteo menor"],
+    correcta:1,
+    explicacion:"El glúteo mayor es el principal extensor de la cadera; es especialmente importante al subir escaleras, correr o levantarse desde la posición sentada."
+},
+{
+    id:339,
+    tema:"Anatomía: Locomotor",
+    pregunta:"¿Qué músculo inicia principalmente la abducción del brazo en la articulación del hombro?",
+    opciones:["Supraespinoso","Infraespinoso","Subescapular","Redondo mayor"],
+    correcta:0,
+    explicacion:"El supraespinoso inicia los primeros grados de abducción. Luego, el deltoides se convierte en el principal músculo abductor."
+},
+{
+    id:340,
+    tema:"Anatomía: Cabeza",
+    pregunta:"¿Qué pared de la órbita es más vulnerable a una fractura por impacto directo sobre el globo ocular?",
+    opciones:["Pared lateral","Piso orbitario","Techo orbitario","Pared posterior"],
+    correcta:1,
+    explicacion:"El piso orbitario es delgado y puede fracturarse en los traumatismos orbitarios. Se relaciona con el seno maxilar y el nervio infraorbitario."
+},
+{
+    id:341,
+    tema:"Anatomía: Cabeza",
+    pregunta:"¿Qué músculo permite principalmente protruir la lengua?",
+    opciones:["Estilogloso","Hiogloso","Palatogloso","Geniogloso"],
+    correcta:3,
+    explicacion:"El geniogloso protruye la lengua. Es importante para evitar que la lengua caiga hacia atrás y obstruya la vía aérea."
+},
+{
+    id:342,
+    tema:"Anatomía: Sistema nervioso",
+    pregunta:"¿Qué estructura del tronco encefálico se localiza entre el mesencéfalo y el bulbo raquídeo?",
+    opciones:["Protuberancia","Tálamo","Cerebelo","Cápsula interna"],
+    correcta:0,
+    explicacion:"La protuberancia, también denominada puente, forma parte del tronco encefálico y se localiza entre el mesencéfalo y el bulbo raquídeo."
+},
+{
+    id:343,
+    tema:"Anatomía: Cabeza",
+    pregunta:"¿Qué par craneal inerva la mayor parte de los músculos extraoculares y el músculo elevador del párpado superior?",
+    opciones:["Nervio troclear (IV)","Nervio abducens (VI)","Nervio oculomotor (III)","Nervio facial (VII)"],
+    correcta:2,
+    explicacion:"El nervio oculomotor inerva los músculos rectos superior, inferior y medial, oblicuo inferior y elevador del párpado superior."
+},
+{
+    id:344,
+    tema:"Anatomía: Cabeza",
+    pregunta:"¿Qué par craneal inerva los músculos de la expresión facial?",
+    opciones:["Nervio vestibulococlear (VIII)","Nervio facial (VII)","Nervio trigémino (V)","Nervio oculomotor (III)"],
+    correcta:1,
+    explicacion:"El nervio facial proporciona inervación motora a los músculos de la mímica facial. El trigémino, en cambio, inerva principalmente los músculos de la masticación."
+},
+{
+    id:345,
+    tema:"Embriología: Introducción",
+    pregunta:"¿Qué periodo del desarrollo humano se extiende desde la segunda hasta la octava semana después de la concepción y se caracteriza por la organogénesis?",
+    opciones:["Periodo fetal","Periodo embrionario","Periodo de preimplantación","Periodo neonatal"],
+    correcta:1,
+    explicacion:"El periodo embrionario abarca de la semana 3 a la 8 después de la fecundación. Durante esta etapa se forman los principales órganos y sistemas, por lo que existe gran susceptibilidad a malformaciones estructurales."
+},
+{
+    id:346,
+    tema:"Embriología: Embriología por sistemas y anomalías congénitas",
+    pregunta:"¿Cuál es la estructura embrionaria que origina el riñón definitivo?",
+    opciones:["Pronefros","Mesonefros","Mesodermo paraxial","Metanefros"],
+    correcta:3,
+    explicacion:"El metanefros origina el riñón definitivo. Se desarrolla por la interacción entre la yema ureteral y el blastema metanéfrico; una alteración de este proceso puede ocasionar agenesia renal."
+},
+{
+    id:347,
+    tema:"Embriología: Embriología y alteraciones más frecuentes",
+    pregunta:"¿Cómo se denomina el defecto del tubo neural caracterizado por protrusión de meninges y médula espinal a través de un defecto vertebral?",
+    opciones:["Meningocele","Mielosquisis","Meningomielocele","Encefalocele"],
+    correcta:2,
+    explicacion:"El meningomielocele es un defecto del cierre del tubo neural en el que protruyen meninges y tejido medular. Es la forma más frecuente de espina bífida quística y puede asociarse con déficits neurológicos en miembros inferiores."
+},
 ]
